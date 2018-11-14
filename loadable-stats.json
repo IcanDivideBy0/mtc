@@ -2,14 +2,13 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "1d8ba81b3bee38c5582c",
+  "hash": "db77503a306aa10a7cc2",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/css/main.637cbdb1.chunk.css",
-      "static/js/main.7c68b28d.chunk.js",
-      "static/js/main.7c68b28d.chunk.js.map"
+      "static/js/main.6f29aac1.chunk.js",
+      "static/js/main.6f29aac1.chunk.js.map"
     ],
     "home-components/HomePage": [
       "static/js/home-components/HomePage.58a03cfd.chunk.js",
@@ -26,8 +25,18 @@
   },
   "assets": [
     {
-      "name": "static/js/main.7c68b28d.chunk.js.map",
-      "size": 16039,
+      "name": "static/js/home-components/HomePage.58a03cfd.chunk.js.map",
+      "size": 1019,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "home-components/HomePage"
+      ]
+    },
+    {
+      "name": "static/js/main.6f29aac1.chunk.js",
+      "size": 5122,
       "chunks": [
         0
       ],
@@ -36,8 +45,36 @@
       ]
     },
     {
-      "name": "static/css/main.637cbdb1.chunk.css",
-      "size": 150,
+      "name": "static/js/contact-components/ContactPage.ef995b17.chunk.js",
+      "size": 355,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "contact-components/ContactPage"
+      ]
+    },
+    {
+      "name": "static/js/3.d7f27f9a.chunk.js",
+      "size": 205984,
+      "chunks": [
+        3
+      ],
+      "chunkNames": []
+    },
+    {
+      "name": "static/js/runtime~main.770236ff.js",
+      "size": 2401,
+      "chunks": [
+        4
+      ],
+      "chunkNames": [
+        "runtime~main"
+      ]
+    },
+    {
+      "name": "static/js/main.6f29aac1.chunk.js.map",
+      "size": 16014,
       "chunks": [
         0
       ],
@@ -56,60 +93,6 @@
       ]
     },
     {
-      "name": "static/js/contact-components/ContactPage.ef995b17.chunk.js",
-      "size": 355,
-      "chunks": [
-        2
-      ],
-      "chunkNames": [
-        "contact-components/ContactPage"
-      ]
-    },
-    {
-      "name": "static/js/3.e8e010cd.chunk.js",
-      "size": 205986,
-      "chunks": [
-        3
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/runtime~main.770236ff.js",
-      "size": 2401,
-      "chunks": [
-        4
-      ],
-      "chunkNames": [
-        "runtime~main"
-      ]
-    },
-    {
-      "name": "static/css/main.637cbdb1.chunk.css.map",
-      "size": 377,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/main.7c68b28d.chunk.js",
-      "size": 5149,
-      "chunks": [
-        0
-      ],
-      "chunkNames": [
-        "main"
-      ]
-    },
-    {
-      "name": "static/js/home-components/HomePage.58a03cfd.chunk.js.map",
-      "size": 1019,
-      "chunks": [
-        1
-      ],
-      "chunkNames": [
-        "home-components/HomePage"
-      ]
-    },
-    {
       "name": "static/js/contact-components/ContactPage.ef995b17.chunk.js.map",
       "size": 809,
       "chunks": [
@@ -120,7 +103,7 @@
       ]
     },
     {
-      "name": "static/js/3.e8e010cd.chunk.js.map",
+      "name": "static/js/3.d7f27f9a.chunk.js.map",
       "size": 725981,
       "chunks": [
         3
@@ -139,13 +122,13 @@
     },
     {
       "name": "index.html",
-      "size": 3189,
+      "size": 3232,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.cf9f4d40370ee4b9d43b64f4c019cd85.js",
-      "size": 766,
+      "name": "precache-manifest.843b53404662cfbacccb5c78068a3548.js",
+      "size": 664,
       "chunks": [],
       "chunkNames": []
     },
@@ -167,11 +150,10 @@
       "assets": [
         "static/js/runtime~main.770236ff.js",
         "static/js/runtime~main.770236ff.js.map",
-        "static/js/3.e8e010cd.chunk.js",
-        "static/js/3.e8e010cd.chunk.js.map",
-        "static/css/main.637cbdb1.chunk.css",
-        "static/js/main.7c68b28d.chunk.js",
-        "static/js/main.7c68b28d.chunk.js.map"
+        "static/js/3.d7f27f9a.chunk.js",
+        "static/js/3.d7f27f9a.chunk.js.map",
+        "static/js/main.6f29aac1.chunk.js",
+        "static/js/main.6f29aac1.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -187,11 +169,10 @@
       "assets": [
         "static/js/runtime~main.770236ff.js",
         "static/js/runtime~main.770236ff.js.map",
-        "static/js/3.e8e010cd.chunk.js",
-        "static/js/3.e8e010cd.chunk.js.map",
-        "static/css/main.637cbdb1.chunk.css",
-        "static/js/main.7c68b28d.chunk.js",
-        "static/js/main.7c68b28d.chunk.js.map"
+        "static/js/3.d7f27f9a.chunk.js",
+        "static/js/3.d7f27f9a.chunk.js.map",
+        "static/js/main.6f29aac1.chunk.js",
+        "static/js/main.6f29aac1.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -231,7 +212,7 @@
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 547445,
+          "size": 547684,
           "chunks": [
             0
           ],
@@ -267,41 +248,6 @@
       },
       "children": [],
       "name": "HtmlWebpackCompiler"
-    },
-    {
-      "errors": [],
-      "warnings": [],
-      "publicPath": "/mtc/",
-      "outputPath": "/home/samuel/Workspace/mtc/build",
-      "assetsByChunkName": {},
-      "assets": [],
-      "filteredAssets": 0,
-      "entrypoints": {
-        "mini-css-extract-plugin": {
-          "chunks": [
-            0
-          ],
-          "assets": [
-            "*"
-          ],
-          "children": {},
-          "childAssets": {}
-        }
-      },
-      "namedChunkGroups": {
-        "mini-css-extract-plugin": {
-          "chunks": [
-            0
-          ],
-          "assets": [
-            "*"
-          ],
-          "children": {},
-          "childAssets": {}
-        }
-      },
-      "children": [],
-      "name": "mini-css-extract-plugin node_modules/css-loader/index.js??ref--6-oneOf-3-1!node_modules/postcss-loader/src/index.js??postcss!src/index.css"
     }
   ]
 }

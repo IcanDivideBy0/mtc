@@ -1,1 +1,0 @@
-{"version":3,"sources":["/home/samuel/Workspace/mtc/src/index.css"],"names":[],"mappings":"AAAA,UAEE,SAAU,AACV,UAAW,AACX,WAAa,CACd,AAED,MACE,gBAAiB,AACjB,aAAc,AACd,qBAAuB,CACxB","file":"main.637cbdb1.chunk.css","sourcesContent":["html,\nbody {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n}\n\n#root {\n  min-height: 100%;\n  display: flex;\n  flex-direction: column;\n}\n"]}
