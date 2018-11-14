@@ -20,7 +20,7 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>MTC</title>
+    <title>Nantes Médecine Chinoise</title>
 
     <script type="text/javascript">
       window.REACT_APP_SSR = <%= !!process.env.REACT_APP_SSR %>;
@@ -54,25 +54,9 @@
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-      }
-
-      #root {
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-    </style>
-
     <%= _headContent %>
   </head>
   <body <%= _bodyAttrs %>>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"><%= _appContent %></div>
     <%= _bodyContent %>
   </body>

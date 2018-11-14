@@ -6,7 +6,7 @@ import { ServerStyleSheet } from "styled-components";
 import { StaticRouter } from "react-router";
 import compose from "lodash.flowright";
 
-import { App } from "modules/app";
+import app from "app";
 
 const path = require("path");
 const statsFile = path.resolve(__dirname, "../build/loadable-stats.json");
@@ -21,7 +21,7 @@ export async function render(url) {
     chunkExtractor.collectChunks.bind(chunkExtractor)
   )(
     <StaticRouter basename={process.env.PUBLIC_URL} location={url} context={{}}>
-      <App />
+      {app}
     </StaticRouter>
   );
 

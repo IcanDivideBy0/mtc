@@ -2,14 +2,14 @@
   "name": "mtc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://icandivideby0.github.io/mtc",
+  "homepage": "https://nantes-medecine-chinoise.fr",
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "craco start",
+    "build": "craco build",
     "postbuild": "node ./ssr/index.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "react-app-rewired test",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -27,14 +27,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
+    "@craco/craco": "^3.1.1",
     "@loadable/babel-plugin": "^5.0.1",
     "@loadable/server": "^5.1.1",
     "@loadable/webpack-plugin": "^5.0.2",
+    "@mdx-js/loader": "^0.16.5",
+    "@mdx-js/mdx": "^0.16.5",
     "@types/lodash.flowright": "^3.5.4",
     "@types/mkdirp": "^0.5.2",
     "@types/react": "^16.4.18",
@@ -45,13 +49,12 @@
     "@types/react-router-dom": "^4.3.1",
     "@types/styled-components": "^4.1.0",
     "babel-plugin-module-resolver": "^3.1.1",
-    "customize-cra": "^0.2.4",
+    "express": "^4.16.4",
     "gh-pages": "^2.0.1",
     "lodash.flowright": "^3.5.0",
     "lodash.template": "^4.4.0",
     "mkdirp": "^0.5.1",
-    "prettier": "^1.14.3",
-    "react-app-rewired": "^1.6.2"
+    "prettier": "^1.14.3"
   },
   "babel": {
     "plugins": [
@@ -64,7 +67,8 @@
         }
       ],
       "@loadable/babel-plugin",
-      "@babel/syntax-dynamic-import"
+      "@babel/syntax-dynamic-import",
+      "@babel/proposal-class-properties"
     ],
     "presets": [
       "@babel/env",

@@ -1,7 +1,9 @@
 const fs = require("fs");
+const path = require("path");
 const loaderUtils = require("loader-utils");
 const mime = require("mime");
 const paths = require("react-scripts/config/paths");
+const mdx = require("@mdx-js/mdx");
 
 /**
  * Webpack like file-loader
@@ -38,6 +40,38 @@ function urlLoader(module) {
 }
 
 /**
+ * MDX loader
+ */
+
+function mdxLoader(module) {
+  const mdxText = fs.readFileSync(module.id);
+  const jsx = mdx.sync(mdxText);
+
+  // See https://github.com/mdx-js/mdx/blob/master/packages/loader/index.js
+  const code = `
+    import React from "react";
+    import { MDXTag } from "@mdx-js/tag";
+
+    ${jsx}
+  `;
+
+  const fileName = path.join(
+    path.dirname(module.id),
+    `.__mdx-loader__${path.basename(module.id, ".mdx")}.js`
+  );
+  fs.writeFileSync(fileName, code);
+
+  // Let babel-register do his work
+  try {
+    module.exports = require(fileName);
+    fs.unlinkSync(fileName);
+  } catch (err) {
+    fs.unlinkSync(fileName);
+    throw err;
+  }
+}
+
+/**
  * Require's hooks
  */
 
@@ -50,6 +84,8 @@ require.extensions[".jpeg"] = urlLoader;
 require.extensions[".png"] = urlLoader;
 require.extensions[".webp"] = urlLoader;
 require.extensions[".mp3"] = urlLoader;
+
+require.extensions[".mdx"] = mdxLoader;
 
 module.exports = {
   fileLoader,

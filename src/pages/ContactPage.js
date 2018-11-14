@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Layout } from "modules/common";
+import PageContent from "components/PageContent";
 
 export default function ContactPage() {
   return (
-    <Layout>
+    <PageContent padded>
       Hello <code>ContactPage</code>!
-    </Layout>
+    </PageContent>
   );
 }

@@ -5,7 +5,8 @@ module.exports = {
 async function getRoutes() {
   return [
     { url: "/" },
+    { url: "/soins" },
+    { url: "/tarifs" },
     { url: "/contact" },
-    // { url: "/foo" }
   ];
 }
