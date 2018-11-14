@@ -2,31 +2,31 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "14a74f0550959c0b4a25",
+  "hash": "517878174ac9fefcaf5c",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.5f3e79a8.chunk.js",
-      "static/js/main.5f3e79a8.chunk.js.map"
+      "static/js/main.5cfffbcf.chunk.js",
+      "static/js/main.5cfffbcf.chunk.js.map"
     ],
     "home-components/HomePage": [
-      "static/js/home-components/HomePage.838dbfa0.chunk.js",
-      "static/js/home-components/HomePage.838dbfa0.chunk.js.map"
+      "static/js/home-components/HomePage.a1bc540f.chunk.js",
+      "static/js/home-components/HomePage.a1bc540f.chunk.js.map"
     ],
     "contact-components/ContactPage": [
-      "static/js/contact-components/ContactPage.55604269.chunk.js",
-      "static/js/contact-components/ContactPage.55604269.chunk.js.map"
+      "static/js/contact-components/ContactPage.210ee912.chunk.js",
+      "static/js/contact-components/ContactPage.210ee912.chunk.js.map"
     ],
     "runtime~main": [
-      "static/js/runtime~main.df0a979d.js",
-      "static/js/runtime~main.df0a979d.js.map"
+      "static/js/runtime~main.032617ee.js",
+      "static/js/runtime~main.032617ee.js.map"
     ]
   },
   "assets": [
     {
-      "name": "static/js/main.5f3e79a8.chunk.js.map",
-      "size": 18962,
+      "name": "static/js/main.5cfffbcf.chunk.js.map",
+      "size": 18863,
       "chunks": [
         0
       ],
@@ -41,8 +41,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.5f3e79a8.chunk.js",
-      "size": 6576,
+      "name": "static/js/main.5cfffbcf.chunk.js",
+      "size": 6569,
       "chunks": [
         0
       ],
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "name": "static/js/home-components/HomePage.838dbfa0.chunk.js",
+      "name": "static/js/home-components/HomePage.a1bc540f.chunk.js",
       "size": 895,
       "chunks": [
         1
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "name": "static/js/contact-components/ContactPage.55604269.chunk.js",
+      "name": "static/js/contact-components/ContactPage.210ee912.chunk.js",
       "size": 355,
       "chunks": [
         2
@@ -79,7 +79,7 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.df0a979d.js",
+      "name": "static/js/runtime~main.032617ee.js",
       "size": 2401,
       "chunks": [
         4
@@ -95,7 +95,7 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/home-components/HomePage.838dbfa0.chunk.js.map",
+      "name": "static/js/home-components/HomePage.a1bc540f.chunk.js.map",
       "size": 2680,
       "chunks": [
         1
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "name": "static/js/contact-components/ContactPage.55604269.chunk.js.map",
+      "name": "static/js/contact-components/ContactPage.210ee912.chunk.js.map",
       "size": 809,
       "chunks": [
         2
@@ -123,7 +123,7 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.df0a979d.js.map",
+      "name": "static/js/runtime~main.032617ee.js.map",
       "size": 12193,
       "chunks": [
         4
@@ -139,7 +139,7 @@
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.af5a7aabab5a4e7b36349d4c31319543.js",
+      "name": "precache-manifest.c6bfe2ecdfda46076f6e84483587232e.js",
       "size": 906,
       "chunks": [],
       "chunkNames": []
@@ -160,12 +160,12 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.df0a979d.js",
-        "static/js/runtime~main.df0a979d.js.map",
+        "static/js/runtime~main.032617ee.js",
+        "static/js/runtime~main.032617ee.js.map",
         "static/js/3.ac13f16c.chunk.js",
         "static/js/3.ac13f16c.chunk.js.map",
-        "static/js/main.5f3e79a8.chunk.js",
-        "static/js/main.5f3e79a8.chunk.js.map"
+        "static/js/main.5cfffbcf.chunk.js",
+        "static/js/main.5cfffbcf.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -179,12 +179,12 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.df0a979d.js",
-        "static/js/runtime~main.df0a979d.js.map",
+        "static/js/runtime~main.032617ee.js",
+        "static/js/runtime~main.032617ee.js.map",
         "static/js/3.ac13f16c.chunk.js",
         "static/js/3.ac13f16c.chunk.js.map",
-        "static/js/main.5f3e79a8.chunk.js",
-        "static/js/main.5f3e79a8.chunk.js.map"
+        "static/js/main.5cfffbcf.chunk.js",
+        "static/js/main.5cfffbcf.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -194,8 +194,8 @@
         1
       ],
       "assets": [
-        "static/js/home-components/HomePage.838dbfa0.chunk.js",
-        "static/js/home-components/HomePage.838dbfa0.chunk.js.map"
+        "static/js/home-components/HomePage.a1bc540f.chunk.js",
+        "static/js/home-components/HomePage.a1bc540f.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -205,8 +205,8 @@
         2
       ],
       "assets": [
-        "static/js/contact-components/ContactPage.55604269.chunk.js",
-        "static/js/contact-components/ContactPage.55604269.chunk.js.map"
+        "static/js/contact-components/ContactPage.210ee912.chunk.js",
+        "static/js/contact-components/ContactPage.210ee912.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
