@@ -2,16 +2,67 @@
   "name": "mtc",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://medecine-chinoise-nantes.fr",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
+    "@loadable/component": "^5.0.1",
+    "classnames": "^2.2.6",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.1.1"
+    "react-helmet": "^5.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "styled-components": "^4.0.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@loadable/babel-plugin": "^5.0.1",
+    "@loadable/server": "^5.1.1",
+    "@loadable/webpack-plugin": "^5.0.2",
+    "@types/lodash.flowright": "^3.5.4",
+    "@types/mkdirp": "^0.5.2",
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-helmet": "^5.0.7",
+    "@types/react-router": "^4.4.0",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/styled-components": "^4.1.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "customize-cra": "^0.2.4",
+    "lodash.flowright": "^3.5.0",
+    "lodash.template": "^4.4.0",
+    "mkdirp": "^0.5.1",
+    "prettier": "^1.14.3",
+    "react-app-rewired": "^1.6.2"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ]
+        }
+      ],
+      "@loadable/babel-plugin",
+      "@babel/syntax-dynamic-import"
+    ],
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
