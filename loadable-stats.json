@@ -2,13 +2,13 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "517878174ac9fefcaf5c",
+  "hash": "a65f6896bec580b162ec",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.5cfffbcf.chunk.js",
-      "static/js/main.5cfffbcf.chunk.js.map"
+      "static/js/main.824e58d4.chunk.js",
+      "static/js/main.824e58d4.chunk.js.map"
     ],
     "home-components/HomePage": [
       "static/js/home-components/HomePage.a1bc540f.chunk.js",
@@ -25,8 +25,8 @@
   },
   "assets": [
     {
-      "name": "static/js/main.5cfffbcf.chunk.js.map",
-      "size": 18863,
+      "name": "static/js/main.824e58d4.chunk.js.map",
+      "size": 18933,
       "chunks": [
         0
       ],
@@ -41,8 +41,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.5cfffbcf.chunk.js",
-      "size": 6569,
+      "name": "static/js/main.824e58d4.chunk.js",
+      "size": 6606,
       "chunks": [
         0
       ],
@@ -139,7 +139,7 @@
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.c6bfe2ecdfda46076f6e84483587232e.js",
+      "name": "precache-manifest.55b3f8c9838f362a853c78df169fff14.js",
       "size": 906,
       "chunks": [],
       "chunkNames": []
@@ -164,8 +164,8 @@
         "static/js/runtime~main.032617ee.js.map",
         "static/js/3.ac13f16c.chunk.js",
         "static/js/3.ac13f16c.chunk.js.map",
-        "static/js/main.5cfffbcf.chunk.js",
-        "static/js/main.5cfffbcf.chunk.js.map"
+        "static/js/main.824e58d4.chunk.js",
+        "static/js/main.824e58d4.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -183,8 +183,8 @@
         "static/js/runtime~main.032617ee.js.map",
         "static/js/3.ac13f16c.chunk.js",
         "static/js/3.ac13f16c.chunk.js.map",
-        "static/js/main.5cfffbcf.chunk.js",
-        "static/js/main.5cfffbcf.chunk.js.map"
+        "static/js/main.824e58d4.chunk.js",
+        "static/js/main.824e58d4.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
