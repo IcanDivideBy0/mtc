@@ -1,0 +1,18 @@
+{
+  "main.css": "/mtc/static/css/main.637cbdb1.chunk.css",
+  "main.js": "/mtc/static/js/main.7c68b28d.chunk.js",
+  "main.js.map": "/mtc/static/js/main.7c68b28d.chunk.js.map",
+  "home-components/HomePage.js": "/mtc/static/js/home-components/HomePage.58a03cfd.chunk.js",
+  "home-components/HomePage.js.map": "/mtc/static/js/home-components/HomePage.58a03cfd.chunk.js.map",
+  "contact-components/ContactPage.js": "/mtc/static/js/contact-components/ContactPage.ef995b17.chunk.js",
+  "contact-components/ContactPage.js.map": "/mtc/static/js/contact-components/ContactPage.ef995b17.chunk.js.map",
+  "static/js/3.e8e010cd.chunk.js": "/mtc/static/js/3.e8e010cd.chunk.js",
+  "static/js/3.e8e010cd.chunk.js.map": "/mtc/static/js/3.e8e010cd.chunk.js.map",
+  "runtime~main.js": "/mtc/static/js/runtime~main.770236ff.js",
+  "runtime~main.js.map": "/mtc/static/js/runtime~main.770236ff.js.map",
+  "static/css/main.637cbdb1.chunk.css.map": "/mtc/static/css/main.637cbdb1.chunk.css.map",
+  "index.html": "/mtc/index.html",
+  "precache-manifest.cf9f4d40370ee4b9d43b64f4c019cd85.js": "/mtc/precache-manifest.cf9f4d40370ee4b9d43b64f4c019cd85.js",
+  "service-worker.js": "/mtc/service-worker.js",
+  "loadable-stats.json": "/mtc/loadable-stats.json"
+}

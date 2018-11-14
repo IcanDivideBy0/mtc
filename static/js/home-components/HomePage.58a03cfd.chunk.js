@@ -1,0 +1,2 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[1],{31:function(e,n,t){"use strict";t.r(n),t.d(n,"default",function(){return a});var r=t(0),u=t.n(r),_=t(7);function a(){return u.a.createElement(_.a,null,Array.from({length:200},function(e,n){return u.a.createElement("div",{key:n},"Hello ",u.a.createElement("code",null,"HomePage"),"!")}))}}}]);
+//# sourceMappingURL=HomePage.58a03cfd.chunk.js.map
