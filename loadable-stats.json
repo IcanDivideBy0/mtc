@@ -2,13 +2,13 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "2df4e33976c1018b2f6c",
+  "hash": "794fdfeca38cc86e116a",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.69bb774b.chunk.js",
-      "static/js/main.69bb774b.chunk.js.map"
+      "static/js/main.cfe782f9.chunk.js",
+      "static/js/main.cfe782f9.chunk.js.map"
     ],
     "home-components/HomePage": [
       "static/js/home-components/HomePage.a1bc540f.chunk.js",
@@ -25,8 +25,8 @@
   },
   "assets": [
     {
-      "name": "static/js/main.69bb774b.chunk.js.map",
-      "size": 18467,
+      "name": "static/js/main.cfe782f9.chunk.js.map",
+      "size": 18354,
       "chunks": [
         0
       ],
@@ -41,8 +41,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.69bb774b.chunk.js",
-      "size": 6369,
+      "name": "static/js/main.cfe782f9.chunk.js",
+      "size": 6294,
       "chunks": [
         0
       ],
@@ -134,12 +134,12 @@
     },
     {
       "name": "index.html",
-      "size": 3394,
+      "size": 3487,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.379462e71c2254e6a406c7dae06ce2d9.js",
+      "name": "precache-manifest.24bdc948e351b5d762e65a4137ab8983.js",
       "size": 906,
       "chunks": [],
       "chunkNames": []
@@ -164,8 +164,8 @@
         "static/js/runtime~main.032617ee.js.map",
         "static/js/3.ce46fc55.chunk.js",
         "static/js/3.ce46fc55.chunk.js.map",
-        "static/js/main.69bb774b.chunk.js",
-        "static/js/main.69bb774b.chunk.js.map"
+        "static/js/main.cfe782f9.chunk.js",
+        "static/js/main.cfe782f9.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -183,8 +183,8 @@
         "static/js/runtime~main.032617ee.js.map",
         "static/js/3.ce46fc55.chunk.js",
         "static/js/3.ce46fc55.chunk.js.map",
-        "static/js/main.69bb774b.chunk.js",
-        "static/js/main.69bb774b.chunk.js.map"
+        "static/js/main.cfe782f9.chunk.js",
+        "static/js/main.cfe782f9.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -224,7 +224,7 @@
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 547862,
+          "size": 548027,
           "chunks": [
             0
           ],
