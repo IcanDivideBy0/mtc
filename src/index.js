@@ -3,19 +3,22 @@ import ReactDOM from "react-dom";
 import { loadableReady } from "@loadable/component";
 import { BrowserRouter } from "react-router-dom";
 
-import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 
 import { App } from "modules/app";
 
-loadableReady(() => {
-  ReactDOM.hydrate(
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App />
-    </BrowserRouter>,
-    document.getElementById("root")
-  );
-});
+const app = (
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <App />
+  </BrowserRouter>
+);
+const root = document.getElementById("root");
+
+if (window.REACT_APP_SSR) {
+  loadableReady(() => ReactDOM.hydrate(app, root));
+} else {
+  ReactDOM.render(app, root);
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -20,7 +20,7 @@ export async function render(url) {
     sheet.collectStyles.bind(sheet),
     chunkExtractor.collectChunks.bind(chunkExtractor)
   )(
-    <StaticRouter location={url} context={{}}>
+    <StaticRouter basename={process.env.PUBLIC_URL} location={url} context={{}}>
       <App />
     </StaticRouter>
   );

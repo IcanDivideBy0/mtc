@@ -28,7 +28,10 @@ function App({ location }) {
           <title>MTC</title>
           <link
             rel="canonical"
-            href={process.env.PUBLIC_URL + location.pathname + location.search}
+            href={
+              // window.location.hostname +
+              process.env.PUBLIC_URL + location.pathname + location.search
+            }
           />
           <meta name="description" content="Medecine traditionnelle chinoise" />
         </Helmet>

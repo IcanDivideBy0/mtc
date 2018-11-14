@@ -13,7 +13,9 @@ const paths = require("react-scripts/config/paths");
 const getClientEnvironment = require("react-scripts/config/env");
 const { minify } = require("html-minifier");
 
-Object.assign(process.env, getClientEnvironment(paths.publicUrl).raw);
+const publicPath = paths.servedPath;
+const publicUrl = publicPath.slice(0, -1);
+Object.assign(process.env, getClientEnvironment(publicUrl).raw);
 
 require("module").Module._initPaths();
 require("@babel/polyfill");
