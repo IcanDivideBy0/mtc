@@ -1,0 +1,2 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[2],{33:function(n,e,t){"use strict";t.r(e),t.d(e,"default",function(){return u});var _=t(0),a=t.n(_),r=t(7);function u(){return a.a.createElement(r.a,{padding:!0},"Hello ",a.a.createElement("code",null,"ContactPage"),"!")}}}]);
+//# sourceMappingURL=pages-ContactPage.47533b8a.chunk.js.map
