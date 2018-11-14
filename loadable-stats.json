@@ -2,13 +2,13 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "db77503a306aa10a7cc2",
+  "hash": "93d606a9419490ac2546",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.6f29aac1.chunk.js",
-      "static/js/main.6f29aac1.chunk.js.map"
+      "static/js/main.93bf2480.chunk.js",
+      "static/js/main.93bf2480.chunk.js.map"
     ],
     "home-components/HomePage": [
       "static/js/home-components/HomePage.58a03cfd.chunk.js",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "name": "static/js/main.6f29aac1.chunk.js",
+      "name": "static/js/main.93bf2480.chunk.js",
       "size": 5122,
       "chunks": [
         0
@@ -73,8 +73,8 @@
       ]
     },
     {
-      "name": "static/js/main.6f29aac1.chunk.js.map",
-      "size": 16014,
+      "name": "static/js/main.93bf2480.chunk.js.map",
+      "size": 15997,
       "chunks": [
         0
       ],
@@ -127,7 +127,7 @@
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.843b53404662cfbacccb5c78068a3548.js",
+      "name": "precache-manifest.452ccc621315d0f9dc57233c1f42c856.js",
       "size": 664,
       "chunks": [],
       "chunkNames": []
@@ -152,8 +152,8 @@
         "static/js/runtime~main.770236ff.js.map",
         "static/js/3.d7f27f9a.chunk.js",
         "static/js/3.d7f27f9a.chunk.js.map",
-        "static/js/main.6f29aac1.chunk.js",
-        "static/js/main.6f29aac1.chunk.js.map"
+        "static/js/main.93bf2480.chunk.js",
+        "static/js/main.93bf2480.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -171,8 +171,8 @@
         "static/js/runtime~main.770236ff.js.map",
         "static/js/3.d7f27f9a.chunk.js",
         "static/js/3.d7f27f9a.chunk.js.map",
-        "static/js/main.6f29aac1.chunk.js",
-        "static/js/main.6f29aac1.chunk.js.map"
+        "static/js/main.93bf2480.chunk.js",
+        "static/js/main.93bf2480.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
