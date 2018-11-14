@@ -2,6 +2,7 @@ process.env.NODE_ENV = "production";
 process.env.REACT_APP_SSR = true;
 
 const path = require("path");
+const url = require("url");
 const { promisify } = require("util");
 const fs = require("fs");
 const rename = promisify(fs.rename);
@@ -13,14 +14,20 @@ const paths = require("react-scripts/config/paths");
 const getClientEnvironment = require("react-scripts/config/env");
 const { minify } = require("html-minifier");
 
+const { protocol, host } = url.parse(paths.publicUrl);
+const REACT_APP_LOCATION_ORIGIN = protocol + "//" + host;
+
 const publicPath = paths.servedPath;
 const publicUrl = publicPath.slice(0, -1);
-Object.assign(process.env, getClientEnvironment(publicUrl).raw);
+Object.assign(process.env, getClientEnvironment(publicUrl).raw, {
+  REACT_APP_LOCATION_ORIGIN,
+});
 
 require("module").Module._initPaths();
 require("@babel/polyfill");
 require("@babel/register");
 
+require("./loaders");
 const { render } = require("./renderer");
 const { getRoutes } = require("./routes");
 const template = require("./template");

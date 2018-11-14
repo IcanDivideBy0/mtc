@@ -39,7 +39,11 @@ const ContactPage = wrapFn(
 function Router({ match }) {
   return (
     <Switch>
-      <Route exact path={match.url} component={HomePage} />
+      <Route
+        exact
+        path={match.url + "(index|index.html)?"}
+        component={HomePage}
+      />
       <Route exact path={match.url + "contact"} component={ContactPage} />
 
       <Route component={NotFoundPage} />

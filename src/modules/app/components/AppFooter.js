@@ -1,10 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 
 import { Layout } from "modules/common";
 
-const AppFooterWrapper = styled(Layout)``;
-
 export default function AppFooter() {
-  return <AppFooterWrapper>Hello AppFooter!</AppFooterWrapper>;
+  return (
+    <footer>
+      <Layout>
+        Hello <code>AppFooter</code>!
+      </Layout>
+    </footer>
+  );
 }
