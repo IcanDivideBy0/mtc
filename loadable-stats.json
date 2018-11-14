@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "5b64dfdaf43205987b12",
+  "hash": "5d77234ad786bd907ba8",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
@@ -122,12 +122,12 @@
     },
     {
       "name": "index.html",
-      "size": 3295,
+      "size": 3394,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.f59dcbe84ee8e075e50ef7c9830fb2da.js",
+      "name": "precache-manifest.76877566407e003c5306fa20db3d7ede.js",
       "size": 664,
       "chunks": [],
       "chunkNames": []
@@ -212,7 +212,7 @@
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 547880,
+          "size": 547862,
           "chunks": [
             0
           ],
