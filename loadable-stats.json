@@ -2,13 +2,13 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "a65f6896bec580b162ec",
+  "hash": "3f85fdca8ede89c3414e",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.824e58d4.chunk.js",
-      "static/js/main.824e58d4.chunk.js.map"
+      "static/js/main.60d97266.chunk.js",
+      "static/js/main.60d97266.chunk.js.map"
     ],
     "home-components/HomePage": [
       "static/js/home-components/HomePage.a1bc540f.chunk.js",
@@ -25,8 +25,8 @@
   },
   "assets": [
     {
-      "name": "static/js/main.824e58d4.chunk.js.map",
-      "size": 18933,
+      "name": "static/js/main.60d97266.chunk.js.map",
+      "size": 18748,
       "chunks": [
         0
       ],
@@ -41,8 +41,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.824e58d4.chunk.js",
-      "size": 6606,
+      "name": "static/js/main.60d97266.chunk.js",
+      "size": 6513,
       "chunks": [
         0
       ],
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "name": "static/js/3.ac13f16c.chunk.js",
-      "size": 214909,
+      "name": "static/js/3.f6475953.chunk.js",
+      "size": 213632,
       "chunks": [
         3
       ],
@@ -115,8 +115,8 @@
       ]
     },
     {
-      "name": "static/js/3.ac13f16c.chunk.js.map",
-      "size": 757545,
+      "name": "static/js/3.f6475953.chunk.js.map",
+      "size": 755984,
       "chunks": [
         3
       ],
@@ -139,7 +139,7 @@
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.55b3f8c9838f362a853c78df169fff14.js",
+      "name": "precache-manifest.09efcc03c3d48a4baecf61fbc70101e5.js",
       "size": 906,
       "chunks": [],
       "chunkNames": []
@@ -162,10 +162,10 @@
       "assets": [
         "static/js/runtime~main.032617ee.js",
         "static/js/runtime~main.032617ee.js.map",
-        "static/js/3.ac13f16c.chunk.js",
-        "static/js/3.ac13f16c.chunk.js.map",
-        "static/js/main.824e58d4.chunk.js",
-        "static/js/main.824e58d4.chunk.js.map"
+        "static/js/3.f6475953.chunk.js",
+        "static/js/3.f6475953.chunk.js.map",
+        "static/js/main.60d97266.chunk.js",
+        "static/js/main.60d97266.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -181,10 +181,10 @@
       "assets": [
         "static/js/runtime~main.032617ee.js",
         "static/js/runtime~main.032617ee.js.map",
-        "static/js/3.ac13f16c.chunk.js",
-        "static/js/3.ac13f16c.chunk.js.map",
-        "static/js/main.824e58d4.chunk.js",
-        "static/js/main.824e58d4.chunk.js.map"
+        "static/js/3.f6475953.chunk.js",
+        "static/js/3.f6475953.chunk.js.map",
+        "static/js/main.60d97266.chunk.js",
+        "static/js/main.60d97266.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
