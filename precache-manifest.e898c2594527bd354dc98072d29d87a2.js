@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "8eb1b4a41f23eb19542c",
-    "url": "/mtc/static/js/runtime~main.8eb1b4a4.js"
+    "revision": "d098e29ac261d188fee0",
+    "url": "/mtc/static/js/runtime~main.d098e29a.js"
   },
   {
     "revision": "806ec409baaeec75c768",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/mtc/static/media/qi-gong.40a30204.jpg"
   },
   {
-    "revision": "15873d9a3bfb0cfe52d1",
-    "url": "/mtc/static/js/pages-HomePage.15873d9a.chunk.js"
+    "revision": "ac647028e9dd2686567c",
+    "url": "/mtc/static/js/pages-HomePage.ac647028.chunk.js"
   },
   {
-    "revision": "db6d5ede143a1fe1c5d7c9fbda85ee93",
-    "url": "/mtc/static/media/acupuncture.db6d5ede.jpg"
+    "revision": "70fa339eccc0bda9b31034f9e0f4e04a",
+    "url": "/mtc/static/media/acupuncture.70fa339e.jpg"
   },
   {
     "revision": "806bc8cc6744cb4a321097001896909f",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/mtc/static/js/5.082b0b25.chunk.js"
   },
   {
-    "revision": "7110919f136c8d69ece2a74593484504",
+    "revision": "c15b04d1576fec1caf13026b1c555709",
     "url": "/mtc/index.html"
   }
 ];
