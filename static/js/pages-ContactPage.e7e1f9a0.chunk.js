@@ -1,0 +1,2 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[2],{45:function(n,t,e){"use strict";e.r(t),e.d(t,"default",function(){return d});var r=e(3),u=e(0),a=e.n(u),c=e(2),_=e(7);function i(){var n=Object(r.a)(["\n  padding: var(--grid-gutter) 0;\n"]);return i=function(){return n},n}var o=Object(c.d)(_.a)(i());function d(){return a.a.createElement(o,null,"Hello ",a.a.createElement("code",null,"ContactPage"),"!")}}}]);
+//# sourceMappingURL=pages-ContactPage.e7e1f9a0.chunk.js.map

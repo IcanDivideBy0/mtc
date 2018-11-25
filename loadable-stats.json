@@ -2,31 +2,31 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "e5536b9a2e75da04fccd",
+  "hash": "b842c3f2145a05f09b77",
   "publicPath": "/mtc/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.dd9e6767.chunk.js",
-      "static/js/main.dd9e6767.chunk.js.map"
+      "static/js/main.c4c7587d.chunk.js",
+      "static/js/main.c4c7587d.chunk.js.map"
     ],
     "pages-HomePage": [
-      "static/js/pages-HomePage.9d339a88.chunk.js",
-      "static/js/pages-HomePage.9d339a88.chunk.js.map"
+      "static/js/pages-HomePage.842015e6.chunk.js",
+      "static/js/pages-HomePage.842015e6.chunk.js.map"
     ],
     "pages-ContactPage": [
-      "static/js/pages-ContactPage.ca857b5c.chunk.js",
-      "static/js/pages-ContactPage.ca857b5c.chunk.js.map"
+      "static/js/pages-ContactPage.e7e1f9a0.chunk.js",
+      "static/js/pages-ContactPage.e7e1f9a0.chunk.js.map"
     ],
     "runtime~main": [
-      "static/js/runtime~main.eba44e73.js",
-      "static/js/runtime~main.eba44e73.js.map"
+      "static/js/runtime~main.08b788fc.js",
+      "static/js/runtime~main.08b788fc.js.map"
     ]
   },
   "assets": [
     {
-      "name": "static/js/main.dd9e6767.chunk.js.map",
-      "size": 30574,
+      "name": "static/js/main.c4c7587d.chunk.js.map",
+      "size": 31601,
       "chunks": [
         0
       ],
@@ -41,8 +41,14 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.dd9e6767.chunk.js",
-      "size": 13454,
+      "name": "static/media/landscape.67add56f.jpg",
+      "size": 422222,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/js/main.c4c7587d.chunk.js",
+      "size": 14035,
       "chunks": [
         0
       ],
@@ -51,8 +57,8 @@
       ]
     },
     {
-      "name": "static/js/pages-HomePage.9d339a88.chunk.js",
-      "size": 4218,
+      "name": "static/js/pages-HomePage.842015e6.chunk.js",
+      "size": 6082,
       "chunks": [
         1
       ],
@@ -61,8 +67,8 @@
       ]
     },
     {
-      "name": "static/js/pages-ContactPage.ca857b5c.chunk.js",
-      "size": 369,
+      "name": "static/js/pages-ContactPage.e7e1f9a0.chunk.js",
+      "size": 506,
       "chunks": [
         2
       ],
@@ -71,15 +77,15 @@
       ]
     },
     {
-      "name": "static/js/3.1d4526bb.chunk.js",
-      "size": 217713,
+      "name": "static/js/3.115fe4aa.chunk.js",
+      "size": 218581,
       "chunks": [
         3
       ],
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.eba44e73.js",
+      "name": "static/js/runtime~main.08b788fc.js",
       "size": 2378,
       "chunks": [
         4
@@ -95,8 +101,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/pages-HomePage.9d339a88.chunk.js.map",
-      "size": 9111,
+      "name": "static/js/pages-HomePage.842015e6.chunk.js.map",
+      "size": 11851,
       "chunks": [
         1
       ],
@@ -105,8 +111,8 @@
       ]
     },
     {
-      "name": "static/js/pages-ContactPage.ca857b5c.chunk.js.map",
-      "size": 819,
+      "name": "static/js/pages-ContactPage.e7e1f9a0.chunk.js.map",
+      "size": 790,
       "chunks": [
         2
       ],
@@ -115,15 +121,15 @@
       ]
     },
     {
-      "name": "static/js/3.1d4526bb.chunk.js.map",
-      "size": 766565,
+      "name": "static/js/3.115fe4aa.chunk.js.map",
+      "size": 770158,
       "chunks": [
         3
       ],
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.eba44e73.js.map",
+      "name": "static/js/runtime~main.08b788fc.js.map",
       "size": 12170,
       "chunks": [
         4
@@ -139,8 +145,8 @@
       "chunkNames": []
     },
     {
-      "name": "precache-manifest.316875168e75eaeb89e08b90d533e86c.js",
-      "size": 883,
+      "name": "precache-manifest.60d6d46aa8fc210da7d5962250fa2b47.js",
+      "size": 998,
       "chunks": [],
       "chunkNames": []
     },
@@ -160,12 +166,12 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.eba44e73.js",
-        "static/js/runtime~main.eba44e73.js.map",
-        "static/js/3.1d4526bb.chunk.js",
-        "static/js/3.1d4526bb.chunk.js.map",
-        "static/js/main.dd9e6767.chunk.js",
-        "static/js/main.dd9e6767.chunk.js.map"
+        "static/js/runtime~main.08b788fc.js",
+        "static/js/runtime~main.08b788fc.js.map",
+        "static/js/3.115fe4aa.chunk.js",
+        "static/js/3.115fe4aa.chunk.js.map",
+        "static/js/main.c4c7587d.chunk.js",
+        "static/js/main.c4c7587d.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -179,12 +185,12 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.eba44e73.js",
-        "static/js/runtime~main.eba44e73.js.map",
-        "static/js/3.1d4526bb.chunk.js",
-        "static/js/3.1d4526bb.chunk.js.map",
-        "static/js/main.dd9e6767.chunk.js",
-        "static/js/main.dd9e6767.chunk.js.map"
+        "static/js/runtime~main.08b788fc.js",
+        "static/js/runtime~main.08b788fc.js.map",
+        "static/js/3.115fe4aa.chunk.js",
+        "static/js/3.115fe4aa.chunk.js.map",
+        "static/js/main.c4c7587d.chunk.js",
+        "static/js/main.c4c7587d.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -194,8 +200,8 @@
         1
       ],
       "assets": [
-        "static/js/pages-HomePage.9d339a88.chunk.js",
-        "static/js/pages-HomePage.9d339a88.chunk.js.map"
+        "static/js/pages-HomePage.842015e6.chunk.js",
+        "static/js/pages-HomePage.842015e6.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -205,8 +211,8 @@
         2
       ],
       "assets": [
-        "static/js/pages-ContactPage.ca857b5c.chunk.js",
-        "static/js/pages-ContactPage.ca857b5c.chunk.js.map"
+        "static/js/pages-ContactPage.e7e1f9a0.chunk.js",
+        "static/js/pages-ContactPage.e7e1f9a0.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
