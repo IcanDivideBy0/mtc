@@ -1,6 +1,6 @@
 {
-  "main.js": "/mtc/static/js/main.a094d623.chunk.js",
-  "main.js.map": "/mtc/static/js/main.a094d623.chunk.js.map",
+  "main.js": "/mtc/static/js/main.be46ad85.chunk.js",
+  "main.js.map": "/mtc/static/js/main.be46ad85.chunk.js.map",
   "pages-HomePage.js": "/mtc/static/js/pages-HomePage.b29f6ed4.chunk.js",
   "pages-HomePage.js.map": "/mtc/static/js/pages-HomePage.b29f6ed4.chunk.js.map",
   "pages-TreatmentsPage.js": "/mtc/static/js/pages-TreatmentsPage.22cda502.chunk.js",
@@ -18,7 +18,7 @@
   "static/media/qi-gong.jpg": "/mtc/static/media/qi-gong.40a30204.jpg",
   "static/media/tuina.jpg": "/mtc/static/media/tuina.806bc8cc.jpg",
   "index.html": "/mtc/index.html",
-  "precache-manifest.2295a529431847347454f1210519395c.js": "/mtc/precache-manifest.2295a529431847347454f1210519395c.js",
+  "precache-manifest.99e5c791b20cc4bb5fb50e9084b5dd42.js": "/mtc/precache-manifest.99e5c791b20cc4bb5fb50e9084b5dd42.js",
   "service-worker.js": "/mtc/service-worker.js",
   "loadable-stats.json": "/mtc/loadable-stats.json"
 }
