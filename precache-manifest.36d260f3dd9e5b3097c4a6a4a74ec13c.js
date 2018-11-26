@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0e8031686a9c367ef89f",
-    "url": "/mtc/static/js/runtime~main.0e803168.js"
+    "revision": "5082a052a9f608469bdb",
+    "url": "/mtc/static/js/runtime~main.5082a052.js"
   },
   {
-    "revision": "c6a2f0450f27ef988c81",
-    "url": "/mtc/static/js/main.c6a2f045.chunk.js"
+    "revision": "72ab459099a26b736bef",
+    "url": "/mtc/static/js/main.72ab4590.chunk.js"
   },
   {
     "revision": "22cda502fdf9141eee96",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/mtc/static/media/qi-gong.40a30204.jpg"
   },
   {
-    "revision": "f258dca4bc961815b5b4",
-    "url": "/mtc/static/js/pages-HomePage.f258dca4.chunk.js"
+    "revision": "21adfe5f5a0f3b1083f3",
+    "url": "/mtc/static/js/pages-HomePage.21adfe5f.chunk.js"
   },
   {
     "revision": "70fa339eccc0bda9b31034f9e0f4e04a",
@@ -36,15 +36,15 @@ self.__precacheManifest = [
     "url": "/mtc/static/media/tuina.806bc8cc.jpg"
   },
   {
-    "revision": "036bd3d028dc0aaf5cda7d593c8931cf",
-    "url": "/mtc/static/media/ventouses.036bd3d0.jpg"
+    "revision": "12805406b2d66073e3e307e5bc8f03b8",
+    "url": "/mtc/static/media/ventouses.12805406.jpg"
   },
   {
     "revision": "c22bd09df7f4f8781299",
     "url": "/mtc/static/js/5.c22bd09d.chunk.js"
   },
   {
-    "revision": "cd625a0c0b10908703075fd91dd1f191",
+    "revision": "80d915859f72e10067d396a2ad0d9712",
     "url": "/mtc/index.html"
   }
 ];
