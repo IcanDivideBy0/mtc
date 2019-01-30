@@ -2,13 +2,13 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "2a2c538c28e948b51869",
+  "hash": "0e6e80c22640eb03c895",
   "publicPath": "/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.31420379.chunk.js",
-      "static/js/main.31420379.chunk.js.map"
+      "static/js/main.5508d91e.chunk.js",
+      "static/js/main.5508d91e.chunk.js.map"
     ],
     "pages-HomePage": [
       "static/js/pages-HomePage.b9a78216.chunk.js",
@@ -19,16 +19,16 @@
       "static/js/pages-TreatmentsPage.0c8f6037.chunk.js.map"
     ],
     "pages-PricingPage": [
-      "static/js/pages-PricingPage.0fd4502a.chunk.js",
-      "static/js/pages-PricingPage.0fd4502a.chunk.js.map"
+      "static/js/pages-PricingPage.5021a31e.chunk.js",
+      "static/js/pages-PricingPage.5021a31e.chunk.js.map"
     ],
     "pages-ContactPage": [
       "static/js/pages-ContactPage.9846a57e.chunk.js",
       "static/js/pages-ContactPage.9846a57e.chunk.js.map"
     ],
     "runtime~main": [
-      "static/js/runtime~main.35c57863.js",
-      "static/js/runtime~main.35c57863.js.map"
+      "static/js/runtime~main.10b21aaa.js",
+      "static/js/runtime~main.10b21aaa.js.map"
     ]
   },
   "assets": [
@@ -293,8 +293,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.31420379.chunk.js",
-      "size": 20693,
+      "name": "static/js/main.5508d91e.chunk.js",
+      "size": 20640,
       "chunks": [
         1
       ],
@@ -323,8 +323,8 @@
       ]
     },
     {
-      "name": "static/js/pages-PricingPage.0fd4502a.chunk.js",
-      "size": 5495,
+      "name": "static/js/pages-PricingPage.5021a31e.chunk.js",
+      "size": 5548,
       "chunks": [
         4
       ],
@@ -375,7 +375,7 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.35c57863.js",
+      "name": "static/js/runtime~main.10b21aaa.js",
       "size": 2486,
       "chunks": [
         9
@@ -399,8 +399,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.31420379.chunk.js.map",
-      "size": 57764,
+      "name": "static/js/main.5508d91e.chunk.js.map",
+      "size": 57668,
       "chunks": [
         1
       ],
@@ -420,7 +420,7 @@
     },
     {
       "name": "static/js/pages-TreatmentsPage.0c8f6037.chunk.js.map",
-      "size": 31672,
+      "size": 31472,
       "chunks": [
         3
       ],
@@ -429,8 +429,8 @@
       ]
     },
     {
-      "name": "static/js/pages-PricingPage.0fd4502a.chunk.js.map",
-      "size": 16479,
+      "name": "static/js/pages-PricingPage.5021a31e.chunk.js.map",
+      "size": 16593,
       "chunks": [
         4
       ],
@@ -473,7 +473,7 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.35c57863.js.map",
+      "name": "static/js/runtime~main.10b21aaa.js.map",
       "size": 12431,
       "chunks": [
         9
@@ -492,13 +492,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime~main.35c57863.js",
-        "static/js/runtime~main.35c57863.js.map",
+        "static/js/runtime~main.10b21aaa.js",
+        "static/js/runtime~main.10b21aaa.js.map",
         "static/css/6.c5ac4f3f.chunk.css",
         "static/js/6.ca21dde2.chunk.js",
         "static/js/6.ca21dde2.chunk.js.map",
-        "static/js/main.31420379.chunk.js",
-        "static/js/main.31420379.chunk.js.map"
+        "static/js/main.5508d91e.chunk.js",
+        "static/js/main.5508d91e.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -512,13 +512,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime~main.35c57863.js",
-        "static/js/runtime~main.35c57863.js.map",
+        "static/js/runtime~main.10b21aaa.js",
+        "static/js/runtime~main.10b21aaa.js.map",
         "static/css/6.c5ac4f3f.chunk.css",
         "static/js/6.ca21dde2.chunk.js",
         "static/js/6.ca21dde2.chunk.js.map",
-        "static/js/main.31420379.chunk.js",
-        "static/js/main.31420379.chunk.js.map"
+        "static/js/main.5508d91e.chunk.js",
+        "static/js/main.5508d91e.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -550,8 +550,8 @@
         4
       ],
       "assets": [
-        "static/js/pages-PricingPage.0fd4502a.chunk.js",
-        "static/js/pages-PricingPage.0fd4502a.chunk.js.map"
+        "static/js/pages-PricingPage.5021a31e.chunk.js",
+        "static/js/pages-PricingPage.5021a31e.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
