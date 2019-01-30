@@ -2,120 +2,38 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "e1e4f86b2ccb6c5d83ef",
+  "hash": "bdc7e500cb4720cd69d0",
   "publicPath": "/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.fd19ec6a.chunk.js",
-      "static/js/main.fd19ec6a.chunk.js.map"
+      "static/js/main.546c86d1.chunk.js",
+      "static/js/main.546c86d1.chunk.js.map"
     ],
     "pages-HomePage": [
-      "static/js/pages-HomePage.4d33b744.chunk.js",
-      "static/js/pages-HomePage.4d33b744.chunk.js.map"
+      "static/js/pages-HomePage.2cb0b96f.chunk.js",
+      "static/js/pages-HomePage.2cb0b96f.chunk.js.map"
     ],
     "pages-TreatmentsPage": [
-      "static/js/pages-TreatmentsPage.7ca5585e.chunk.js",
-      "static/js/pages-TreatmentsPage.7ca5585e.chunk.js.map"
+      "static/js/pages-TreatmentsPage.2711bae5.chunk.js",
+      "static/js/pages-TreatmentsPage.2711bae5.chunk.js.map"
     ],
     "pages-PricingPage": [
-      "static/js/pages-PricingPage.3a22830e.chunk.js",
-      "static/js/pages-PricingPage.3a22830e.chunk.js.map"
+      "static/js/pages-PricingPage.145869e5.chunk.js",
+      "static/js/pages-PricingPage.145869e5.chunk.js.map"
     ],
     "pages-ContactPage": [
-      "static/js/pages-ContactPage.e168bc98.chunk.js",
-      "static/js/pages-ContactPage.e168bc98.chunk.js.map"
+      "static/js/pages-ContactPage.16cc19f1.chunk.js",
+      "static/js/pages-ContactPage.16cc19f1.chunk.js.map"
     ],
     "runtime~main": [
-      "static/js/runtime~main.7f1f997a.js",
-      "static/js/runtime~main.7f1f997a.js.map"
+      "static/js/runtime~main.5663b5f6.js",
+      "static/js/runtime~main.5663b5f6.js.map"
     ]
   },
   "assets": [
     {
-      "name": "static/js/5.ec279e85.chunk.js",
-      "size": 218097,
-      "chunks": [
-        5
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/acupuncture.70fa339e.jpg",
-      "size": 90013,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/ventouses.12805406.jpg",
-      "size": 53158,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/qi-gong.40a30204.jpg",
-      "size": 128222,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/main.fd19ec6a.chunk.js",
-      "size": 17843,
-      "chunks": [
-        0
-      ],
-      "chunkNames": [
-        "main"
-      ]
-    },
-    {
-      "name": "static/js/pages-HomePage.4d33b744.chunk.js",
-      "size": 7216,
-      "chunks": [
-        1
-      ],
-      "chunkNames": [
-        "pages-HomePage"
-      ]
-    },
-    {
-      "name": "static/js/pages-TreatmentsPage.7ca5585e.chunk.js",
-      "size": 374,
-      "chunks": [
-        2
-      ],
-      "chunkNames": [
-        "pages-TreatmentsPage"
-      ]
-    },
-    {
-      "name": "static/js/pages-PricingPage.3a22830e.chunk.js",
-      "size": 3676,
-      "chunks": [
-        3
-      ],
-      "chunkNames": [
-        "pages-PricingPage"
-      ]
-    },
-    {
-      "name": "static/js/pages-ContactPage.e168bc98.chunk.js",
-      "size": 368,
-      "chunks": [
-        4
-      ],
-      "chunkNames": [
-        "pages-ContactPage"
-      ]
-    },
-    {
-      "name": "static/media/tuina.806bc8cc.jpg",
-      "size": 39682,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/runtime~main.7f1f997a.js",
+      "name": "static/js/runtime~main.5663b5f6.js",
       "size": 2447,
       "chunks": [
         6
@@ -125,18 +43,14 @@
       ]
     },
     {
-      "name": "static/js/main.fd19ec6a.chunk.js.map",
-      "size": 35184,
-      "chunks": [
-        0
-      ],
-      "chunkNames": [
-        "main"
-      ]
+      "name": "static/media/bg.f9c1490e.svg",
+      "size": 4077,
+      "chunks": [],
+      "chunkNames": []
     },
     {
-      "name": "static/js/pages-HomePage.4d33b744.chunk.js.map",
-      "size": 12291,
+      "name": "static/js/pages-HomePage.2cb0b96f.chunk.js",
+      "size": 364,
       "chunks": [
         1
       ],
@@ -145,8 +59,8 @@
       ]
     },
     {
-      "name": "static/js/pages-TreatmentsPage.7ca5585e.chunk.js.map",
-      "size": 858,
+      "name": "static/js/pages-TreatmentsPage.2711bae5.chunk.js",
+      "size": 376,
       "chunks": [
         2
       ],
@@ -155,8 +69,8 @@
       ]
     },
     {
-      "name": "static/js/pages-PricingPage.3a22830e.chunk.js.map",
-      "size": 12022,
+      "name": "static/js/pages-PricingPage.145869e5.chunk.js",
+      "size": 5952,
       "chunks": [
         3
       ],
@@ -165,8 +79,8 @@
       ]
     },
     {
-      "name": "static/js/pages-ContactPage.e168bc98.chunk.js.map",
-      "size": 843,
+      "name": "static/js/pages-ContactPage.16cc19f1.chunk.js",
+      "size": 370,
       "chunks": [
         4
       ],
@@ -175,15 +89,83 @@
       ]
     },
     {
-      "name": "static/js/5.ec279e85.chunk.js.map",
-      "size": 767975,
+      "name": "static/js/5.1caa36ce.chunk.js",
+      "size": 466848,
       "chunks": [
         5
       ],
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.7f1f997a.js.map",
+      "name": "static/js/main.546c86d1.chunk.js",
+      "size": 16149,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ]
+    },
+    {
+      "name": "static/js/main.546c86d1.chunk.js.map",
+      "size": 43313,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ]
+    },
+    {
+      "name": "static/js/pages-HomePage.2cb0b96f.chunk.js.map",
+      "size": 858,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "pages-HomePage"
+      ]
+    },
+    {
+      "name": "static/js/pages-TreatmentsPage.2711bae5.chunk.js.map",
+      "size": 888,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "pages-TreatmentsPage"
+      ]
+    },
+    {
+      "name": "static/js/pages-PricingPage.145869e5.chunk.js.map",
+      "size": 14908,
+      "chunks": [
+        3
+      ],
+      "chunkNames": [
+        "pages-PricingPage"
+      ]
+    },
+    {
+      "name": "static/js/pages-ContactPage.16cc19f1.chunk.js.map",
+      "size": 873,
+      "chunks": [
+        4
+      ],
+      "chunkNames": [
+        "pages-ContactPage"
+      ]
+    },
+    {
+      "name": "static/js/5.1caa36ce.chunk.js.map",
+      "size": 2248954,
+      "chunks": [
+        5
+      ],
+      "chunkNames": []
+    },
+    {
+      "name": "static/js/runtime~main.5663b5f6.js.map",
       "size": 12319,
       "chunks": [
         6
@@ -202,12 +184,12 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.7f1f997a.js",
-        "static/js/runtime~main.7f1f997a.js.map",
-        "static/js/5.ec279e85.chunk.js",
-        "static/js/5.ec279e85.chunk.js.map",
-        "static/js/main.fd19ec6a.chunk.js",
-        "static/js/main.fd19ec6a.chunk.js.map"
+        "static/js/runtime~main.5663b5f6.js",
+        "static/js/runtime~main.5663b5f6.js.map",
+        "static/js/5.1caa36ce.chunk.js",
+        "static/js/5.1caa36ce.chunk.js.map",
+        "static/js/main.546c86d1.chunk.js",
+        "static/js/main.546c86d1.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -221,12 +203,12 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.7f1f997a.js",
-        "static/js/runtime~main.7f1f997a.js.map",
-        "static/js/5.ec279e85.chunk.js",
-        "static/js/5.ec279e85.chunk.js.map",
-        "static/js/main.fd19ec6a.chunk.js",
-        "static/js/main.fd19ec6a.chunk.js.map"
+        "static/js/runtime~main.5663b5f6.js",
+        "static/js/runtime~main.5663b5f6.js.map",
+        "static/js/5.1caa36ce.chunk.js",
+        "static/js/5.1caa36ce.chunk.js.map",
+        "static/js/main.546c86d1.chunk.js",
+        "static/js/main.546c86d1.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -236,8 +218,8 @@
         1
       ],
       "assets": [
-        "static/js/pages-HomePage.4d33b744.chunk.js",
-        "static/js/pages-HomePage.4d33b744.chunk.js.map"
+        "static/js/pages-HomePage.2cb0b96f.chunk.js",
+        "static/js/pages-HomePage.2cb0b96f.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -247,8 +229,8 @@
         2
       ],
       "assets": [
-        "static/js/pages-TreatmentsPage.7ca5585e.chunk.js",
-        "static/js/pages-TreatmentsPage.7ca5585e.chunk.js.map"
+        "static/js/pages-TreatmentsPage.2711bae5.chunk.js",
+        "static/js/pages-TreatmentsPage.2711bae5.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -258,8 +240,8 @@
         3
       ],
       "assets": [
-        "static/js/pages-PricingPage.3a22830e.chunk.js",
-        "static/js/pages-PricingPage.3a22830e.chunk.js.map"
+        "static/js/pages-PricingPage.145869e5.chunk.js",
+        "static/js/pages-PricingPage.145869e5.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -269,8 +251,8 @@
         4
       ],
       "assets": [
-        "static/js/pages-ContactPage.e168bc98.chunk.js",
-        "static/js/pages-ContactPage.e168bc98.chunk.js.map"
+        "static/js/pages-ContactPage.16cc19f1.chunk.js",
+        "static/js/pages-ContactPage.16cc19f1.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -288,7 +270,7 @@
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 547563,
+          "size": 547599,
           "chunks": [
             0
           ],
