@@ -2,45 +2,41 @@
   "errors": [],
   "warnings": [],
   "version": "4.19.1",
-  "hash": "bdc7e500cb4720cd69d0",
+  "hash": "0ecc2f6ed79f4188b11d",
   "publicPath": "/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.546c86d1.chunk.js",
-      "static/js/main.546c86d1.chunk.js.map"
+      "static/js/main.73740dff.chunk.js",
+      "static/js/main.73740dff.chunk.js.map"
     ],
     "pages-HomePage": [
-      "static/js/pages-HomePage.2cb0b96f.chunk.js",
-      "static/js/pages-HomePage.2cb0b96f.chunk.js.map"
+      "static/js/pages-HomePage.c0b7ef1b.chunk.js",
+      "static/js/pages-HomePage.c0b7ef1b.chunk.js.map"
     ],
     "pages-TreatmentsPage": [
-      "static/js/pages-TreatmentsPage.2711bae5.chunk.js",
-      "static/js/pages-TreatmentsPage.2711bae5.chunk.js.map"
+      "static/js/pages-TreatmentsPage.50ef7511.chunk.js",
+      "static/js/pages-TreatmentsPage.50ef7511.chunk.js.map"
     ],
     "pages-PricingPage": [
-      "static/js/pages-PricingPage.145869e5.chunk.js",
-      "static/js/pages-PricingPage.145869e5.chunk.js.map"
+      "static/js/pages-PricingPage.f193a510.chunk.js",
+      "static/js/pages-PricingPage.f193a510.chunk.js.map"
     ],
     "pages-ContactPage": [
-      "static/js/pages-ContactPage.16cc19f1.chunk.js",
-      "static/js/pages-ContactPage.16cc19f1.chunk.js.map"
+      "static/js/pages-ContactPage.0d7e60ca.chunk.js",
+      "static/js/pages-ContactPage.0d7e60ca.chunk.js.map"
     ],
     "runtime~main": [
-      "static/js/runtime~main.5663b5f6.js",
-      "static/js/runtime~main.5663b5f6.js.map"
+      "static/js/runtime~main.7ffc0068.js",
+      "static/js/runtime~main.7ffc0068.js.map"
     ]
   },
   "assets": [
     {
-      "name": "static/js/runtime~main.5663b5f6.js",
-      "size": 2447,
-      "chunks": [
-        6
-      ],
-      "chunkNames": [
-        "runtime~main"
-      ]
+      "name": "static/media/fira-sans-latin-400italic.92d6bf99.woff",
+      "size": 26368,
+      "chunks": [],
+      "chunkNames": []
     },
     {
       "name": "static/media/bg.f9c1490e.svg",
@@ -49,7 +45,227 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/pages-HomePage.2cb0b96f.chunk.js",
+      "name": "static/media/fira-sans-latin-100.64ef5d92.woff",
+      "size": 24464,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-100italic.7ea7f783.woff2",
+      "size": 20848,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-200.5dfe5bb8.woff2",
+      "size": 20520,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-200italic.50b37736.woff2",
+      "size": 21452,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-300.2a17d205.woff2",
+      "size": 20716,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-300italic.83f9042f.woff2",
+      "size": 21572,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-400.ffc57646.woff2",
+      "size": 21016,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-400italic.ac9431d4.woff2",
+      "size": 21804,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-500.d7b9cfe2.woff2",
+      "size": 20984,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-500italic.de3e8ca7.woff2",
+      "size": 21724,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-600.d169a7ca.woff2",
+      "size": 21852,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-600italic.09c31355.woff2",
+      "size": 22740,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-700.eb271b54.woff2",
+      "size": 22040,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-700italic.a8a81920.woff2",
+      "size": 22812,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-800.3dd887ae.woff2",
+      "size": 22028,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-800italic.6c6352cc.woff2",
+      "size": 23580,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-900.3505dd68.woff2",
+      "size": 21684,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-900italic.cd497598.woff2",
+      "size": 22572,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-100italic.cad78196.woff",
+      "size": 25700,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-200.3759dc28.woff",
+      "size": 25072,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-200italic.ac01e2f3.woff",
+      "size": 26140,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-300.e98236c8.woff",
+      "size": 25172,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-300italic.c583c57a.woff",
+      "size": 26248,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-400.491b04b1.woff",
+      "size": 25472,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-100.8ae7c3eb.woff2",
+      "size": 19960,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-500.86206664.woff",
+      "size": 25468,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-500italic.55380eb6.woff",
+      "size": 26404,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-600.9984ceaf.woff",
+      "size": 26660,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-600italic.a64c67a5.woff",
+      "size": 27692,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-700.4921abc7.woff",
+      "size": 26736,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-700italic.406af0be.woff",
+      "size": 27768,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-800.ea51ab60.woff",
+      "size": 26780,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-800italic.cb8edeb3.woff",
+      "size": 28544,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-900.985a68f9.woff",
+      "size": 26452,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-900italic.961d754a.woff",
+      "size": 27464,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/js/main.73740dff.chunk.js",
+      "size": 18101,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ]
+    },
+    {
+      "name": "static/js/pages-HomePage.c0b7ef1b.chunk.js",
       "size": 364,
       "chunks": [
         1
@@ -59,7 +275,7 @@
       ]
     },
     {
-      "name": "static/js/pages-TreatmentsPage.2711bae5.chunk.js",
+      "name": "static/js/pages-TreatmentsPage.50ef7511.chunk.js",
       "size": 376,
       "chunks": [
         2
@@ -69,7 +285,7 @@
       ]
     },
     {
-      "name": "static/js/pages-PricingPage.145869e5.chunk.js",
+      "name": "static/js/pages-PricingPage.f193a510.chunk.js",
       "size": 5952,
       "chunks": [
         3
@@ -79,7 +295,7 @@
       ]
     },
     {
-      "name": "static/js/pages-ContactPage.16cc19f1.chunk.js",
+      "name": "static/js/pages-ContactPage.0d7e60ca.chunk.js",
       "size": 370,
       "chunks": [
         4
@@ -89,16 +305,40 @@
       ]
     },
     {
-      "name": "static/js/5.1caa36ce.chunk.js",
-      "size": 466848,
+      "name": "static/css/5.f6c56ec4.chunk.css",
+      "size": 5325,
       "chunks": [
         5
       ],
       "chunkNames": []
     },
     {
-      "name": "static/js/main.546c86d1.chunk.js",
-      "size": 16149,
+      "name": "static/js/5.ae60d24c.chunk.js",
+      "size": 475000,
+      "chunks": [
+        5
+      ],
+      "chunkNames": []
+    },
+    {
+      "name": "static/js/runtime~main.7ffc0068.js",
+      "size": 2447,
+      "chunks": [
+        6
+      ],
+      "chunkNames": [
+        "runtime~main"
+      ]
+    },
+    {
+      "name": "static/css/5.f6c56ec4.chunk.css.map",
+      "size": 8904,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/js/main.73740dff.chunk.js.map",
+      "size": 49279,
       "chunks": [
         0
       ],
@@ -107,17 +347,7 @@
       ]
     },
     {
-      "name": "static/js/main.546c86d1.chunk.js.map",
-      "size": 43313,
-      "chunks": [
-        0
-      ],
-      "chunkNames": [
-        "main"
-      ]
-    },
-    {
-      "name": "static/js/pages-HomePage.2cb0b96f.chunk.js.map",
+      "name": "static/js/pages-HomePage.c0b7ef1b.chunk.js.map",
       "size": 858,
       "chunks": [
         1
@@ -127,7 +357,7 @@
       ]
     },
     {
-      "name": "static/js/pages-TreatmentsPage.2711bae5.chunk.js.map",
+      "name": "static/js/pages-TreatmentsPage.50ef7511.chunk.js.map",
       "size": 888,
       "chunks": [
         2
@@ -137,7 +367,7 @@
       ]
     },
     {
-      "name": "static/js/pages-PricingPage.145869e5.chunk.js.map",
+      "name": "static/js/pages-PricingPage.f193a510.chunk.js.map",
       "size": 14908,
       "chunks": [
         3
@@ -147,7 +377,7 @@
       ]
     },
     {
-      "name": "static/js/pages-ContactPage.16cc19f1.chunk.js.map",
+      "name": "static/js/pages-ContactPage.0d7e60ca.chunk.js.map",
       "size": 873,
       "chunks": [
         4
@@ -157,15 +387,15 @@
       ]
     },
     {
-      "name": "static/js/5.1caa36ce.chunk.js.map",
-      "size": 2248954,
+      "name": "static/js/5.ae60d24c.chunk.js.map",
+      "size": 2286181,
       "chunks": [
         5
       ],
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.5663b5f6.js.map",
+      "name": "static/js/runtime~main.7ffc0068.js.map",
       "size": 12319,
       "chunks": [
         6
@@ -184,12 +414,13 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.5663b5f6.js",
-        "static/js/runtime~main.5663b5f6.js.map",
-        "static/js/5.1caa36ce.chunk.js",
-        "static/js/5.1caa36ce.chunk.js.map",
-        "static/js/main.546c86d1.chunk.js",
-        "static/js/main.546c86d1.chunk.js.map"
+        "static/js/runtime~main.7ffc0068.js",
+        "static/js/runtime~main.7ffc0068.js.map",
+        "static/css/5.f6c56ec4.chunk.css",
+        "static/js/5.ae60d24c.chunk.js",
+        "static/js/5.ae60d24c.chunk.js.map",
+        "static/js/main.73740dff.chunk.js",
+        "static/js/main.73740dff.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -203,12 +434,13 @@
         0
       ],
       "assets": [
-        "static/js/runtime~main.5663b5f6.js",
-        "static/js/runtime~main.5663b5f6.js.map",
-        "static/js/5.1caa36ce.chunk.js",
-        "static/js/5.1caa36ce.chunk.js.map",
-        "static/js/main.546c86d1.chunk.js",
-        "static/js/main.546c86d1.chunk.js.map"
+        "static/js/runtime~main.7ffc0068.js",
+        "static/js/runtime~main.7ffc0068.js.map",
+        "static/css/5.f6c56ec4.chunk.css",
+        "static/js/5.ae60d24c.chunk.js",
+        "static/js/5.ae60d24c.chunk.js.map",
+        "static/js/main.73740dff.chunk.js",
+        "static/js/main.73740dff.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -218,8 +450,8 @@
         1
       ],
       "assets": [
-        "static/js/pages-HomePage.2cb0b96f.chunk.js",
-        "static/js/pages-HomePage.2cb0b96f.chunk.js.map"
+        "static/js/pages-HomePage.c0b7ef1b.chunk.js",
+        "static/js/pages-HomePage.c0b7ef1b.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -229,8 +461,8 @@
         2
       ],
       "assets": [
-        "static/js/pages-TreatmentsPage.2711bae5.chunk.js",
-        "static/js/pages-TreatmentsPage.2711bae5.chunk.js.map"
+        "static/js/pages-TreatmentsPage.50ef7511.chunk.js",
+        "static/js/pages-TreatmentsPage.50ef7511.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -240,8 +472,8 @@
         3
       ],
       "assets": [
-        "static/js/pages-PricingPage.145869e5.chunk.js",
-        "static/js/pages-PricingPage.145869e5.chunk.js.map"
+        "static/js/pages-PricingPage.f193a510.chunk.js",
+        "static/js/pages-PricingPage.f193a510.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -251,8 +483,8 @@
         4
       ],
       "assets": [
-        "static/js/pages-ContactPage.16cc19f1.chunk.js",
-        "static/js/pages-ContactPage.16cc19f1.chunk.js.map"
+        "static/js/pages-ContactPage.0d7e60ca.chunk.js",
+        "static/js/pages-ContactPage.0d7e60ca.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -270,7 +502,7 @@
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 547599,
+          "size": 547483,
           "chunks": [
             0
           ],
@@ -306,6 +538,41 @@
       },
       "children": [],
       "name": "HtmlWebpackCompiler"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/",
+      "outputPath": "/home/samuel/Workspace/mtc/build",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/index.js??ref--6-oneOf-4-1!node_modules/postcss-loader/src/index.js??postcss!node_modules/typeface-fira-sans/index.css"
     }
   ]
 }
