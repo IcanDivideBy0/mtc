@@ -26,20 +26,12 @@ const NAV_ITEMS = [
   {
     label: "Soins",
     path: "/soins",
-    items: [
-      { label: "Acupuncture", path: "/soins/acupuncture" },
-      {
-        label: "Tuina",
-        path: "/soins/tuina",
-        items: [
-          { label: "Foo", path: "/soins/tuina/foo" },
-          { label: "Bar", path: "/soins/tuina/bar" },
-          { label: "Baz", path: "/soins/tuina/baz" },
-        ],
-      },
-      { label: "Ventouses", path: "/soins/ventouses" },
-      { label: "Qi-Gong", path: "/soins/qi-gong" },
-    ],
+    // items: [
+    //   { label: "Acupuncture", path: "/soins/acupuncture" },
+    //   { label: "Tuina", path: "/soins/tuina" },
+    //   { label: "Ventouses", path: "/soins/ventouses" },
+    //   { label: "Qi-Gong", path: "/soins/qi-gong" },
+    // ],
   },
   { label: "Tarifs", path: "/tarifs" },
   { label: "Contact", path: "/contact" },

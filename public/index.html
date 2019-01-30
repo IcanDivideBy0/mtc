@@ -6,10 +6,13 @@
   const _appContent = typeof appContent === "undefined" ? "" : appContent;
   const _bodyContent = typeof bodyContent === "undefined" ? "" : bodyContent;
 %>
-<html lang="en" <%= _htmlAttrs %>>
+<html <%= _htmlAttrs %>>
   <head>
     <meta charset="utf-8" />
+
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" sizes="192×192" href="%PUBLIC_URL%/logo-192.png" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"

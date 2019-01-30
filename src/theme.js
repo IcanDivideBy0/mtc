@@ -1,8 +1,6 @@
-import React from "react";
+import { createMuiTheme } from "@material-ui/core";
 
-import { createMuiTheme, Typography } from "@material-ui/core";
-
-export default createMuiTheme({
+const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: ['"Fira Sans"', "sans-serif"],
@@ -40,14 +38,26 @@ export default createMuiTheme({
       spacing: 16,
     },
   },
-  mdxComponents: {
-    wrapper: React.Fragment,
-    h1: props => <Typography variant="h1" gutterBottom {...props} />,
-    h2: props => <Typography variant="h2" gutterBottom {...props} />,
-    h3: props => <Typography variant="h3" gutterBottom {...props} />,
-    h4: props => <Typography variant="h4" gutterBottom {...props} />,
-    h5: props => <Typography variant="h5" gutterBottom {...props} />,
-    h6: props => <Typography variant="h6" gutterBottom {...props} />,
-    p: props => <Typography paragraph {...props} />,
+  images: {
+    genImageSizes: config => {
+      const getSizeQuery = breakpoint =>
+        theme.breakpoints.up(breakpoint).replace("@media ", "");
+
+      return Array.from(theme.breakpoints.keys)
+        .reverse()
+        .reduce((acc, breakpoint) => {
+          const fn = config[breakpoint];
+          if (!fn || typeof fn !== "function") return acc;
+
+          const size = [
+            getSizeQuery(breakpoint),
+            fn(theme.breakpoints.values[breakpoint]),
+          ].join(" ");
+
+          return [...acc, size];
+        }, []);
+    },
   },
 });
+
+export default theme;

@@ -23,9 +23,7 @@ function Footer({ classes }) {
   return (
     <Paper square className={classes.root}>
       <ContentContainer padded>
-        <Typography color="inherit">
-          Hello <code>Footer</code>!
-        </Typography>
+        <Typography color="inherit" />
       </ContentContainer>
     </Paper>
   );

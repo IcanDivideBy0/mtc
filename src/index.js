@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { loadableReady } from "@loadable/component";
 import "typeface-fira-sans";
+import "leaflet/dist/leaflet.css";
 
 import App from "mtc/components/App";
 

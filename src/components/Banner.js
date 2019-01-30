@@ -15,24 +15,41 @@ const styles = theme => ({
       )
     `,
     backgroundRepeat: "repeat, no-repeat",
+    backgroundPosition: "center center, center center",
     color: theme.palette.primary.contrastText,
     display: "flex",
-
-    [theme.breakpoints.up("sm")]: {
-      height: 300,
-    },
+    height: 300,
   },
   content: {
     flexGrow: 1,
+    position: "relative",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+
+    [theme.breakpoints.up("sm")]: {
+      paddingRight: 200,
+    },
+  },
+  logo: {
+    position: "absolute",
+    right: 0,
+    top: "50%",
+    transform: "translateY(-50%)",
+
+    [theme.breakpoints.down("xs")]: {
+      top: 32,
+      transform: "scale(0.5)",
+      transformOrigin: "top right",
+    },
   },
   title: {
+    position: "relative",
     fontWeight: 500,
     textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
   },
   subtitle: {
+    position: "relative",
     fontWeight: 500,
     textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
   },
@@ -40,8 +57,14 @@ const styles = theme => ({
 
 function Banner({ classes }) {
   return (
-    <div className={classes.root}>
+    <header className={classes.root}>
       <ContentContainer padded className={classes.content}>
+        <img
+          src={require("./images/logo.svg")}
+          alt="logo"
+          className={classes.logo}
+        />
+
         <Typography
           variant="h1"
           component="div"
@@ -53,9 +76,9 @@ function Banner({ classes }) {
         </Typography>
 
         <Typography
-          paragraph
+          variant="h3"
+          component="div"
           color="inherit"
-          gutterBottom
           className={classes.subtitle}
         >
           Loïse Holive, votre praticienne en médecine traditionnelle chinoise
@@ -63,7 +86,7 @@ function Banner({ classes }) {
           Acupuncture, Tuina, Ventouses, Qi-Gong, …
         </Typography>
       </ContentContainer>
-    </div>
+    </header>
   );
 }
 

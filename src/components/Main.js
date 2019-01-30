@@ -1,35 +1,29 @@
 import React from "react";
 import { withRouter } from "react-router";
 import { Helmet } from "react-helmet";
-import { withStyles } from "@material-ui/core";
+
+import { withStyles, withTheme, Grid } from "@material-ui/core";
 
 import { compose, getBaseUrl } from "mtc/utils";
+import { ADDRESS, PHONE } from "mtc/constants";
 
 import PageMetaTitle from "mtc/components/PageMetaTitle";
 import PageMetaDescription from "mtc/components/PageMetaDescription";
 import Banner from "mtc/components/Banner";
 import NavBar from "mtc/components/NavBar";
+import ContentContainer from "mtc/components/ContentContainer";
+import SideBar from "mtc/components/SideBar";
 import Router from "mtc/components/Router";
 import Footer from "mtc/components/Footer";
 
 const styles = theme => ({
-  main: {
+  content: {
     position: "relative",
     flexGrow: 1,
   },
 });
 
-const ADDRESS = {
-  street: "1 allée Jean Bart",
-  postalCode: "44000",
-  locality: "Nantes",
-  region: "Pays de la Loire",
-  country: "France",
-};
-
-const PHONE = "+33 6 84 55 64 44";
-
-function Main({ classes, match, location }) {
+function Main({ match, location, classes, theme }) {
   const baseUrl = getBaseUrl();
   const url = baseUrl + location.pathname + location.search;
 
@@ -41,6 +35,8 @@ function Main({ classes, match, location }) {
       <Helmet>
         <html lang="fr" />
         <meta property="og:locale" content="fr" />
+
+        <meta name="theme-color" content={theme.palette.secondary.main} />
 
         <link rel="canonical" href={url} />
         <meta property="og:url" content={url} />
@@ -78,6 +74,30 @@ function Main({ classes, match, location }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            url: baseUrl,
+            name: "Nantes Médecine Chinoise",
+          }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            url: baseUrl,
+            name: "Loïse Holive",
+          }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "http://schema.org/",
             "@type": "LocalBusiness",
             name:
@@ -102,9 +122,17 @@ function Main({ classes, match, location }) {
       <Banner />
       <NavBar />
 
-      <main className={classes.main}>
-        <Router />
-      </main>
+      <ContentContainer padded className={classes.content}>
+        <Grid container spacing={32}>
+          <Grid item xs={12} md={8} component="main">
+            <Router />
+          </Grid>
+
+          <Grid item xs={12} md={4} component="aside">
+            <SideBar />
+          </Grid>
+        </Grid>
+      </ContentContainer>
 
       <Footer />
     </>
@@ -113,5 +141,6 @@ function Main({ classes, match, location }) {
 
 export default compose(
   withRouter,
-  withStyles(styles)
+  withStyles(styles),
+  withTheme()
 )(Main);

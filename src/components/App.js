@@ -32,6 +32,16 @@ const styles = theme => ({
     a: {
       color: theme.palette.secondary.main,
     },
+    strong: {
+      fontWeight: 500,
+    },
+    hr: {
+      border: "none",
+      height: 0,
+      width: "100%",
+      borderBottom: [[1, "solid", theme.palette.text.hint]],
+      margin: [[theme.spacing.unit * 2, 0]],
+    },
   },
 });
 

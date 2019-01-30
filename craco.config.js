@@ -16,7 +16,10 @@ module.exports = {
     ],
   },
   webpack: {
-    plugins: [new LoadablePlugin(), new VisualizerPlugin()],
+    plugins: [
+      new LoadablePlugin(),
+      process.env.NODE_ENV === "production" && new VisualizerPlugin(),
+    ].filter(p => !!p),
     configure: (webpackConfig, { env, paths }) => {
       const { isFound, match } = getLoader(
         webpackConfig,

@@ -139,13 +139,14 @@ async function writeDeployedUrl(uri, fileContent) {
       paths.publicUrl
     );
 
-    if (process.env.DEBUG_ROUTE) {
-      // console.log(html);
-      // continue;
-    }
+    // if (process.env.DEBUG_ROUTE) {
+    //   console.log(html);
+    //   continue;
+    // }
 
-    const fileContent =
-      !!process.env.DEBUG_ROUTE || true ? html : minify(html, minifyOptions);
+    const fileContent = !!process.env.DEBUG_ROUTE
+      ? html
+      : minify(html, minifyOptions);
 
     const promises = [];
     promises.push(writeDeployedUrl(route.url, fileContent));
