@@ -1,11 +1,11 @@
 import React from "react";
 
-import PageContent from "components/PageContent";
+import ContentContainer from "mtc/components/ContentContainer";
 
 export default function TreatmentsPage() {
   return (
-    <PageContent padded>
+    <ContentContainer padded>
       Hello <code>TreatmentsPage</code>!
-    </PageContent>
+    </ContentContainer>
   );
 }

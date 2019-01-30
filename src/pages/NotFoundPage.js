@@ -1,7 +1,16 @@
 import React from "react";
 
-import PageContent from "components/PageContent";
+import { Typography } from "@material-ui/core";
 
-export default function NotFoundPage() {
-  return <PageContent padded>Not found!</PageContent>;
+import ContentContainer from "mtc/components/ContentContainer";
+import Message from "mtc/components/Message";
+
+export default function ContactPage() {
+  return (
+    <ContentContainer padded>
+      <Message type="error">
+        <Typography color="inherit">Page introuvable.</Typography>
+      </Message>
+    </ContentContainer>
+  );
 }

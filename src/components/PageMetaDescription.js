@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 
-export default function PageDescription({ description }) {
+function PageMetaDescription({ description }) {
   return (
     <Helmet>
       <meta name="description" content={description} />
@@ -11,6 +11,8 @@ export default function PageDescription({ description }) {
   );
 }
 
-PageDescription.propTypes = {
-  description: PropTypes.string.isRequired,
+PageMetaDescription.propTypes = {
+  description: PropTypes.string,
 };
+
+export default PageMetaDescription;

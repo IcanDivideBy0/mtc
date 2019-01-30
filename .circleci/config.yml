@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore Build Folder
+          key: build-folder
+      - run: yarn install
+      - run: yarn lint
+      - deploy:
+          command: |
+            if [ "$CIRCLE_BRANCH" == "master" ]; then
+              git config --global user.name "Circle CI"
+              git config --global user.email "circle-ci@syos.co"
+              yarn deploy
+            fi
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - save_cache:
+          name: Save Build Folder
+          key: build-folder
+          paths:
+            - ./build

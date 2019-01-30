@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import LazyLoad from "react-lazyload";
 
-export default function Image({ lazy, lazyHeight, ...props }) {
-  // eslint-disable-next-line jsx-a11y/alt-text
-  const img = <img {...props} />;
+function Image({ lazy, lazyHeight, alt, src, ...props }) {
+  const img = <img src={src} alt={alt} {...props} />;
 
   if (!lazy) return img;
+  if (src.indexOf("data:") === 0) return img;
 
   return (
     <>
-      <LazyLoad height={lazyHeight}>{img}</LazyLoad>
+      <LazyLoad height={lazyHeight || 0}>{img}</LazyLoad>
       <noscript>{img}</noscript>
     </>
   );
@@ -18,12 +18,13 @@ export default function Image({ lazy, lazyHeight, ...props }) {
 
 Image.propTypes = {
   lazy: PropTypes.bool,
-  lazyHeight: PropTypes.number,
-  alt: PropTypes.string.isRequired,
+  lazyHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-Image.GlobalStyle = () => (
+Image.GlobalStyles = () => (
   <noscript>
     <style>{".lazyload-placeholder { display: none; }"}</style>
   </noscript>
 );
+
+export default Image;

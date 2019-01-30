@@ -1,4 +1,5 @@
 process.env.NODE_ENV = "production";
+process.env.REACT_APP_SSR_HYDRATE = true;
 process.env.REACT_APP_SSR = true;
 
 const path = require("path");
@@ -9,6 +10,8 @@ const rename = promisify(fs.rename);
 const stat = promisify(fs.stat);
 const writeFile = promisify(fs.writeFile);
 const mkdirp = promisify(require("mkdirp"));
+const sm = require("sitemap");
+const chalk = require("chalk");
 
 const paths = require("react-scripts/config/paths");
 const getClientEnvironment = require("react-scripts/config/env");
@@ -26,6 +29,7 @@ Object.assign(process.env, getClientEnvironment(publicUrl).raw, {
 require("module").Module._initPaths();
 require("@babel/polyfill");
 require("@babel/register");
+global.fetch = require("node-fetch");
 
 require("./loaders");
 const { render } = require("./renderer");
@@ -65,28 +69,92 @@ async function move(from, to) {
 }
 
 /**
+ * Write a file to the build folder
+ */
+
+async function writeDeployedFile(fileName, fileContent) {
+  const filePath = path.join(paths.appBuild, fileName);
+
+  console.log(chalk`  {grey ${fileName}}`);
+
+  await mkdirp(path.dirname(filePath));
+  await writeFile(filePath, fileContent);
+}
+
+/**
+ * Write an url to corresponding deployed files
+ */
+
+async function writeDeployedUrl(uri, fileContent) {
+  const promises = [];
+
+  uri = uri.replace(/^\//, "");
+  if (uri) promises.push(writeDeployedFile(`${uri}.html`, fileContent));
+
+  const indexFilePath = path.join(uri, "index.html");
+  promises.push(writeDeployedFile(indexFilePath, fileContent));
+
+  return Promise.all(promises);
+}
+
+/**
  * Main
  */
 
 (async () => {
   await move("index.html", "200.html");
+  const routes = process.env.DEBUG_ROUTE
+    ? process.env.DEBUG_ROUTE.split(";")
+        .filter(v => !!v)
+        .map(url => ({ url }))
+    : await getRoutes();
 
-  const routes = await getRoutes();
+  /**
+   * Sitemap
+   */
+
+  console.log(chalk`Generating {bold sitemap.xml}`);
+  const sitemap = await sm.createSitemap({
+    hostname: paths.publicUrl,
+    cacheTime: 600000, // 600 sec - cache purge period
+    urls: routes
+      // sm module mutates routes objects, make a copy of these objects…
+      .map(route => ({ ...route }))
+      // remove unwanted routes
+      .filter(route => !!route.priority),
+  });
+  const xml = await promisify(sitemap.toXML.bind(sitemap))();
+  await writeDeployedFile("sitemap.xml", xml);
+
+  /**
+   * Routes
+   */
 
   for (const route of routes) {
+    console.log(chalk`Generating {bold ${route.url}}`);
+
     const templateVars = await render(route.url);
     const html = template(templateVars).replace(
       /%PUBLIC_URL%/g,
       paths.publicUrl
     );
 
-    const fileContent = minify(html, minifyOptions);
-    const fileName =
-      route.url + (route.url.endsWith("/") ? "index.html" : ".html");
-    const filePath = path.join(paths.appBuild, fileName);
+    if (process.env.DEBUG_ROUTE) {
+      // console.log(html);
+      // continue;
+    }
 
-    await mkdirp(path.dirname(filePath));
-    await writeFile(filePath, fileContent);
+    const fileContent =
+      !!process.env.DEBUG_ROUTE || true ? html : minify(html, minifyOptions);
+
+    const promises = [];
+    promises.push(writeDeployedUrl(route.url, fileContent));
+
+    for (const alias of route.aliases || []) {
+      promises.push(writeDeployedUrl(alias, fileContent));
+    }
+
+    await Promise.all(promises);
   }
 })().catch(err => {
   console.error(err);

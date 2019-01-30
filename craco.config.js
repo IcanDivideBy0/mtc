@@ -6,16 +6,17 @@ const {
 } = require("@craco/craco");
 
 const LoadablePlugin = require("@loadable/webpack-plugin");
+const VisualizerPlugin = require("webpack-visualizer-plugin");
 
 module.exports = {
   babel: {
     plugins: [
       "@loadable/babel-plugin",
-      ["module-resolver", { root: ["./src"] }],
+      ["module-resolver", { alias: { mtc: "./src" } }],
     ],
   },
   webpack: {
-    plugins: [new LoadablePlugin()],
+    plugins: [new LoadablePlugin(), new VisualizerPlugin()],
     configure: (webpackConfig, { env, paths }) => {
       const { isFound, match } = getLoader(
         webpackConfig,
@@ -24,9 +25,9 @@ module.exports = {
 
       if (!isFound) {
         throwUnexpectedConfigError({
-          packageName: "craco-mdx",
-          githubRepo: "IcanDivideBy0/craco-mdx",
-          message: "Can’t find babel-loader in the webpack config!",
+          packageName: "mdx-js",
+          githubRepo: "@mdx-js/loader",
+          message: "[craco] Can’t find babel-loader in the webpack config!",
         });
       }
 

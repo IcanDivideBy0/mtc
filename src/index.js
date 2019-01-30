@@ -1,30 +1,20 @@
-// import "@babel/polyfill";
-// import "core-js/fn/object/assign";
-// import "core-js/fn/object/entries";
-// import "core-js/es6/promise";
+import "./polyfills";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { loadableReady } from "@loadable/component";
 import { BrowserRouter } from "react-router-dom";
+import { loadableReady } from "@loadable/component";
+import "typeface-fira-sans";
 
-// import * as serviceWorker from "./serviceWorker";
+import App from "mtc/components/App";
 
-import app from "./app";
+(async () => {
+  const app = <App routerComponent={BrowserRouter} />;
+  const root = document.getElementById("root");
 
-const routerApp = (
-  <BrowserRouter basename={process.env.PUBLIC_URL}>{app}</BrowserRouter>
-);
-
-const root = document.getElementById("root");
-
-if (window.REACT_APP_SSR) {
-  loadableReady(() => ReactDOM.hydrate(routerApp, root));
-} else {
-  ReactDOM.render(routerApp, root);
-}
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+  if (window.REACT_APP_SSR_HYDRATE) {
+    loadableReady(() => ReactDOM.hydrate(app, root));
+  } else {
+    ReactDOM.render(app, root);
+  }
+})();

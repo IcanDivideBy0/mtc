@@ -1,112 +1,53 @@
-import { createGlobalStyle, css } from "styled-components";
+import React from "react";
 
-const devicesSizes = {
-  small: 576,
-  medium: 768,
-  large: 992,
-  xLarge: 1200,
-};
+import { createMuiTheme, Typography } from "@material-ui/core";
 
-const devices = Object.entries(devicesSizes).reduce(
-  (acc, [deviceName, deviceSize]) => ({
-    ...acc,
-    [deviceName]: {
-      size: deviceSize,
-      query: `(min-width: ${deviceSize}px)`,
+export default createMuiTheme({
+  typography: {
+    useNextVariants: true,
+    fontFamily: ['"Fira Sans"', "sans-serif"],
+    fontSize: 16,
+    body1: { fontWeight: 300 },
+    body2: { fontWeight: 300 },
+    h1: { fontWeight: 300, fontSize: "2rem" },
+    h2: { fontWeight: 300, fontSize: "1.5rem" },
+    h3: { fontWeight: 300, fontSize: "1.17rem" },
+    h4: { fontWeight: 300, fontSize: "1rem" },
+    h5: { fontWeight: 300, fontSize: "0.83rem" },
+    h6: { fontWeight: 300, fontSize: "0.67rem" },
+  },
+  palette: {
+    primary: {
+      main: "#91c149",
+      light: "#9cc94c",
+      dark: "#4d9037",
+      contrastText: "#fff",
     },
-  }),
-  {}
-);
-
-export default {
-  gridGutter: 16,
-  devices,
-  clearfix: css`
-    &::before,
-    &::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-  `,
-  colors: {
-    body: {
-      bg: "#fff",
-      text: "#353535",
+    secondary: {
+      main: "#454648",
+      light: "#4a4b4d",
+      dark: "#252324",
+      contrastText: "#fff",
     },
-    titles: {
-      text: "#F77518",
-    },
-    appBar: {
-      bg: "#A2C5AC",
-      text: "#fff",
-      highlight: "#F77518",
-    },
-    appBanner: {
-      bg: "#DEF7F1",
-      text: "#353535",
-      title: "#353535",
-      subtitle: "#F77518",
-    },
-    appMenu: {
-      bg: "#A2C5AC",
-      text: "#fff",
-      highlight: "#F77518",
-    },
-    appFooter: {
-      bg: "#353535",
-      text: "#fff",
+    text: { main: "#ff0000" },
+    info: { main: "#00d3ee", contrastText: "#fff" },
+    success: { main: "#5cb860", contrastText: "#fff" },
+    warning: { main: "#ffa21a", contrastText: "#fff" },
+    error: { main: "#f55a4e", contrastText: "#fff" },
+  },
+  props: {
+    MuiGrid: {
+      spacing: 16,
     },
   },
-  fonts: {
-    base: "'Alegreya Sans', sans-serif",
-    alternate: "'Merienda', cursive",
+  mdxComponents: {
+    wrapper: React.Fragment,
+    h1: props => <Typography variant="h1" gutterBottom {...props} />,
+    h2: props => <Typography variant="h2" gutterBottom {...props} />,
+    h3: props => <Typography variant="h3" gutterBottom {...props} />,
+    h4: props => <Typography variant="h4" gutterBottom {...props} />,
+    h5: props => <Typography variant="h5" gutterBottom {...props} />,
+    h6: props => <Typography variant="h6" gutterBottom {...props} />,
+    p: props => <Typography paragraph {...props} />,
   },
-};
-
-export const ThemeGlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Merienda:700');
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-    font-family: ${({ theme }) => theme.fonts.base};
-    font-size: larger;
-    color: ${({ theme }) => theme.colors.body.text};
-    background-color: ${({ theme }) => theme.colors.body.bg};
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: ${({ theme }) => theme.colors.titles.text};
-    font-family: ${({ theme }) => theme.fonts.alternate};
-    font-weight: 700;
-  }
-
-  h1 { font-size: 1.4em; }
-  h2 { font-size: 1.1em; }
-  h3 { font-size: 1em; }
-
-  #root {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-export function imageSizes(config, fallback) {
-  return Object.entries(devices)
-    .reduce((acc, [deviceName, { size, query }]) => {
-      const fn = config[deviceName];
-      if (!fn || typeof fn !== "function") return acc;
-
-      return [...acc, `${query} ${fn(size)}`];
-    }, [])
-    .concat([fallback]);
-}
+});

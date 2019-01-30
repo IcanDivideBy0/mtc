@@ -2,30 +2,41 @@ import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { ChunkExtractor } from "@loadable/server";
 import { Helmet } from "react-helmet";
-import { ServerStyleSheet } from "styled-components";
+import { SheetsRegistry } from "jss";
+import { createGenerateClassName } from "@material-ui/core/styles";
 import { StaticRouter } from "react-router";
-import compose from "lodash.flowright";
+import flowRight from "lodash.flowright";
 
-import app from "app";
+import App from "mtc/components/App";
 
 const path = require("path");
 const statsFile = path.resolve(__dirname, "../build/loadable-stats.json");
 
-export async function render(url) {
+export async function render(location) {
+  // loadable-components
   const chunkExtractor = new ChunkExtractor({ statsFile });
-  const sheet = new ServerStyleSheet();
 
-  const html = compose(
+  // material-ui
+  const generateClassName = createGenerateClassName({
+    productionPrefix: "jss-ssr",
+  });
+  const sheetsRegistry = new SheetsRegistry();
+  const sheetsManager = new Map();
+
+  const html = await flowRight(
     ReactDOMServer.renderToString,
-    sheet.collectStyles.bind(sheet),
     chunkExtractor.collectChunks.bind(chunkExtractor)
   )(
-    <StaticRouter basename={process.env.PUBLIC_URL} location={url} context={{}}>
-      {app}
-    </StaticRouter>
+    <App
+      muiThemeProviderProps={{ sheetsManager }}
+      jssProviderProps={{ registry: sheetsRegistry, generateClassName }}
+      routerComponent={StaticRouter}
+      routerProps={{ location, context: {} }}
+    />
   );
 
   const helmet = Helmet.renderStatic();
+  const muiCss = `<style id="jss-ssr">${sheetsRegistry.toString()}</style>`;
 
   return {
     htmlAttrs: helmet.htmlAttributes.toString(),
@@ -38,7 +49,7 @@ export async function render(url) {
       helmet.style.toString(),
       chunkExtractor.getLinkTags(),
       chunkExtractor.getStyleTags(),
-      sheet.getStyleTags(),
+      muiCss,
     ].join(""),
     bodyAttrs: helmet.bodyAttributes.toString(),
     appContent: html,

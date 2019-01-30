@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 
-export default function PageTitle({ title }) {
+function PageMetaTitle({ title }) {
   return (
     <Helmet>
       <title>{title}</title>
@@ -11,6 +11,8 @@ export default function PageTitle({ title }) {
   );
 }
 
-PageTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+PageMetaTitle.propTypes = {
+  title: PropTypes.string,
 };
+
+export default PageMetaTitle;

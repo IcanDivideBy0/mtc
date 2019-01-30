@@ -6,7 +6,7 @@
   const _appContent = typeof appContent === "undefined" ? "" : appContent;
   const _bodyContent = typeof bodyContent === "undefined" ? "" : bodyContent;
 %>
-<html lang="fr" <%= _htmlAttrs %>>
+<html lang="en" <%= _htmlAttrs %>>
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -14,16 +14,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Nantes Médecine Chinoise</title>
 
     <script type="text/javascript">
-      window.REACT_APP_SSR = <%= !!process.env.REACT_APP_SSR %>;
+      window.REACT_APP_SSR_HYDRATE = <%= !!process.env.REACT_APP_SSR_HYDRATE %>;
     </script>
 
     <!-- Start Single Page Apps for GitHub Pages -->

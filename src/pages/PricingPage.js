@@ -1,12 +1,16 @@
 import React from "react";
 
-import PageContent from "components/PageContent";
+import { withTheme } from "@material-ui/core";
+
+import ContentContainer from "mtc/components/ContentContainer";
 import Content from "./PricingPage.mdx";
 
-export default function PricingPage() {
+function PricingPage({ theme }) {
   return (
-    <PageContent padded>
-      <Content />
-    </PageContent>
+    <ContentContainer padded>
+      <Content components={theme.mdxComponents} />
+    </ContentContainer>
   );
 }
+
+export default withTheme()(PricingPage);
