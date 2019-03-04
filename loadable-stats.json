@@ -1,14 +1,16 @@
 {
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    "./src/pages/ContactPage.js\nModule Warning (from ./node_modules/eslint-loader/index.js):\n\n  \u001b[1mLine 2:10:\u001b[22m  'FORM_ERROR' is defined but never used  \u001b[33m\u001b[4mno-unused-vars\u001b[24m\u001b[39m\n\n\n @ ./src/components/Router.js 1:3177-3220 1:2863-2936\n @ ./src/components/Main.js\n @ ./src/components/App.js\n @ ./src/index.js\n @ multi ./src/index.js"
+  ],
   "version": "4.19.1",
-  "hash": "0e6e80c22640eb03c895",
+  "hash": "458edd58011afc74007e",
   "publicPath": "/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.5508d91e.chunk.js",
-      "static/js/main.5508d91e.chunk.js.map"
+      "static/js/main.902d7973.chunk.js",
+      "static/js/main.902d7973.chunk.js.map"
     ],
     "pages-HomePage": [
       "static/js/pages-HomePage.b9a78216.chunk.js",
@@ -23,30 +25,24 @@
       "static/js/pages-PricingPage.5021a31e.chunk.js.map"
     ],
     "pages-ContactPage": [
-      "static/js/pages-ContactPage.9846a57e.chunk.js",
-      "static/js/pages-ContactPage.9846a57e.chunk.js.map"
+      "static/js/pages-ContactPage.f14eb234.chunk.js",
+      "static/js/pages-ContactPage.f14eb234.chunk.js.map"
     ],
     "runtime~main": [
-      "static/js/runtime~main.10b21aaa.js",
-      "static/js/runtime~main.10b21aaa.js.map"
+      "static/js/runtime~main.378ef097.js",
+      "static/js/runtime~main.378ef097.js.map"
     ]
   },
   "assets": [
     {
-      "name": "static/media/fira-sans-latin-800.ea51ab60.woff",
-      "size": 26780,
+      "name": "static/media/fira-sans-latin-700italic.406af0be.woff",
+      "size": 27768,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "static/media/bg.f9c1490e.svg",
-      "size": 4077,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-100.64ef5d92.woff",
-      "size": 24464,
+      "name": "static/media/bg.db7259d6.svg",
+      "size": 4129,
       "chunks": [],
       "chunkNames": []
     },
@@ -77,6 +73,12 @@
     {
       "name": "static/media/fira-sans-latin-300italic.83f9042f.woff2",
       "size": 21572,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-100.8ae7c3eb.woff2",
+      "size": 19960,
       "chunks": [],
       "chunkNames": []
     },
@@ -143,6 +145,12 @@
     {
       "name": "static/media/fira-sans-latin-900.3505dd68.woff2",
       "size": 21684,
+      "chunks": [],
+      "chunkNames": []
+    },
+    {
+      "name": "static/media/fira-sans-latin-900italic.cd497598.woff2",
+      "size": 22572,
       "chunks": [],
       "chunkNames": []
     },
@@ -219,14 +227,14 @@
       "chunkNames": []
     },
     {
-      "name": "static/media/fira-sans-latin-700italic.406af0be.woff",
-      "size": 27768,
+      "name": "static/media/fira-sans-latin-100.64ef5d92.woff",
+      "size": 24464,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "static/media/fira-sans-latin-100.8ae7c3eb.woff2",
-      "size": 19960,
+      "name": "static/media/fira-sans-latin-800.ea51ab60.woff",
+      "size": 26780,
       "chunks": [],
       "chunkNames": []
     },
@@ -239,12 +247,6 @@
     {
       "name": "static/media/fira-sans-latin-900.985a68f9.woff",
       "size": 26452,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-900italic.cd497598.woff2",
-      "size": 22572,
       "chunks": [],
       "chunkNames": []
     },
@@ -293,8 +295,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.5508d91e.chunk.js",
-      "size": 20640,
+      "name": "static/js/main.902d7973.chunk.js",
+      "size": 21135,
       "chunks": [
         1
       ],
@@ -333,8 +335,8 @@
       ]
     },
     {
-      "name": "static/js/pages-ContactPage.9846a57e.chunk.js",
-      "size": 3089,
+      "name": "static/js/pages-ContactPage.f14eb234.chunk.js",
+      "size": 2791,
       "chunks": [
         5
       ],
@@ -367,15 +369,15 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/8.fc5cfd43.chunk.js",
-      "size": 22061,
+      "name": "static/js/8.4e0c5397.chunk.js",
+      "size": 22047,
       "chunks": [
         8
       ],
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.10b21aaa.js",
+      "name": "static/js/runtime~main.378ef097.js",
       "size": 2486,
       "chunks": [
         9
@@ -399,8 +401,8 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/main.5508d91e.chunk.js.map",
-      "size": 57668,
+      "name": "static/js/main.902d7973.chunk.js.map",
+      "size": 58843,
       "chunks": [
         1
       ],
@@ -439,8 +441,8 @@
       ]
     },
     {
-      "name": "static/js/pages-ContactPage.9846a57e.chunk.js.map",
-      "size": 8904,
+      "name": "static/js/pages-ContactPage.f14eb234.chunk.js.map",
+      "size": 8776,
       "chunks": [
         5
       ],
@@ -465,15 +467,15 @@
       "chunkNames": []
     },
     {
-      "name": "static/js/8.fc5cfd43.chunk.js.map",
-      "size": 97511,
+      "name": "static/js/8.4e0c5397.chunk.js.map",
+      "size": 97458,
       "chunks": [
         8
       ],
       "chunkNames": []
     },
     {
-      "name": "static/js/runtime~main.10b21aaa.js.map",
+      "name": "static/js/runtime~main.378ef097.js.map",
       "size": 12431,
       "chunks": [
         9
@@ -492,13 +494,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime~main.10b21aaa.js",
-        "static/js/runtime~main.10b21aaa.js.map",
+        "static/js/runtime~main.378ef097.js",
+        "static/js/runtime~main.378ef097.js.map",
         "static/css/6.c5ac4f3f.chunk.css",
         "static/js/6.ca21dde2.chunk.js",
         "static/js/6.ca21dde2.chunk.js.map",
-        "static/js/main.5508d91e.chunk.js",
-        "static/js/main.5508d91e.chunk.js.map"
+        "static/js/main.902d7973.chunk.js",
+        "static/js/main.902d7973.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -512,13 +514,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime~main.10b21aaa.js",
-        "static/js/runtime~main.10b21aaa.js.map",
+        "static/js/runtime~main.378ef097.js",
+        "static/js/runtime~main.378ef097.js.map",
         "static/css/6.c5ac4f3f.chunk.css",
         "static/js/6.ca21dde2.chunk.js",
         "static/js/6.ca21dde2.chunk.js.map",
-        "static/js/main.5508d91e.chunk.js",
-        "static/js/main.5508d91e.chunk.js.map"
+        "static/js/main.902d7973.chunk.js",
+        "static/js/main.902d7973.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -562,10 +564,10 @@
         5
       ],
       "assets": [
-        "static/js/8.fc5cfd43.chunk.js",
-        "static/js/8.fc5cfd43.chunk.js.map",
-        "static/js/pages-ContactPage.9846a57e.chunk.js",
-        "static/js/pages-ContactPage.9846a57e.chunk.js.map"
+        "static/js/8.4e0c5397.chunk.js",
+        "static/js/8.4e0c5397.chunk.js.map",
+        "static/js/pages-ContactPage.f14eb234.chunk.js",
+        "static/js/pages-ContactPage.f14eb234.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -583,7 +585,7 @@
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 547676,
+          "size": 547625,
           "chunks": [
             0
           ],
