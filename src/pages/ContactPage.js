@@ -1,5 +1,5 @@
 import React from "react";
-import { FORM_ERROR } from "final-form";
+// import { FORM_ERROR } from "final-form";
 import { Form } from "react-final-form";
 
 import { Grid, Typography } from "@material-ui/core";
@@ -14,21 +14,32 @@ export default function ContactPage({ classes }) {
   return (
     <Form
       onSubmit={async values => {
-        try {
-          const formData = new FormData();
-          formData.append("name", values.name);
-          formData.append("email", values.email);
-          formData.append("message", values.message);
-
-          const url = `https://formspree.io/${EMAIL}`;
-          await fetch(url, { method: "POST", body: formData });
-        } catch (error) {
-          return { [FORM_ERROR]: error.toString() };
-        }
+        // try {
+        //   const formData = new FormData();
+        //   formData.append("name", values.name);
+        //   formData.append("email", values.email);
+        //   formData.append("message", values.message);
+        //   const url = `https://formspree.io/${EMAIL}`;
+        //   await fetch(url, {
+        //     method: "POST",
+        //     headers: {
+        //       "Content-Type":
+        //         "application/x-www-form-urlencoded ; charset=UTF-8",
+        //     },
+        //     body: formData,
+        //   });
+        // } catch (error) {
+        //   return { [FORM_ERROR]: error.toString() };
+        // }
       }}
     >
       {({ handleSubmit, submitting, submitError, submitSucceeded }) => (
-        <form onSubmit={handleSubmit} noValidate>
+        <form
+          // onSubmit={handleSubmit}
+          noValidate
+          action={`https://formspree.io/${EMAIL}`}
+          method="POST"
+        >
           <Grid container spacing={16} justify="flex-end">
             <Grid item xs={12}>
               <Typography variant="h1">Contact</Typography>
