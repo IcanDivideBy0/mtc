@@ -1,488 +1,768 @@
 {
   "errors": [],
-  "warnings": [
-    "./src/pages/ContactPage.js\nModule Warning (from ./node_modules/eslint-loader/index.js):\n\n  \u001b[1mLine 2:10:\u001b[22m  'FORM_ERROR' is defined but never used  \u001b[33m\u001b[4mno-unused-vars\u001b[24m\u001b[39m\n\n\n @ ./src/components/Router.js 1:3177-3220 1:2863-2936\n @ ./src/components/Main.js\n @ ./src/components/App.js\n @ ./src/index.js\n @ multi ./src/index.js"
-  ],
-  "version": "4.19.1",
-  "hash": "458edd58011afc74007e",
+  "warnings": [],
+  "version": "4.41.5",
+  "hash": "11d0f3cfec7b455854c8",
   "publicPath": "/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.902d7973.chunk.js",
-      "static/js/main.902d7973.chunk.js.map"
+      "static/js/main.81f2ae71.chunk.js",
+      "static/js/main.81f2ae71.chunk.js.map"
     ],
-    "pages-HomePage": [
-      "static/js/pages-HomePage.b9a78216.chunk.js",
-      "static/js/pages-HomePage.b9a78216.chunk.js.map"
+    "pages-Contact": [
+      "static/js/pages-Contact.647dccb4.chunk.js",
+      "static/js/pages-Contact.647dccb4.chunk.js.map"
     ],
-    "pages-TreatmentsPage": [
-      "static/js/pages-TreatmentsPage.0c8f6037.chunk.js",
-      "static/js/pages-TreatmentsPage.0c8f6037.chunk.js.map"
+    "pages-Faq-mdx": [
+      "static/js/pages-Faq-mdx.9c6f0663.chunk.js",
+      "static/js/pages-Faq-mdx.9c6f0663.chunk.js.map"
     ],
-    "pages-PricingPage": [
-      "static/js/pages-PricingPage.5021a31e.chunk.js",
-      "static/js/pages-PricingPage.5021a31e.chunk.js.map"
+    "pages-Home": [
+      "static/js/pages-Home.16845a95.chunk.js",
+      "static/js/pages-Home.16845a95.chunk.js.map"
     ],
-    "pages-ContactPage": [
-      "static/js/pages-ContactPage.f14eb234.chunk.js",
-      "static/js/pages-ContactPage.f14eb234.chunk.js.map"
+    "pages-MaPratique-mdx": [
+      "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js",
+      "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js.map"
     ],
-    "runtime~main": [
-      "static/js/runtime~main.378ef097.js",
-      "static/js/runtime~main.378ef097.js.map"
+    "pages-Preparatifs-mdx": [
+      "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js",
+      "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js.map"
+    ],
+    "pages-Soins-mdx": [
+      "static/js/pages-Soins-mdx.e00b2f9a.chunk.js",
+      "static/js/pages-Soins-mdx.e00b2f9a.chunk.js.map"
+    ],
+    "pages-Tarifs-mdx": [
+      "static/js/pages-Tarifs-mdx.c450e22c.chunk.js",
+      "static/js/pages-Tarifs-mdx.c450e22c.chunk.js.map"
+    ],
+    "runtime-main": [
+      "static/js/runtime-main.d0bdd30a.js",
+      "static/js/runtime-main.d0bdd30a.js.map"
     ]
   },
   "assets": [
     {
-      "name": "static/media/fira-sans-latin-700italic.406af0be.woff",
-      "size": 27768,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/css/10.0defd3aa.chunk.css",
+      "size": 20258,
+      "chunks": [
+        10
+      ],
+      "chunkNames": [],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/bg.db7259d6.svg",
-      "size": 4129,
+      "name": "static/css/10.0defd3aa.chunk.css.map",
+      "size": 28431,
       "chunks": [],
-      "chunkNames": []
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-100italic.7ea7f783.woff2",
-      "size": 20848,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/0.0deea020.chunk.js",
+      "size": 142779,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-200.5dfe5bb8.woff2",
-      "size": 20520,
+      "name": "static/js/0.0deea020.chunk.js.LICENSE.txt",
+      "size": 152,
       "chunks": [],
-      "chunkNames": []
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-200italic.50b37736.woff2",
-      "size": 21452,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/0.0deea020.chunk.js.map",
+      "size": 660969,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-300.2a17d205.woff2",
-      "size": 20716,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/10.86298f48.chunk.js",
+      "size": 358556,
+      "chunks": [
+        10
+      ],
+      "chunkNames": [],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-300italic.83f9042f.woff2",
-      "size": 21572,
+      "name": "static/js/10.86298f48.chunk.js.LICENSE.txt",
+      "size": 2466,
       "chunks": [],
-      "chunkNames": []
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-100.8ae7c3eb.woff2",
-      "size": 19960,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/10.86298f48.chunk.js.map",
+      "size": 1397004,
+      "chunks": [
+        10
+      ],
+      "chunkNames": [],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-400.ffc57646.woff2",
-      "size": 21016,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/11.4de8b5b0.chunk.js",
+      "size": 56694,
+      "chunks": [
+        11
+      ],
+      "chunkNames": [],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-400italic.ac9431d4.woff2",
-      "size": 21804,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/11.4de8b5b0.chunk.js.map",
+      "size": 301314,
+      "chunks": [
+        11
+      ],
+      "chunkNames": [],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-500.d7b9cfe2.woff2",
-      "size": 20984,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/12.63261162.chunk.js",
+      "size": 29984,
+      "chunks": [
+        12
+      ],
+      "chunkNames": [],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-500italic.de3e8ca7.woff2",
-      "size": 21724,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/12.63261162.chunk.js.map",
+      "size": 106843,
+      "chunks": [
+        12
+      ],
+      "chunkNames": [],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-600.d169a7ca.woff2",
-      "size": 21852,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/main.81f2ae71.chunk.js",
+      "size": 21635,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-600italic.09c31355.woff2",
-      "size": 22740,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/main.81f2ae71.chunk.js.map",
+      "size": 51070,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-700.eb271b54.woff2",
-      "size": 22040,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Contact.647dccb4.chunk.js",
+      "size": 1101,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "pages-Contact"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-700italic.a8a81920.woff2",
-      "size": 22812,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Contact.647dccb4.chunk.js.map",
+      "size": 2319,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "pages-Contact"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-800.3dd887ae.woff2",
-      "size": 22028,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Faq-mdx.9c6f0663.chunk.js",
+      "size": 6851,
+      "chunks": [
+        3
+      ],
+      "chunkNames": [
+        "pages-Faq-mdx"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-800italic.6c6352cc.woff2",
-      "size": 23580,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Faq-mdx.9c6f0663.chunk.js.map",
+      "size": 15147,
+      "chunks": [
+        3
+      ],
+      "chunkNames": [
+        "pages-Faq-mdx"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-900.3505dd68.woff2",
-      "size": 21684,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Home.16845a95.chunk.js",
+      "size": 5555,
+      "chunks": [
+        4
+      ],
+      "chunkNames": [
+        "pages-Home"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-900italic.cd497598.woff2",
-      "size": 22572,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Home.16845a95.chunk.js.map",
+      "size": 11792,
+      "chunks": [
+        4
+      ],
+      "chunkNames": [
+        "pages-Home"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-100italic.cad78196.woff",
-      "size": 25700,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js",
+      "size": 4797,
+      "chunks": [
+        5
+      ],
+      "chunkNames": [
+        "pages-MaPratique-mdx"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-200.3759dc28.woff",
-      "size": 25072,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js.map",
+      "size": 12713,
+      "chunks": [
+        5
+      ],
+      "chunkNames": [
+        "pages-MaPratique-mdx"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-200italic.ac01e2f3.woff",
-      "size": 26140,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js",
+      "size": 6117,
+      "chunks": [
+        6
+      ],
+      "chunkNames": [
+        "pages-Preparatifs-mdx"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-300.e98236c8.woff",
-      "size": 25172,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js.map",
+      "size": 14381,
+      "chunks": [
+        6
+      ],
+      "chunkNames": [
+        "pages-Preparatifs-mdx"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-300italic.c583c57a.woff",
-      "size": 26248,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Soins-mdx.e00b2f9a.chunk.js",
+      "size": 7847,
+      "chunks": [
+        7
+      ],
+      "chunkNames": [
+        "pages-Soins-mdx"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-400.491b04b1.woff",
-      "size": 25472,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Soins-mdx.e00b2f9a.chunk.js.map",
+      "size": 16534,
+      "chunks": [
+        7
+      ],
+      "chunkNames": [
+        "pages-Soins-mdx"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-400italic.92d6bf99.woff",
-      "size": 26368,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Tarifs-mdx.c450e22c.chunk.js",
+      "size": 4330,
+      "chunks": [
+        8
+      ],
+      "chunkNames": [
+        "pages-Tarifs-mdx"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-500.86206664.woff",
-      "size": 25468,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/pages-Tarifs-mdx.c450e22c.chunk.js.map",
+      "size": 12483,
+      "chunks": [
+        8
+      ],
+      "chunkNames": [
+        "pages-Tarifs-mdx"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-500italic.55380eb6.woff",
-      "size": 26404,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/runtime-main.d0bdd30a.js",
+      "size": 2631,
+      "chunks": [
+        9
+      ],
+      "chunkNames": [
+        "runtime-main"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": false
     },
     {
-      "name": "static/media/fira-sans-latin-600.9984ceaf.woff",
-      "size": 26660,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-600italic.a64c67a5.woff",
-      "size": 27692,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-700.4921abc7.woff",
-      "size": 26736,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-100.64ef5d92.woff",
-      "size": 24464,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-800.ea51ab60.woff",
-      "size": 26780,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-800italic.cb8edeb3.woff",
-      "size": 28544,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-900.985a68f9.woff",
-      "size": 26452,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/fira-sans-latin-900italic.961d754a.woff",
-      "size": 27464,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/logo.545c42cd.svg",
-      "size": 8393,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/media/marker.d4d2ace0.svg",
-      "size": 348,
-      "chunks": [],
-      "chunkNames": []
+      "name": "static/js/runtime-main.d0bdd30a.js.map",
+      "size": 13018,
+      "chunks": [
+        9
+      ],
+      "chunkNames": [
+        "runtime-main"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
     },
     {
       "name": "static/media/acupuncture.70fa339e.jpg",
       "size": 90013,
       "chunks": [],
-      "chunkNames": []
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/bg.db7259d6.svg",
+      "size": 4129,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-100.d67acf5d.woff2",
+      "size": 20196,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-100.f82d7eee.woff",
+      "size": 24860,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-100italic.883de112.woff",
+      "size": 26104,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-100italic.c2048bd9.woff2",
+      "size": 21108,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-200.b159127b.woff2",
+      "size": 20868,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-200.d31cdb6d.woff",
+      "size": 25500,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-200italic.b8cefd79.woff2",
+      "size": 21780,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-200italic.ef80c6c0.woff",
+      "size": 26656,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-300.8914854c.woff",
+      "size": 25576,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-300.b39aa336.woff2",
+      "size": 20952,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-300italic.346f609f.woff2",
+      "size": 21984,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-300italic.a63b595b.woff",
+      "size": 26752,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-400.78773521.woff2",
+      "size": 21244,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-400.baa3b51e.woff",
+      "size": 25888,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-400italic.cd0194f9.woff",
+      "size": 26888,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-400italic.ee9f2373.woff2",
+      "size": 22100,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-500.6f0d36c5.woff",
+      "size": 25876,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-500.d8bc03a6.woff2",
+      "size": 21304,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-500italic.41a2680b.woff2",
+      "size": 21984,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-500italic.920bd3dd.woff",
+      "size": 26904,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-600.5a2c789b.woff2",
+      "size": 22184,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-600.a90c720b.woff",
+      "size": 27044,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-600italic.9ccb4594.woff2",
+      "size": 23044,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-600italic.efb9bd18.woff",
+      "size": 28228,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-700.2ecb426f.woff2",
+      "size": 22336,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-700.4d2dfa0d.woff",
+      "size": 27156,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-700italic.cfc0cbce.woff2",
+      "size": 23156,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-700italic.fc51c09e.woff",
+      "size": 28276,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-800.6892a45b.woff2",
+      "size": 22372,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-800.7497f914.woff",
+      "size": 27200,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-800italic.5d183d1c.woff2",
+      "size": 23828,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-800italic.72a48117.woff",
+      "size": 29056,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-900.9b656745.woff",
+      "size": 26856,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-900.fcd834a0.woff2",
+      "size": 22056,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-900italic.41e1815f.woff",
+      "size": 27964,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/fira-sans-latin-900italic.d9d38660.woff2",
+      "size": 22972,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/logo.545c42cd.svg",
+      "size": 8393,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "static/media/marker.d4d2ace0.svg",
+      "size": 348,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
     },
     {
       "name": "static/media/tuina.806bc8cc.jpg",
       "size": 39682,
       "chunks": [],
-      "chunkNames": []
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
     },
     {
       "name": "static/media/ventouses.12805406.jpg",
       "size": 53158,
       "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/0.a8740641.chunk.js",
-      "size": 141145,
-      "chunks": [
-        0
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/main.902d7973.chunk.js",
-      "size": 21135,
-      "chunks": [
-        1
-      ],
-      "chunkNames": [
-        "main"
-      ]
-    },
-    {
-      "name": "static/js/pages-HomePage.b9a78216.chunk.js",
-      "size": 5632,
-      "chunks": [
-        2
-      ],
-      "chunkNames": [
-        "pages-HomePage"
-      ]
-    },
-    {
-      "name": "static/js/pages-TreatmentsPage.0c8f6037.chunk.js",
-      "size": 15360,
-      "chunks": [
-        3
-      ],
-      "chunkNames": [
-        "pages-TreatmentsPage"
-      ]
-    },
-    {
-      "name": "static/js/pages-PricingPage.5021a31e.chunk.js",
-      "size": 5548,
-      "chunks": [
-        4
-      ],
-      "chunkNames": [
-        "pages-PricingPage"
-      ]
-    },
-    {
-      "name": "static/js/pages-ContactPage.f14eb234.chunk.js",
-      "size": 2791,
-      "chunks": [
-        5
-      ],
-      "chunkNames": [
-        "pages-ContactPage"
-      ]
-    },
-    {
-      "name": "static/css/6.c5ac4f3f.chunk.css",
-      "size": 20464,
-      "chunks": [
-        6
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/6.ca21dde2.chunk.js",
-      "size": 555766,
-      "chunks": [
-        6
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/7.d5919394.chunk.js",
-      "size": 28343,
-      "chunks": [
-        7
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/8.4e0c5397.chunk.js",
-      "size": 22047,
-      "chunks": [
-        8
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/runtime~main.378ef097.js",
-      "size": 2486,
-      "chunks": [
-        9
-      ],
-      "chunkNames": [
-        "runtime~main"
-      ]
-    },
-    {
-      "name": "static/css/6.c5ac4f3f.chunk.css.map",
-      "size": 29390,
-      "chunks": [],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/0.a8740641.chunk.js.map",
-      "size": 640547,
-      "chunks": [
-        0
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/main.902d7973.chunk.js.map",
-      "size": 58843,
-      "chunks": [
-        1
-      ],
-      "chunkNames": [
-        "main"
-      ]
-    },
-    {
-      "name": "static/js/pages-HomePage.b9a78216.chunk.js.map",
-      "size": 12961,
-      "chunks": [
-        2
-      ],
-      "chunkNames": [
-        "pages-HomePage"
-      ]
-    },
-    {
-      "name": "static/js/pages-TreatmentsPage.0c8f6037.chunk.js.map",
-      "size": 31472,
-      "chunks": [
-        3
-      ],
-      "chunkNames": [
-        "pages-TreatmentsPage"
-      ]
-    },
-    {
-      "name": "static/js/pages-PricingPage.5021a31e.chunk.js.map",
-      "size": 16593,
-      "chunks": [
-        4
-      ],
-      "chunkNames": [
-        "pages-PricingPage"
-      ]
-    },
-    {
-      "name": "static/js/pages-ContactPage.f14eb234.chunk.js.map",
-      "size": 8776,
-      "chunks": [
-        5
-      ],
-      "chunkNames": [
-        "pages-ContactPage"
-      ]
-    },
-    {
-      "name": "static/js/6.ca21dde2.chunk.js.map",
-      "size": 2658667,
-      "chunks": [
-        6
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/7.d5919394.chunk.js.map",
-      "size": 109385,
-      "chunks": [
-        7
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/8.4e0c5397.chunk.js.map",
-      "size": 97458,
-      "chunks": [
-        8
-      ],
-      "chunkNames": []
-    },
-    {
-      "name": "static/js/runtime~main.378ef097.js.map",
-      "size": 12431,
-      "chunks": [
-        9
-      ],
-      "chunkNames": [
-        "runtime~main"
-      ]
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -490,17 +770,17 @@
     "main": {
       "chunks": [
         9,
-        6,
+        10,
         1
       ],
       "assets": [
-        "static/js/runtime~main.378ef097.js",
-        "static/js/runtime~main.378ef097.js.map",
-        "static/css/6.c5ac4f3f.chunk.css",
-        "static/js/6.ca21dde2.chunk.js",
-        "static/js/6.ca21dde2.chunk.js.map",
-        "static/js/main.902d7973.chunk.js",
-        "static/js/main.902d7973.chunk.js.map"
+        "static/js/runtime-main.d0bdd30a.js",
+        "static/js/runtime-main.d0bdd30a.js.map",
+        "static/css/10.0defd3aa.chunk.css",
+        "static/js/10.86298f48.chunk.js",
+        "static/js/10.86298f48.chunk.js.map",
+        "static/js/main.81f2ae71.chunk.js",
+        "static/js/main.81f2ae71.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -510,67 +790,107 @@
     "main": {
       "chunks": [
         9,
-        6,
+        10,
         1
       ],
       "assets": [
-        "static/js/runtime~main.378ef097.js",
-        "static/js/runtime~main.378ef097.js.map",
-        "static/css/6.c5ac4f3f.chunk.css",
-        "static/js/6.ca21dde2.chunk.js",
-        "static/js/6.ca21dde2.chunk.js.map",
-        "static/js/main.902d7973.chunk.js",
-        "static/js/main.902d7973.chunk.js.map"
+        "static/js/runtime-main.d0bdd30a.js",
+        "static/js/runtime-main.d0bdd30a.js.map",
+        "static/css/10.0defd3aa.chunk.css",
+        "static/js/10.86298f48.chunk.js",
+        "static/js/10.86298f48.chunk.js.map",
+        "static/js/main.81f2ae71.chunk.js",
+        "static/js/main.81f2ae71.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
     },
-    "pages-HomePage": {
-      "chunks": [
-        2
-      ],
-      "assets": [
-        "static/js/pages-HomePage.b9a78216.chunk.js",
-        "static/js/pages-HomePage.b9a78216.chunk.js.map"
-      ],
-      "children": {},
-      "childAssets": {}
-    },
-    "pages-TreatmentsPage": {
-      "chunks": [
-        3
-      ],
-      "assets": [
-        "static/js/pages-TreatmentsPage.0c8f6037.chunk.js",
-        "static/js/pages-TreatmentsPage.0c8f6037.chunk.js.map"
-      ],
-      "children": {},
-      "childAssets": {}
-    },
-    "pages-PricingPage": {
+    "pages-Home": {
       "chunks": [
         4
       ],
       "assets": [
-        "static/js/pages-PricingPage.5021a31e.chunk.js",
-        "static/js/pages-PricingPage.5021a31e.chunk.js.map"
+        "static/js/pages-Home.16845a95.chunk.js",
+        "static/js/pages-Home.16845a95.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
     },
-    "pages-ContactPage": {
+    "pages-Contact": {
       "chunks": [
-        8,
-        5
+        11,
+        2
       ],
       "assets": [
-        "static/js/8.4e0c5397.chunk.js",
-        "static/js/8.4e0c5397.chunk.js.map",
-        "static/js/pages-ContactPage.f14eb234.chunk.js",
-        "static/js/pages-ContactPage.f14eb234.chunk.js.map"
+        "static/js/11.4de8b5b0.chunk.js",
+        "static/js/11.4de8b5b0.chunk.js.map",
+        "static/js/pages-Contact.647dccb4.chunk.js",
+        "static/js/pages-Contact.647dccb4.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
+    },
+    "pages-Soins-mdx": {
+      "chunks": [
+        7
+      ],
+      "assets": [
+        "static/js/pages-Soins-mdx.e00b2f9a.chunk.js",
+        "static/js/pages-Soins-mdx.e00b2f9a.chunk.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-MaPratique-mdx": {
+      "chunks": [
+        5
+      ],
+      "assets": [
+        "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js",
+        "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-Preparatifs-mdx": {
+      "chunks": [
+        6
+      ],
+      "assets": [
+        "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js",
+        "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-Tarifs-mdx": {
+      "chunks": [
+        8
+      ],
+      "assets": [
+        "static/js/pages-Tarifs-mdx.c450e22c.chunk.js",
+        "static/js/pages-Tarifs-mdx.c450e22c.chunk.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-Faq-mdx": {
+      "chunks": [
+        3
+      ],
+      "assets": [
+        "static/js/pages-Faq-mdx.9c6f0663.chunk.js",
+        "static/js/pages-Faq-mdx.9c6f0663.chunk.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
     }
   },
   "children": [
@@ -585,13 +905,15 @@
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 547625,
+          "size": 6481,
           "chunks": [
             0
           ],
           "chunkNames": [
             "HtmlWebpackPlugin_0"
-          ]
+          ],
+          "info": {},
+          "emitted": false
         }
       ],
       "filteredAssets": 0,
@@ -617,6 +939,13 @@
           ],
           "children": {},
           "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
         }
       },
       "children": [],
@@ -654,8 +983,15 @@
           "childAssets": {}
         }
       },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
       "children": [],
-      "name": "mini-css-extract-plugin node_modules/css-loader/index.js??ref--6-oneOf-4-1!node_modules/postcss-loader/src/index.js??postcss!node_modules/leaflet/dist/leaflet.css"
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-oneOf-4-1!node_modules/postcss-loader/src/index.js??postcss!node_modules/leaflet/dist/leaflet.css"
     },
     {
       "errors": [],
@@ -689,8 +1025,15 @@
           "childAssets": {}
         }
       },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
       "children": [],
-      "name": "mini-css-extract-plugin node_modules/css-loader/index.js??ref--6-oneOf-4-1!node_modules/postcss-loader/src/index.js??postcss!node_modules/typeface-fira-sans/index.css"
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-oneOf-4-1!node_modules/postcss-loader/src/index.js??postcss!node_modules/typeface-fira-sans/index.css"
     }
   ]
 }
