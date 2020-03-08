@@ -1,13 +1,12 @@
 import React from "react";
 
 import { Typography } from "@material-ui/core";
+import Alert from "@material-ui/lab/Alert";
 
-import Message from "mtc/components/Message";
-
-export default function ContactPage() {
+export default function NotFoundPage() {
   return (
-    <Message type="error">
+    <Alert severity="error">
       <Typography color="inherit">Page introuvable.</Typography>
-    </Message>
+    </Alert>
   );
 }

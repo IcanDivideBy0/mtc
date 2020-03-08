@@ -1,7 +1,7 @@
 import React from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 
-import { withStyles, Typography } from "@material-ui/core";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
 
 export const H1 = props => <Typography variant="h1" gutterBottom {...props} />;
 export const H2 = props => <Typography variant="h2" gutterBottom {...props} />;
@@ -12,44 +12,52 @@ export const H6 = props => <Typography variant="h6" gutterBottom {...props} />;
 
 export const Paragraph = props => <Typography paragraph {...props} />;
 
-const srongStyles = theme => ({
-  root: {
-    color: theme.palette.primary.dark,
-  },
-});
-const _Strong = ({ classes, className, ...props }) => (
-  <strong className={classnames(classes.root, className)} {...props} />
-);
-export const Strong = withStyles(srongStyles)(_Strong);
+/**
+ * <strong>
+ */
 
-const unorderedListStyles = theme => ({
+const useStrongStyles = makeStyles(theme => ({
   root: {
-    color: "red",
+    color: theme.palette.primary.main,
   },
-});
-const _UnorderedList = ({ classes, className, ...props }) => (
-  <Typography
-    component="ul"
-    paragraph
-    className={classnames(classes.root, className)}
-    {...props}
-  />
-);
-export const UnorderedList = withStyles(unorderedListStyles)(_UnorderedList);
+}));
 
-const listItemStyles = theme => ({
+export function Strong({ className, ...props }) {
+  const classes = useStrongStyles(props);
+
+  return <strong className={clsx(className, classes.root)} {...props} />;
+}
+
+/**
+ * <ul>
+ */
+
+export function UnorderedList(props) {
+  return <Typography component="ul" paragraph {...props} />;
+}
+
+/**
+ * <li>
+ */
+
+export function ListItem(props) {
+  return <Typography component="li" {...props} />;
+}
+
+/**
+ * <hr />
+ */
+
+const useHorizontalRuleStyles = makeStyles(theme => ({
   root: {
-    display: "list-item",
+    margin: theme.spacing(2, 0),
   },
-});
-const _ListItem = ({ classes, className, ...props }) => (
-  <Typography
-    component="li"
-    className={classnames(classes.root, className)}
-    {...props}
-  />
-);
-export const ListItem = withStyles(listItemStyles)(_ListItem);
+}));
+
+export function HorizontalRule(props) {
+  const classes = useHorizontalRuleStyles(props);
+  return <Divider {...props} classes={classes} />;
+}
 
 export default {
   wrapper: React.Fragment,
@@ -63,4 +71,5 @@ export default {
   strong: Strong,
   ul: UnorderedList,
   li: ListItem,
+  hr: HorizontalRule,
 };

@@ -1,11 +1,11 @@
 import React from "react";
 
-import { withStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { ADDRESS } from "mtc/constants";
 
 const KEY = "wrAwaALiRJUx596rDgKP";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     position: "relative",
     width: "100%",
@@ -17,7 +17,7 @@ const styles = theme => ({
     width: "100%",
     height: "100%",
   },
-});
+}));
 
 function useMap() {
   const [mapUtils, setMapUtils] = React.useState();
@@ -44,7 +44,8 @@ function useMap() {
   return mapUtils;
 }
 
-function MapComponent({ classes }) {
+export default function MapComponent(props) {
+  const classes = useStyles(props);
   const mapUtils = useMap();
   if (!mapUtils) return <div className={classes.root} />;
 
@@ -68,5 +69,3 @@ function MapComponent({ classes }) {
     </div>
   );
 }
-
-export default withStyles(styles)(MapComponent);

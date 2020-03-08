@@ -1,7 +1,7 @@
 import React from "react";
 
 import {
-  withStyles,
+  makeStyles,
   Grid,
   Card,
   CardContent,
@@ -18,7 +18,7 @@ const cardImageSize = theme.images.genImageSizes({
   lg: w => w + "px",
 });
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   card: {
     display: "flex",
   },
@@ -50,26 +50,28 @@ const styles = theme => ({
   cardContent: {
     flexGrow: 2,
   },
-});
+}));
 
-function HomePage({ classes }) {
+export default function HomePage(props) {
+  const classes = useStyles(props);
+
   return (
-    <Grid container spacing={32}>
+    <Grid container spacing={4}>
       <Grid item xs={12}>
         <Typography variant="h1" gutterBottom>
-          Qu’est-ce que la Médecine Traditionnelle Chinoise ?
+          Qu’est-ce que la Médecine Énergétique Chinoise ?
         </Typography>
         <Typography paragraph>
-          La Médecine Traditionnelle Chinoise est basée sur l’observation de
-          l’homme et de la nature. Ainsi, après 5000 ans d’existence, elle
+          La médecine énergétique chinoise est basée sur l’observation de
+          l’homme et de la nature. Après plus de 3000 ans d’existence, elle
           permet efficacement de soulager une grandes quantités de maux et
           d’aider au bien être.
         </Typography>
         <Typography paragraph>
           De façon schématique, une douleur, une gêne physique ou moral est due
-          à un blocage. Grâce aux différents outils de la Médecine Chinoise, je
-          pourrai lever ces blocages et ainsi remettre en circulation vos
-          énergies et faciliter l’autoguérison du corps.
+          à un blocage. Grâce aux différents outils de la médecine énergétique
+          chinoise, je pourrai lever ces blocages et ainsi remettre en
+          circulation vos énergies et faciliter l’autoguérison du corps.
         </Typography>
       </Grid>
 
@@ -99,11 +101,12 @@ function HomePage({ classes }) {
                 L’acupuncture
               </Typography>
               <Typography>
-                L’acupuncture est un outil pour travailler en toute minutie
-                grace à des aiguilles très fines à usage unique. Elle permet
-                d’agir en profondeur et de donner au soin une plus grande
-                intensité. L’acupuncture permet de re-équilibrer et harmoniser
-                les énergies et de relancer leur circulation.
+                L’acupuncture est un outil pour travailler en toute minutie et
+                précision grâce à des aiguilles stériles très fines à usage
+                unique. Elle permet d’agir en profondeur et de donner au soin
+                une plus grande intensité et rapidité au soulagement.
+                L’acupuncture permet de re-équilibrer et harmoniser les énergies
+                et de relancer leur circulation.
               </Typography>
             </CardContent>
           </Grid>
@@ -139,9 +142,8 @@ function HomePage({ classes }) {
               </Typography>
               <Typography>
                 Le massage Tui Na est une mobilisation manuel semblable à un
-                modelage dynamique. Comme l’acupuncture, il permet d’harmoniser
-                les énergies et permet une bonne circulation du sang et de la
-                lymphe. Son action est moins profonde mais plus global.
+                modelage dynamique. Adapter pour la détente, ce soin est plus
+                global et permet un récupération plus progressive.
               </Typography>
             </CardContent>
           </Grid>
@@ -221,5 +223,3 @@ function HomePage({ classes }) {
     </Grid>
   );
 }
-
-export default withStyles(styles)(HomePage);

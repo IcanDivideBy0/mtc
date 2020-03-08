@@ -1,10 +1,10 @@
 import React from "react";
 
-import { withStyles, Paper, Typography } from "@material-ui/core";
+import { makeStyles, Paper, Typography } from "@material-ui/core";
 
 import ContentContainer from "mtc/components/ContentContainer";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     background: `
       url(${require("./images/bg.svg")}),
@@ -17,9 +17,11 @@ const styles = theme => ({
     backgroundRepeat: "repeat, no-repeat",
     color: theme.palette.secondary.contrastText,
   },
-});
+}));
 
-function Footer({ classes }) {
+export default function Footer(props) {
+  const classes = useStyles(props);
+
   return (
     <Paper square className={classes.root}>
       <ContentContainer padded>
@@ -28,5 +30,3 @@ function Footer({ classes }) {
     </Paper>
   );
 }
-
-export default withStyles(styles)(Footer);

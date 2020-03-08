@@ -1,21 +1,13 @@
 import React from "react";
-import {
-  MuiThemeProvider,
-  createGenerateClassName,
-  CssBaseline,
-  withStyles,
-} from "@material-ui/core";
-import JssProvider from "react-jss/lib/JssProvider";
+import { ThemeProvider, CssBaseline, makeStyles } from "@material-ui/core";
+import { HelmetProvider } from "react-helmet-async";
 
 import theme from "mtc/theme";
-
 import AutoScroll from "mtc/components/AutoScroll";
 import Image from "mtc/components/Image";
 import Main from "mtc/components/Main";
 
-const generateClassName = createGenerateClassName();
-
-const styles = theme => ({
+const useGlobalStyles = makeStyles(theme => ({
   "@global": {
     html: {
       height: "100%",
@@ -30,32 +22,36 @@ const styles = theme => ({
       flexDirection: "column",
     },
     a: {
-      color: theme.palette.secondary.main,
+      color: theme.palette.primary.main,
     },
     strong: {
       fontWeight: 500,
     },
-    hr: {
-      border: "none",
-      height: 0,
-      width: "100%",
-      borderBottom: [[1, "solid", theme.palette.text.hint]],
-      margin: [[theme.spacing.unit * 2, 0]],
-    },
   },
-});
+}));
 
-const GlobalStyles = withStyles(styles)(() => null);
+function GlobalStyles() {
+  useGlobalStyles();
+  return null;
+}
 
 export default function App({
-  jssProviderProps,
-  muiThemeProviderProps,
+  helmetProviderProps,
+  themeProviderProps,
   routerComponent: Router,
   routerProps,
 }) {
+  React.useEffect(() => {
+    const jssStyles = document.querySelector("#jss-server-side");
+
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }, []);
+
   return (
-    <JssProvider generateClassName={generateClassName} {...jssProviderProps}>
-      <MuiThemeProvider theme={theme} {...muiThemeProviderProps}>
+    <HelmetProvider {...helmetProviderProps}>
+      <ThemeProvider theme={theme} {...themeProviderProps}>
         <Router basename={process.env.PUBLIC_URL} {...routerProps}>
           <CssBaseline />
           <GlobalStyles />
@@ -63,7 +59,7 @@ export default function App({
           <AutoScroll />
           <Main />
         </Router>
-      </MuiThemeProvider>
-    </JssProvider>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }

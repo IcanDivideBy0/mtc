@@ -1,6 +1,5 @@
-import "@babel/polyfill";
-import "core-js/fn/object/assign";
-import "core-js/fn/object/entries";
-import "core-js/fn/string/ends-with";
-import "core-js/es6/promise";
+import "core-js/es/object/assign";
+import "core-js/es/object/entries";
+import "core-js/es/string/ends-with";
+import "core-js/es/promise";
 import "whatwg-fetch";

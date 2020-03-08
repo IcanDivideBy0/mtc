@@ -1,13 +1,13 @@
 import React from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 
-import { withStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     margin: "0 auto",
-    maxWidth: `calc(100% - ${theme.spacing.unit * 2}px * 2)`,
+    maxWidth: `calc(100% - ${theme.spacing(4)}px)`,
 
     ...["sm", "md", "lg"].reduce(
       (acc, key) => ({
@@ -15,7 +15,7 @@ const styles = theme => ({
         [theme.breakpoints.up(key)]: {
           maxWidth: `calc(
             ${theme.breakpoints.values[key]}px -
-            ${theme.spacing.unit * 4}px * 2
+            ${theme.spacing(16)}px
           )`,
         },
       }),
@@ -23,24 +23,25 @@ const styles = theme => ({
     ),
   },
   padded: {
-    padding: [[theme.spacing.unit * 2, 0]],
+    padding: theme.spacing(2, 0),
 
     [theme.breakpoints.up("sm")]: {
-      padding: [[theme.spacing.unit * 4, 0]],
+      padding: theme.spacing(4, 0),
     },
   },
-});
+}));
 
-function ContentContainer({
+export default function ContentContainer({
   component: Component = "div",
-  classes,
   padded,
   className,
   ...props
 }) {
+  const classes = useStyles(props);
+
   return (
     <Component
-      className={classnames(
+      className={clsx(
         classes.root,
         { [classes.padded]: padded },
         className
@@ -49,5 +50,3 @@ function ContentContainer({
     />
   );
 }
-
-export default withStyles(styles)(ContentContainer);

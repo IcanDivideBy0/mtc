@@ -1,11 +1,11 @@
 import React from "react";
-import { withRouter, matchPath } from "react-router";
+import { useLocation, matchPath } from "react-router";
 import { Link } from "react-router-dom";
 import FontFaceObserver from "fontfaceobserver";
-import classnames from "classnames";
+import clsx from "clsx";
 
 import {
-  withStyles,
+  makeStyles,
   AppBar,
   Tabs,
   Tab,
@@ -18,7 +18,6 @@ import {
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
 
-import { compose } from "mtc/utils";
 import ContentContainer from "mtc/components/ContentContainer";
 
 const NAV_ITEMS = [
@@ -33,7 +32,10 @@ const NAV_ITEMS = [
     //   { label: "Qi-Gong", path: "/soins/qi-gong" },
     // ],
   },
-  { label: "Tarifs", path: "/tarifs" },
+  { label: "Ma pratique", path: "/ma-pratique" },
+  { label: "Préparatifs", path: "/préparatifs" },
+  { label: "FAQ", path: "/faq" },
+  { label: "Tarifs et infos", path: "/tarifs" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -41,7 +43,7 @@ const NAV_ITEMS = [
  * Desktop nav
  */
 
-const navItemStyles = theme => ({
+const useNavItemStyles = makeStyles(theme => ({
   root: {
     position: "relative",
     display: "flex",
@@ -53,6 +55,8 @@ const navItemStyles = theme => ({
     },
   },
   button: {
+    color: "#fff",
+
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.2)",
     },
@@ -70,22 +74,21 @@ const navItemStyles = theme => ({
   paper: {
     backgroundColor: theme.palette.secondary.main,
   },
-});
+}));
 
-function _DesktopNavItem({
-  location,
-  classes,
-  navItem,
-  isNested,
-  className,
-  children,
-}) {
-  const rootRef = React.useRef();
+function DesktopNavItem({ innerRef, navItem, isNested, className, children }) {
+  const location = useLocation();
+  const classes = useNavItemStyles();
+
+  let rootRef = React.useRef();
   const [isOver, setIsOver] = React.useState(false);
 
   return (
     <div
-      ref={rootRef}
+      ref={ref => {
+        rootRef.current = ref;
+        innerRef && innerRef(ref);
+      }}
       onMouseEnter={() => setIsOver(true)}
       onMouseLeave={() => setIsOver(false)}
       onClick={() => setIsOver(false)}
@@ -96,7 +99,7 @@ function _DesktopNavItem({
         color="secondary"
         component={Link}
         to={navItem.path}
-        className={classnames(classes.button, className)}
+        className={clsx(classes.button, className)}
       >
         {children}
       </ButtonBase>
@@ -104,7 +107,6 @@ function _DesktopNavItem({
       {navItem.items && (
         <Popper
           open={isOver}
-          disablePortal
           placement={isNested ? "right-start" : "bottom-start"}
           className={classes.popper}
           anchorEl={rootRef.current}
@@ -118,7 +120,7 @@ function _DesktopNavItem({
                     key={navItem.path}
                     value={navItem.path}
                     label={navItem.label}
-                    component={DesktopNavItem}
+                    component={DesktopNavItemRef}
                     navItem={navItem}
                     isNested
                     selected={!!matchPath(location.pathname, navItem)}
@@ -133,23 +135,22 @@ function _DesktopNavItem({
   );
 }
 
-const DesktopNavItem = compose(
-  withRouter,
-  withStyles(navItemStyles)
-)(_DesktopNavItem);
+const DesktopNavItemRef = React.forwardRef((props, ref) => (
+  <DesktopNavItem {...props} innerRef={ref} />
+));
 
 /**
  * Mobile nav
  */
 
-const mobileNavItemListStyles = theme => ({
+const useMobileNavItemListStyles = makeStyles(theme => ({
   root: {
     listStyleType: "none",
     padding: 0,
     margin: 0,
 
     "& &": {
-      paddingLeft: theme.spacing.unit * 2,
+      paddingLeft: theme.spacing(2),
     },
   },
   item: {
@@ -162,15 +163,17 @@ const mobileNavItemListStyles = theme => ({
     display: "block",
     textDecoration: "none",
     margin: 0,
-    padding: [[theme.spacing.unit, theme.spacing.unit * 2]],
+    padding: theme.spacing(1, 2),
 
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.2)",
     },
   },
-});
+}));
 
-function _MobileNavItemList({ classes, navItems }) {
+function MobileNavItemList({ navItems }) {
+  const classes = useMobileNavItemListStyles();
+
   return (
     <ul className={classes.root}>
       {navItems.map(navItem => (
@@ -190,19 +193,15 @@ function _MobileNavItemList({ classes, navItems }) {
   );
 }
 
-const MobileNavItemList = withStyles(mobileNavItemListStyles)(
-  _MobileNavItemList
-);
-
 /**
  * Nav bar
  */
 
-const navBarStyles = theme => ({
+const useNavBarStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexDirection: "row",
-    padding: `0 ${theme.spacing.unit * 2}px`,
+    padding: theme.spacing(0, 2),
   },
   main: {
     display: "flex",
@@ -211,6 +210,7 @@ const navBarStyles = theme => ({
       maxWidth: "100%",
     },
   },
+
   tabs: {
     flexGrow: 1,
     overflow: "visible",
@@ -231,9 +231,15 @@ const navBarStyles = theme => ({
   hiddenTab: {
     display: "none",
   },
+  desktopTabRoot: {
+    [theme.breakpoints.down("sm")]: {
+      minWidth: 80,
+    },
+  },
+
   mobileNav: {
     flexGrow: 1,
-    margin: [[0, -theme.spacing.unit * 2]],
+    margin: [[0, -theme.spacing(2)]],
     display: "flex",
     flexDirection: "column",
 
@@ -247,17 +253,20 @@ const navBarStyles = theme => ({
     height: 48,
     display: "flex",
     justifyContent: "flex-end",
-    padding: [[0, theme.spacing.unit * 2]],
+    padding: theme.spacing(0, 2),
   },
   mobileMenuButtonLabel: {
-    padding: [[0, theme.spacing.unit * 2]],
+    padding: theme.spacing(0, 2),
     fontWeight: 500,
     textTransform: "uppercase",
     lineHeight: 1.75,
   },
-});
+}));
 
-function NavBar({ location, history, classes }) {
+export default function NavBar() {
+  const classes = useNavBarStyles();
+  const location = useLocation();
+
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const toggleMobilenav = () => setMobileNavOpen(open => !open);
 
@@ -279,9 +288,10 @@ function NavBar({ location, history, classes }) {
             flexContainer: classes.tabsFlexContainer,
             scroller: classes.tabsScroller,
           }}
-          action={actions => {
+          action={ref => {
+            if (!ref) return;
             const font = new FontFaceObserver("Fira Sans");
-            font.load().then(actions.updateIndicator);
+            font.load().then(ref.updateIndicator);
           }}
         >
           <Tab value={0} className={classes.hiddenTab} />
@@ -291,8 +301,11 @@ function NavBar({ location, history, classes }) {
               key={navItem.path}
               value={navItem.path}
               label={navItem.label}
-              component={DesktopNavItem}
+              component={DesktopNavItemRef}
               navItem={navItem}
+              classes={{
+                root: classes.desktopTabRoot,
+              }}
             />
           ))}
         </Tabs>
@@ -322,8 +335,3 @@ function NavBar({ location, history, classes }) {
     </AppBar>
   );
 }
-
-export default compose(
-  withRouter,
-  withStyles(navBarStyles)
-)(NavBar);

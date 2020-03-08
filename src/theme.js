@@ -4,7 +4,7 @@ const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: ['"Fira Sans"', "sans-serif"],
-    fontSize: 16,
+    fontSize: 14,
     body1: { fontWeight: 300 },
     body2: { fontWeight: 300 },
     h1: { fontWeight: 300, fontSize: "2rem" },
@@ -28,14 +28,10 @@ const theme = createMuiTheme({
       contrastText: "#fff",
     },
     text: { main: "#ff0000" },
-    info: { main: "#00d3ee", contrastText: "#fff" },
-    success: { main: "#5cb860", contrastText: "#fff" },
-    warning: { main: "#ffa21a", contrastText: "#fff" },
-    error: { main: "#f55a4e", contrastText: "#fff" },
   },
   props: {
     MuiGrid: {
-      spacing: 16,
+      spacing: 2,
     },
   },
   images: {

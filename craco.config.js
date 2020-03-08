@@ -12,7 +12,7 @@ module.exports = {
   babel: {
     plugins: [
       "@loadable/babel-plugin",
-      ["module-resolver", { alias: { mtc: "./src" } }],
+      ["module-resolver", { alias: { "mtc": "./src" } }],
     ],
   },
   webpack: {

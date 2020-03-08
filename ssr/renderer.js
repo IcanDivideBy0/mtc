@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { ChunkExtractor } from "@loadable/server";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { SheetsRegistry } from "jss";
 import { createGenerateClassName } from "@material-ui/core/styles";
 import { StaticRouter } from "react-router";

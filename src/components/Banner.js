@@ -1,10 +1,10 @@
 import React from "react";
 
-import { withStyles, Typography } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 
 import ContentContainer from "mtc/components/ContentContainer";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundImage: `
       url(${require("./images/bg.svg")}),
@@ -53,9 +53,11 @@ const styles = theme => ({
     fontWeight: 500,
     textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
   },
-});
+}));
 
-function Banner({ classes }) {
+export default function Banner(props) {
+  const classes = useStyles(props);
+
   return (
     <header className={classes.root}>
       <ContentContainer padded className={classes.content}>
@@ -72,7 +74,7 @@ function Banner({ classes }) {
           gutterBottom
           className={classes.title}
         >
-          La Médecine Traditionnelle Chinoise à Nantes
+          La Médecine Énergétique Chinoise à Nantes
         </Typography>
 
         <Typography
@@ -81,13 +83,9 @@ function Banner({ classes }) {
           color="inherit"
           className={classes.subtitle}
         >
-          Loïse Holive, votre praticienne en médecine traditionnelle chinoise
-          <br />
-          Acupuncture, Tuina, Ventouses, Qi-Gong, …
+          Loïse Holive, votre praticienne en Acupuncture et massage Tuina, pour soulager rapidement vos douleurs et restituer votre bien être.
         </Typography>
       </ContentContainer>
     </header>
   );
 }
-
-export default withStyles(styles)(Banner);

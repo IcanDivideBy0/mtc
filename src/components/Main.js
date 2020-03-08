@@ -1,10 +1,9 @@
 import React from "react";
-import { withRouter } from "react-router";
-import { Helmet } from "react-helmet";
+import { useLocation } from "react-router";
+import { Helmet } from "react-helmet-async";
+import { makeStyles, useTheme, Grid } from "@material-ui/core";
 
-import { withStyles, withTheme, Grid } from "@material-ui/core";
-
-import { compose, getBaseUrl } from "mtc/utils";
+import { getBaseUrl } from "mtc/utils";
 import { ADDRESS, PHONE } from "mtc/constants";
 
 import PageMetaTitle from "mtc/components/PageMetaTitle";
@@ -16,14 +15,18 @@ import SideBar from "mtc/components/SideBar";
 import Router from "mtc/components/Router";
 import Footer from "mtc/components/Footer";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   content: {
     position: "relative",
     flexGrow: 1,
   },
-});
+}));
 
-function Main({ match, location, classes, theme }) {
+export default function Main() {
+  const theme = useTheme();
+  const classes = useStyles();
+  const location = useLocation();
+
   const baseUrl = getBaseUrl();
   const url = baseUrl + location.pathname + location.search;
 
@@ -123,7 +126,7 @@ function Main({ match, location, classes, theme }) {
       <NavBar />
 
       <ContentContainer padded className={classes.content}>
-        <Grid container spacing={32}>
+        <Grid container spacing={4}>
           <Grid item xs={12} md={8} component="main">
             <Router />
           </Grid>
@@ -138,9 +141,3 @@ function Main({ match, location, classes, theme }) {
     </>
   );
 }
-
-export default compose(
-  withRouter,
-  withStyles(styles),
-  withTheme()
-)(Main);
