@@ -3,7 +3,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { ADDRESS } from "mtc/constants";
 
-const KEY = "wrAwaALiRJUx596rDgKP";
+const MAPBOX_TOKEN =
+  "pk.eyJ1IjoiZGlzY29sb3JkIiwiYSI6ImNrN2plazhteTBzZzQzbG8zcnEyMHA3eWQifQ.j6KgxESGIU8KLbE0FRiRUg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -60,9 +61,9 @@ export default function MapComponent(props) {
         maxZoom={19}
       >
         <TileLayer
-          attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-          // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          url={`https://maps.tilehosting.com/styles/streets/{z}/{x}/{y}@2x.png?key=${KEY}`}
+          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a>'
+          id="mapbox/streets-v11"
+          url={`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${MAPBOX_TOKEN}`}
         />
         <Marker position={ADDRESS.geo} icon={icon} />
       </LeafletMap>

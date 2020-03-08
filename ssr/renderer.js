@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { ChunkExtractor } from "@loadable/server";
-import { Helmet } from "react-helmet-async";
-import { SheetsRegistry } from "jss";
-import { createGenerateClassName } from "@material-ui/core/styles";
+import { ServerStyleSheets } from "@material-ui/styles";
 import { StaticRouter } from "react-router";
 import flowRight from "lodash.flowright";
 
@@ -17,26 +15,25 @@ export async function render(location) {
   const chunkExtractor = new ChunkExtractor({ statsFile });
 
   // material-ui
-  const generateClassName = createGenerateClassName({
-    productionPrefix: "jss-ssr",
-  });
-  const sheetsRegistry = new SheetsRegistry();
-  const sheetsManager = new Map();
+  const sheets = new ServerStyleSheets();
+
+  // react-helmet-async
+  const helmetContext = {};
 
   const html = await flowRight(
     ReactDOMServer.renderToString,
-    chunkExtractor.collectChunks.bind(chunkExtractor)
+    chunkExtractor.collectChunks.bind(chunkExtractor),
+    sheets.collect.bind(sheets)
   )(
     <App
-      muiThemeProviderProps={{ sheetsManager }}
-      jssProviderProps={{ registry: sheetsRegistry, generateClassName }}
+      helmetProviderProps={{ context: helmetContext }}
       routerComponent={StaticRouter}
       routerProps={{ location, context: {} }}
     />
   );
 
-  const helmet = Helmet.renderStatic();
-  const muiCss = `<style id="jss-ssr">${sheetsRegistry.toString()}</style>`;
+  const { helmet } = helmetContext;
+  const muiCss = `<style id="jss-server-side">${sheets.toString()}</style>`;
 
   return {
     htmlAttrs: helmet.htmlAttributes.toString(),
@@ -53,6 +50,6 @@ export async function render(location) {
     ].join(""),
     bodyAttrs: helmet.bodyAttributes.toString(),
     appContent: html,
-    bodyContent: chunkExtractor.getScriptTags(),
+    bodyContent: [chunkExtractor.getScriptTags()].join(""),
   };
 }

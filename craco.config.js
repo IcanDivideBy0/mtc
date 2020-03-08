@@ -11,8 +11,8 @@ const VisualizerPlugin = require("webpack-visualizer-plugin");
 module.exports = {
   babel: {
     plugins: [
+      ["module-resolver", { alias: { mtc: "./src" } }],
       "@loadable/babel-plugin",
-      ["module-resolver", { alias: { "mtc": "./src" } }],
     ],
   },
   webpack: {

@@ -196,9 +196,9 @@ export default function HomePage(props) {
               <Image
                 lazy
                 lazyHeight={200}
-                srcSet={[require("./images/acupuncture.jpg") + " 320w"]}
+                srcSet={[require("./images/moxas.jpg") + " 320w"]}
                 sizes={cardImageSize}
-                src={require("./images/acupuncture.jpg")}
+                src={require("./images/moxas.jpg")}
                 alt=""
                 className={classes.cardImage}
               />

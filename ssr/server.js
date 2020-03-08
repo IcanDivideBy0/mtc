@@ -8,7 +8,7 @@ const express = require("express");
 const compression = require("compression");
 
 const paths = require("react-scripts/config/paths");
-const publicPath = paths.servedPath;
+const publicPath = paths.publicUrlOrPath;
 const publicUrl = publicPath.slice(0, -1);
 
 const app = express();

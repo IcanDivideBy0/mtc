@@ -215,7 +215,7 @@ const useNavBarStyles = makeStyles(theme => ({
     flexGrow: 1,
     overflow: "visible",
 
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "none",
     },
     "@media (hover: none)": {
@@ -232,7 +232,7 @@ const useNavBarStyles = makeStyles(theme => ({
     display: "none",
   },
   desktopTabRoot: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       minWidth: 80,
     },
   },
@@ -243,7 +243,7 @@ const useNavBarStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
 
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       "@media (hover: hover)": {
         display: "none",
       },

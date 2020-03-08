@@ -19,7 +19,7 @@ function fileLoader(module) {
     }
   );
 
-  module.exports = paths.servedPath + buildFilePath;
+  module.exports = paths.publicUrlOrPath + buildFilePath;
 }
 
 /**

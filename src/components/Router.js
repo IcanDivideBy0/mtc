@@ -23,22 +23,20 @@ const opts = {
 const HomePage = loadable(() => import("../pages/Home"), opts);
 const ContactPage = loadable(() => import("../pages/Contact"), opts);
 
-function mdxPage({ default: Mdx }) {
-  return {
-    default: props => <Mdx components={mdxComponents} {...props} />,
-  };
-}
+const SoinsMdx = loadable(() => import("../pages/Soins.mdx"), opts);
+const SoinsPage = () => <SoinsMdx components={mdxComponents} />;
 
-// prettier-ignore
-const SoinsPage      = loadable(() => import("../pages/Soins.mdx").then(mdxPage), opts);
-// prettier-ignore
-const MaPratiquePage = loadable(() => import("../pages/MaPratique.mdx").then(mdxPage), opts);
-// prettier-ignore
-const PreparatifsPage = loadable(() => import("../pages/Preparatifs.mdx").then(mdxPage), opts);
-// prettier-ignore
-const TarifsPage     = loadable(() => import("../pages/Tarifs.mdx").then(mdxPage), opts);
-// prettier-ignore
-const FaqPage     = loadable(() => import("../pages/Faq.mdx").then(mdxPage), opts);
+const MaPratiqueMdx = loadable(() => import("../pages/MaPratique.mdx"), opts);
+const MaPratiquePage = () => <MaPratiqueMdx components={mdxComponents} />;
+
+const PreparatifsMdx = loadable(() => import("../pages/Preparatifs.mdx"), opts);
+const PreparatifsPage = () => <PreparatifsMdx components={mdxComponents} />;
+
+const TarifsMdx = loadable(() => import("../pages/Tarifs.mdx"), opts);
+const TarifsPage = () => <TarifsMdx components={mdxComponents} />;
+
+const FaqMdx = loadable(() => import("../pages/Faq.mdx"), opts);
+const FaqPage = () => <FaqMdx components={mdxComponents} />;
 
 function Router({ match }) {
   const getPath = path => match.url + path;
