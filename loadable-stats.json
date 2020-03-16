@@ -2,45 +2,45 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.5",
-  "hash": "2c2352e6b4c78d999763",
+  "hash": "67fa964ca0b3ff6ce0c0",
   "publicPath": "/",
   "outputPath": "/home/samuel/Workspace/mtc/build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.3e5a195d.chunk.js",
-      "static/js/main.3e5a195d.chunk.js.map"
+      "static/js/main.7c6c0eab.chunk.js",
+      "static/js/main.7c6c0eab.chunk.js.map"
     ],
     "pages-Contact": [
       "static/js/pages-Contact.f8463f6b.chunk.js",
       "static/js/pages-Contact.f8463f6b.chunk.js.map"
     ],
     "pages-Faq-mdx": [
-      "static/js/pages-Faq-mdx.9c6f0663.chunk.js",
-      "static/js/pages-Faq-mdx.9c6f0663.chunk.js.map"
+      "static/js/pages-Faq-mdx.65a768d9.chunk.js",
+      "static/js/pages-Faq-mdx.65a768d9.chunk.js.map"
     ],
     "pages-Home": [
       "static/js/pages-Home.eab89e08.chunk.js",
       "static/js/pages-Home.eab89e08.chunk.js.map"
     ],
     "pages-MaPratique-mdx": [
-      "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js",
-      "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js.map"
+      "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js",
+      "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js.map"
     ],
     "pages-Preparatifs-mdx": [
       "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js",
       "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js.map"
     ],
     "pages-Soins-mdx": [
-      "static/js/pages-Soins-mdx.e00b2f9a.chunk.js",
-      "static/js/pages-Soins-mdx.e00b2f9a.chunk.js.map"
+      "static/js/pages-Soins-mdx.0f4c3f50.chunk.js",
+      "static/js/pages-Soins-mdx.0f4c3f50.chunk.js.map"
     ],
     "pages-Tarifs-mdx": [
       "static/js/pages-Tarifs-mdx.c450e22c.chunk.js",
       "static/js/pages-Tarifs-mdx.c450e22c.chunk.js.map"
     ],
     "runtime-main": [
-      "static/js/runtime-main.f8999e6f.js",
-      "static/js/runtime-main.f8999e6f.js.map"
+      "static/js/runtime-main.df2694ed.js",
+      "static/js/runtime-main.df2694ed.js.map"
     ]
   },
   "assets": [
@@ -177,8 +177,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/main.3e5a195d.chunk.js",
-      "size": 21794,
+      "name": "static/js/main.7c6c0eab.chunk.js",
+      "size": 21860,
       "chunks": [
         1
       ],
@@ -191,8 +191,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/main.3e5a195d.chunk.js.map",
-      "size": 51259,
+      "name": "static/js/main.7c6c0eab.chunk.js.map",
+      "size": 51325,
       "chunks": [
         1
       ],
@@ -233,8 +233,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Faq-mdx.9c6f0663.chunk.js",
-      "size": 6851,
+      "name": "static/js/pages-Faq-mdx.65a768d9.chunk.js",
+      "size": 6852,
       "chunks": [
         3
       ],
@@ -247,8 +247,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Faq-mdx.9c6f0663.chunk.js.map",
-      "size": 15147,
+      "name": "static/js/pages-Faq-mdx.65a768d9.chunk.js.map",
+      "size": 15148,
       "chunks": [
         3
       ],
@@ -289,8 +289,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js",
-      "size": 4797,
+      "name": "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js",
+      "size": 4872,
       "chunks": [
         5
       ],
@@ -303,8 +303,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js.map",
-      "size": 12713,
+      "name": "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js.map",
+      "size": 12841,
       "chunks": [
         5
       ],
@@ -345,8 +345,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Soins-mdx.e00b2f9a.chunk.js",
-      "size": 7847,
+      "name": "static/js/pages-Soins-mdx.0f4c3f50.chunk.js",
+      "size": 7316,
       "chunks": [
         7
       ],
@@ -359,8 +359,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Soins-mdx.e00b2f9a.chunk.js.map",
-      "size": 16534,
+      "name": "static/js/pages-Soins-mdx.0f4c3f50.chunk.js.map",
+      "size": 15950,
       "chunks": [
         7
       ],
@@ -401,7 +401,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/runtime-main.f8999e6f.js",
+      "name": "static/js/runtime-main.df2694ed.js",
       "size": 2631,
       "chunks": [
         9
@@ -415,7 +415,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/runtime-main.f8999e6f.js.map",
+      "name": "static/js/runtime-main.df2694ed.js.map",
       "size": 13018,
       "chunks": [
         9
@@ -782,13 +782,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime-main.f8999e6f.js",
-        "static/js/runtime-main.f8999e6f.js.map",
+        "static/js/runtime-main.df2694ed.js",
+        "static/js/runtime-main.df2694ed.js.map",
         "static/css/10.0defd3aa.chunk.css",
         "static/js/10.39f5a382.chunk.js",
         "static/js/10.39f5a382.chunk.js.map",
-        "static/js/main.3e5a195d.chunk.js",
-        "static/js/main.3e5a195d.chunk.js.map"
+        "static/js/main.7c6c0eab.chunk.js",
+        "static/js/main.7c6c0eab.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -802,13 +802,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime-main.f8999e6f.js",
-        "static/js/runtime-main.f8999e6f.js.map",
+        "static/js/runtime-main.df2694ed.js",
+        "static/js/runtime-main.df2694ed.js.map",
         "static/css/10.0defd3aa.chunk.css",
         "static/js/10.39f5a382.chunk.js",
         "static/js/10.39f5a382.chunk.js.map",
-        "static/js/main.3e5a195d.chunk.js",
-        "static/js/main.3e5a195d.chunk.js.map"
+        "static/js/main.7c6c0eab.chunk.js",
+        "static/js/main.7c6c0eab.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -843,8 +843,8 @@
         7
       ],
       "assets": [
-        "static/js/pages-Soins-mdx.e00b2f9a.chunk.js",
-        "static/js/pages-Soins-mdx.e00b2f9a.chunk.js.map"
+        "static/js/pages-Soins-mdx.0f4c3f50.chunk.js",
+        "static/js/pages-Soins-mdx.0f4c3f50.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -854,8 +854,8 @@
         5
       ],
       "assets": [
-        "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js",
-        "static/js/pages-MaPratique-mdx.7acaa18f.chunk.js.map"
+        "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js",
+        "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -887,8 +887,8 @@
         3
       ],
       "assets": [
-        "static/js/pages-Faq-mdx.9c6f0663.chunk.js",
-        "static/js/pages-Faq-mdx.9c6f0663.chunk.js.map"
+        "static/js/pages-Faq-mdx.65a768d9.chunk.js",
+        "static/js/pages-Faq-mdx.65a768d9.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
