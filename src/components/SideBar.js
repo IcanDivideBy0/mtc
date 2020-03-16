@@ -34,22 +34,22 @@ export default function SideBar(props) {
           {ADDRESS.postalCode} {ADDRESS.locality}
         </Typography>
 
-        <Typography
-          
-        >
-          <a href={`tel:${PHONE}`}>
-            <PhoneIcon className={classes.icon} />
-            {PHONE}
-          </a>
+        <Typography>
+          <strong>
+            <a href={`tel:${PHONE}`}>
+              <PhoneIcon className={classes.icon} />
+              {PHONE}
+            </a>
+          </strong>
         </Typography>
 
-        <Typography
-          
-        >
-          <a href={`mailto:${EMAIL}`}>
-            <EmailIcon className={classes.icon} />
-            {EMAIL}
-          </a>
+        <Typography>
+          <strong>
+            <a href={`mailto:${EMAIL}`}>
+              <EmailIcon className={classes.icon} />
+              {EMAIL}
+            </a>
+          </strong>
         </Typography>
       </CardContent>
     </Card>
