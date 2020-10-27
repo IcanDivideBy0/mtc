@@ -2,45 +2,45 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.5",
-  "hash": "f6770d90ffab88a562ac",
+  "hash": "824040332d77005b8bd3",
   "publicPath": "/",
-  "outputPath": "/home/samuel/Workspace/mtc/build",
+  "outputPath": "C:\\Users\\samuel\\source\\repos\\mtc\\build",
   "assetsByChunkName": {
     "main": [
-      "static/js/main.7c6c0eab.chunk.js",
-      "static/js/main.7c6c0eab.chunk.js.map"
+      "static/js/main.b57a2128.chunk.js",
+      "static/js/main.b57a2128.chunk.js.map"
     ],
     "pages-Contact": [
       "static/js/pages-Contact.f8463f6b.chunk.js",
       "static/js/pages-Contact.f8463f6b.chunk.js.map"
     ],
     "pages-Faq-mdx": [
-      "static/js/pages-Faq-mdx.65a768d9.chunk.js",
-      "static/js/pages-Faq-mdx.65a768d9.chunk.js.map"
+      "static/js/pages-Faq-mdx.b21fafb5.chunk.js",
+      "static/js/pages-Faq-mdx.b21fafb5.chunk.js.map"
     ],
     "pages-Home": [
       "static/js/pages-Home.eab89e08.chunk.js",
       "static/js/pages-Home.eab89e08.chunk.js.map"
     ],
     "pages-MaPratique-mdx": [
-      "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js",
-      "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js.map"
+      "static/js/pages-MaPratique-mdx.3252f501.chunk.js",
+      "static/js/pages-MaPratique-mdx.3252f501.chunk.js.map"
     ],
     "pages-Preparatifs-mdx": [
-      "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js",
-      "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js.map"
+      "static/js/pages-Preparatifs-mdx.c201e821.chunk.js",
+      "static/js/pages-Preparatifs-mdx.c201e821.chunk.js.map"
     ],
     "pages-Soins-mdx": [
-      "static/js/pages-Soins-mdx.0f4c3f50.chunk.js",
-      "static/js/pages-Soins-mdx.0f4c3f50.chunk.js.map"
+      "static/js/pages-Soins-mdx.448e4e95.chunk.js",
+      "static/js/pages-Soins-mdx.448e4e95.chunk.js.map"
     ],
     "pages-Tarifs-mdx": [
-      "static/js/pages-Tarifs-mdx.8fe041f7.chunk.js",
-      "static/js/pages-Tarifs-mdx.8fe041f7.chunk.js.map"
+      "static/js/pages-Tarifs-mdx.407fb97f.chunk.js",
+      "static/js/pages-Tarifs-mdx.407fb97f.chunk.js.map"
     ],
     "runtime-main": [
-      "static/js/runtime-main.89e29e33.js",
-      "static/js/runtime-main.89e29e33.js.map"
+      "static/js/runtime-main.a29bed5d.js",
+      "static/js/runtime-main.a29bed5d.js.map"
     ]
   },
   "assets": [
@@ -129,7 +129,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/11.8350f8c8.chunk.js",
+      "name": "static/js/11.474d2b80.chunk.js",
       "size": 56694,
       "chunks": [
         11
@@ -141,7 +141,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/11.8350f8c8.chunk.js.map",
+      "name": "static/js/11.474d2b80.chunk.js.map",
       "size": 301314,
       "chunks": [
         11
@@ -177,8 +177,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/main.7c6c0eab.chunk.js",
-      "size": 21860,
+      "name": "static/js/main.b57a2128.chunk.js",
+      "size": 21883,
       "chunks": [
         1
       ],
@@ -191,8 +191,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/main.7c6c0eab.chunk.js.map",
-      "size": 51325,
+      "name": "static/js/main.b57a2128.chunk.js.map",
+      "size": 51347,
       "chunks": [
         1
       ],
@@ -233,7 +233,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Faq-mdx.65a768d9.chunk.js",
+      "name": "static/js/pages-Faq-mdx.b21fafb5.chunk.js",
       "size": 6852,
       "chunks": [
         3
@@ -247,7 +247,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Faq-mdx.65a768d9.chunk.js.map",
+      "name": "static/js/pages-Faq-mdx.b21fafb5.chunk.js.map",
       "size": 15148,
       "chunks": [
         3
@@ -289,7 +289,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js",
+      "name": "static/js/pages-MaPratique-mdx.3252f501.chunk.js",
       "size": 4872,
       "chunks": [
         5
@@ -303,7 +303,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js.map",
+      "name": "static/js/pages-MaPratique-mdx.3252f501.chunk.js.map",
       "size": 12841,
       "chunks": [
         5
@@ -317,7 +317,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js",
+      "name": "static/js/pages-Preparatifs-mdx.c201e821.chunk.js",
       "size": 6117,
       "chunks": [
         6
@@ -331,7 +331,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js.map",
+      "name": "static/js/pages-Preparatifs-mdx.c201e821.chunk.js.map",
       "size": 14381,
       "chunks": [
         6
@@ -345,8 +345,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Soins-mdx.0f4c3f50.chunk.js",
-      "size": 7316,
+      "name": "static/js/pages-Soins-mdx.448e4e95.chunk.js",
+      "size": 5785,
       "chunks": [
         7
       ],
@@ -359,8 +359,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Soins-mdx.0f4c3f50.chunk.js.map",
-      "size": 15950,
+      "name": "static/js/pages-Soins-mdx.448e4e95.chunk.js.map",
+      "size": 13960,
       "chunks": [
         7
       ],
@@ -373,8 +373,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Tarifs-mdx.8fe041f7.chunk.js",
-      "size": 4119,
+      "name": "static/js/pages-Tarifs-mdx.407fb97f.chunk.js",
+      "size": 3972,
       "chunks": [
         8
       ],
@@ -387,8 +387,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Tarifs-mdx.8fe041f7.chunk.js.map",
-      "size": 12322,
+      "name": "static/js/pages-Tarifs-mdx.407fb97f.chunk.js.map",
+      "size": 12031,
       "chunks": [
         8
       ],
@@ -401,7 +401,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/runtime-main.89e29e33.js",
+      "name": "static/js/runtime-main.a29bed5d.js",
       "size": 2631,
       "chunks": [
         9
@@ -415,7 +415,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/runtime-main.89e29e33.js.map",
+      "name": "static/js/runtime-main.a29bed5d.js.map",
       "size": 13018,
       "chunks": [
         9
@@ -782,13 +782,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime-main.89e29e33.js",
-        "static/js/runtime-main.89e29e33.js.map",
+        "static/js/runtime-main.a29bed5d.js",
+        "static/js/runtime-main.a29bed5d.js.map",
         "static/css/10.0defd3aa.chunk.css",
         "static/js/10.39f5a382.chunk.js",
         "static/js/10.39f5a382.chunk.js.map",
-        "static/js/main.7c6c0eab.chunk.js",
-        "static/js/main.7c6c0eab.chunk.js.map"
+        "static/js/main.b57a2128.chunk.js",
+        "static/js/main.b57a2128.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -802,13 +802,13 @@
         1
       ],
       "assets": [
-        "static/js/runtime-main.89e29e33.js",
-        "static/js/runtime-main.89e29e33.js.map",
+        "static/js/runtime-main.a29bed5d.js",
+        "static/js/runtime-main.a29bed5d.js.map",
         "static/css/10.0defd3aa.chunk.css",
         "static/js/10.39f5a382.chunk.js",
         "static/js/10.39f5a382.chunk.js.map",
-        "static/js/main.7c6c0eab.chunk.js",
-        "static/js/main.7c6c0eab.chunk.js.map"
+        "static/js/main.b57a2128.chunk.js",
+        "static/js/main.b57a2128.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -830,8 +830,8 @@
         2
       ],
       "assets": [
-        "static/js/11.8350f8c8.chunk.js",
-        "static/js/11.8350f8c8.chunk.js.map",
+        "static/js/11.474d2b80.chunk.js",
+        "static/js/11.474d2b80.chunk.js.map",
         "static/js/pages-Contact.f8463f6b.chunk.js",
         "static/js/pages-Contact.f8463f6b.chunk.js.map"
       ],
@@ -843,8 +843,8 @@
         7
       ],
       "assets": [
-        "static/js/pages-Soins-mdx.0f4c3f50.chunk.js",
-        "static/js/pages-Soins-mdx.0f4c3f50.chunk.js.map"
+        "static/js/pages-Soins-mdx.448e4e95.chunk.js",
+        "static/js/pages-Soins-mdx.448e4e95.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -854,8 +854,8 @@
         5
       ],
       "assets": [
-        "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js",
-        "static/js/pages-MaPratique-mdx.eb6d20fd.chunk.js.map"
+        "static/js/pages-MaPratique-mdx.3252f501.chunk.js",
+        "static/js/pages-MaPratique-mdx.3252f501.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -865,8 +865,8 @@
         6
       ],
       "assets": [
-        "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js",
-        "static/js/pages-Preparatifs-mdx.3c48c08d.chunk.js.map"
+        "static/js/pages-Preparatifs-mdx.c201e821.chunk.js",
+        "static/js/pages-Preparatifs-mdx.c201e821.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -876,8 +876,8 @@
         8
       ],
       "assets": [
-        "static/js/pages-Tarifs-mdx.8fe041f7.chunk.js",
-        "static/js/pages-Tarifs-mdx.8fe041f7.chunk.js.map"
+        "static/js/pages-Tarifs-mdx.407fb97f.chunk.js",
+        "static/js/pages-Tarifs-mdx.407fb97f.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -887,8 +887,8 @@
         3
       ],
       "assets": [
-        "static/js/pages-Faq-mdx.65a768d9.chunk.js",
-        "static/js/pages-Faq-mdx.65a768d9.chunk.js.map"
+        "static/js/pages-Faq-mdx.b21fafb5.chunk.js",
+        "static/js/pages-Faq-mdx.b21fafb5.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -906,14 +906,14 @@
       "errors": [],
       "warnings": [],
       "publicPath": "/",
-      "outputPath": "/home/samuel/Workspace/mtc/build",
+      "outputPath": "C:\\Users\\samuel\\source\\repos\\mtc\\build",
       "assetsByChunkName": {
         "HtmlWebpackPlugin_0": "__child-HtmlWebpackPlugin_0"
       },
       "assets": [
         {
           "name": "__child-HtmlWebpackPlugin_0",
-          "size": 6481,
+          "size": 6569,
           "chunks": [
             0
           ],
@@ -963,7 +963,7 @@
       "errors": [],
       "warnings": [],
       "publicPath": "/",
-      "outputPath": "/home/samuel/Workspace/mtc/build",
+      "outputPath": "C:\\Users\\samuel\\source\\repos\\mtc\\build",
       "assetsByChunkName": {},
       "assets": [],
       "filteredAssets": 0,
@@ -1005,7 +1005,7 @@
       "errors": [],
       "warnings": [],
       "publicPath": "/",
-      "outputPath": "/home/samuel/Workspace/mtc/build",
+      "outputPath": "C:\\Users\\samuel\\source\\repos\\mtc\\build",
       "assetsByChunkName": {},
       "assets": [],
       "filteredAssets": 0,
