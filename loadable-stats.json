@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.5",
-  "hash": "824040332d77005b8bd3",
+  "hash": "d61b09f0e31674cce3b0",
   "publicPath": "/",
   "outputPath": "C:\\Users\\samuel\\source\\repos\\mtc\\build",
   "assetsByChunkName": {
@@ -35,12 +35,12 @@
       "static/js/pages-Soins-mdx.448e4e95.chunk.js.map"
     ],
     "pages-Tarifs-mdx": [
-      "static/js/pages-Tarifs-mdx.407fb97f.chunk.js",
-      "static/js/pages-Tarifs-mdx.407fb97f.chunk.js.map"
+      "static/js/pages-Tarifs-mdx.af9be2e1.chunk.js",
+      "static/js/pages-Tarifs-mdx.af9be2e1.chunk.js.map"
     ],
     "runtime-main": [
-      "static/js/runtime-main.a29bed5d.js",
-      "static/js/runtime-main.a29bed5d.js.map"
+      "static/js/runtime-main.9717dcd2.js",
+      "static/js/runtime-main.9717dcd2.js.map"
     ]
   },
   "assets": [
@@ -373,8 +373,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Tarifs-mdx.407fb97f.chunk.js",
-      "size": 3972,
+      "name": "static/js/pages-Tarifs-mdx.af9be2e1.chunk.js",
+      "size": 3973,
       "chunks": [
         8
       ],
@@ -387,8 +387,8 @@
       "emitted": false
     },
     {
-      "name": "static/js/pages-Tarifs-mdx.407fb97f.chunk.js.map",
-      "size": 12031,
+      "name": "static/js/pages-Tarifs-mdx.af9be2e1.chunk.js.map",
+      "size": 12032,
       "chunks": [
         8
       ],
@@ -401,7 +401,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/runtime-main.a29bed5d.js",
+      "name": "static/js/runtime-main.9717dcd2.js",
       "size": 2631,
       "chunks": [
         9
@@ -415,7 +415,7 @@
       "emitted": false
     },
     {
-      "name": "static/js/runtime-main.a29bed5d.js.map",
+      "name": "static/js/runtime-main.9717dcd2.js.map",
       "size": 13018,
       "chunks": [
         9
@@ -782,8 +782,8 @@
         1
       ],
       "assets": [
-        "static/js/runtime-main.a29bed5d.js",
-        "static/js/runtime-main.a29bed5d.js.map",
+        "static/js/runtime-main.9717dcd2.js",
+        "static/js/runtime-main.9717dcd2.js.map",
         "static/css/10.0defd3aa.chunk.css",
         "static/js/10.39f5a382.chunk.js",
         "static/js/10.39f5a382.chunk.js.map",
@@ -802,8 +802,8 @@
         1
       ],
       "assets": [
-        "static/js/runtime-main.a29bed5d.js",
-        "static/js/runtime-main.a29bed5d.js.map",
+        "static/js/runtime-main.9717dcd2.js",
+        "static/js/runtime-main.9717dcd2.js.map",
         "static/css/10.0defd3aa.chunk.css",
         "static/js/10.39f5a382.chunk.js",
         "static/js/10.39f5a382.chunk.js.map",
@@ -876,8 +876,8 @@
         8
       ],
       "assets": [
-        "static/js/pages-Tarifs-mdx.407fb97f.chunk.js",
-        "static/js/pages-Tarifs-mdx.407fb97f.chunk.js.map"
+        "static/js/pages-Tarifs-mdx.af9be2e1.chunk.js",
+        "static/js/pages-Tarifs-mdx.af9be2e1.chunk.js.map"
       ],
       "children": {},
       "childAssets": {}
