@@ -1,6 +1,6 @@
 import React from "react";
-import { useLocation, matchPath } from "react-router";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import FontFaceObserver from "fontfaceobserver";
 import clsx from "clsx";
 
@@ -15,10 +15,9 @@ import {
   Fade,
   Typography,
   Collapse,
+  Container,
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
-
-import ContentContainer from "mtc/components/ContentContainer";
 
 const NAV_ITEMS = [
   { label: "Accueil", path: "/", exact: true },
@@ -33,7 +32,7 @@ const NAV_ITEMS = [
     // ],
   },
   { label: "Ma pratique", path: "/ma-pratique" },
-  { label: "Préparatifs", path: "/préparatifs" },
+  { label: "Préparatifs", path: "/preparatifs" },
   { label: "FAQ", path: "/faq" },
   { label: "Tarifs et infos", path: "/tarifs" },
   { label: "Contact", path: "/contact" },
@@ -43,7 +42,7 @@ const NAV_ITEMS = [
  * Desktop nav
  */
 
-const useNavItemStyles = makeStyles(theme => ({
+const useNavItemStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     display: "flex",
@@ -76,33 +75,37 @@ const useNavItemStyles = makeStyles(theme => ({
   },
 }));
 
-function DesktopNavItem({ innerRef, navItem, isNested, className, children }) {
-  const location = useLocation();
+const DesktopNavItem = React.forwardRef(function DesktopNavItem(
+  { navItem, isNested, className, children },
+  ref
+) {
   const classes = useNavItemStyles();
+  const router = useRouter();
 
   let rootRef = React.useRef();
   const [isOver, setIsOver] = React.useState(false);
 
   return (
     <div
-      ref={ref => {
+      ref={(r) => {
         rootRef.current = ref;
-        innerRef && innerRef(ref);
+        ref && ref(r);
       }}
       onMouseEnter={() => setIsOver(true)}
       onMouseLeave={() => setIsOver(false)}
       onClick={() => setIsOver(false)}
       className={classes.root}
     >
-      <ButtonBase
-        variant="contained"
-        color="secondary"
-        component={Link}
-        to={navItem.path}
-        className={clsx(classes.button, className)}
-      >
-        {children}
-      </ButtonBase>
+      <Link href={navItem.path} passHref>
+        <ButtonBase
+          variant="contained"
+          color="secondary"
+          component="a"
+          className={clsx(classes.button, className)}
+        >
+          {children}
+        </ButtonBase>
+      </Link>
 
       {navItem.items && (
         <Popper
@@ -115,17 +118,23 @@ function DesktopNavItem({ innerRef, navItem, isNested, className, children }) {
           {({ TransitionProps }) => (
             <Fade {...TransitionProps} timeout={350}>
               <Paper square className={classes.paper}>
-                {navItem.items.map(navItem => (
-                  <Tab
-                    key={navItem.path}
-                    value={navItem.path}
-                    label={navItem.label}
-                    component={DesktopNavItemRef}
-                    navItem={navItem}
-                    isNested
-                    selected={!!matchPath(location.pathname, navItem)}
-                  />
-                ))}
+                {navItem.items.map(({ label, path, exact }) => {
+                  const selected = exact
+                    ? path === router.pathname
+                    : router.pathname.indexOf(path) === 0;
+
+                  return (
+                    <Tab
+                      key={path}
+                      value={path}
+                      label={label}
+                      component={DesktopNavItem}
+                      navItem={navItem}
+                      isNested
+                      selected={selected}
+                    />
+                  );
+                })}
               </Paper>
             </Fade>
           )}
@@ -133,17 +142,13 @@ function DesktopNavItem({ innerRef, navItem, isNested, className, children }) {
       )}
     </div>
   );
-}
-
-const DesktopNavItemRef = React.forwardRef((props, ref) => (
-  <DesktopNavItem {...props} innerRef={ref} />
-));
+});
 
 /**
  * Mobile nav
  */
 
-const useMobileNavItemListStyles = makeStyles(theme => ({
+const useMobileNavItemListStyles = makeStyles((theme) => ({
   root: {
     listStyleType: "none",
     padding: 0,
@@ -176,15 +181,13 @@ function MobileNavItemList({ navItems }) {
 
   return (
     <ul className={classes.root}>
-      {navItems.map(navItem => (
+      {navItems.map((navItem) => (
         <li key={navItem.path} className={classes.item}>
-          <ButtonBase
-            component={Link}
-            to={navItem.path}
-            className={classes.link}
-          >
-            <Typography color="inherit">{navItem.label}</Typography>
-          </ButtonBase>
+          <Link href={navItem.path} passHref>
+            <ButtonBase component="a" className={classes.link}>
+              <Typography color="inherit">{navItem.label}</Typography>
+            </ButtonBase>
+          </Link>
 
           {navItem.items && <MobileNavItemList navItems={navItem.items} />}
         </li>
@@ -197,11 +200,10 @@ function MobileNavItemList({ navItems }) {
  * Nav bar
  */
 
-const useNavBarStyles = makeStyles(theme => ({
+const useNavBarStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "row",
-    padding: theme.spacing(0, 2),
   },
   main: {
     display: "flex",
@@ -264,21 +266,21 @@ const useNavBarStyles = makeStyles(theme => ({
 }));
 
 export default function NavBar() {
+  const router = useRouter();
   const classes = useNavBarStyles();
-  const location = useLocation();
 
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
-  const toggleMobilenav = () => setMobileNavOpen(open => !open);
+  const toggleMobilenav = () => setMobileNavOpen((open) => !open);
 
   const tabValue = (
     NAV_ITEMS.find(({ path, exact }) =>
-      matchPath(location.pathname, { path, exact })
+      exact ? path === router.pathname : router.pathname.indexOf(path) === 0
     ) || { path: 0 }
   ).path;
 
   return (
     <AppBar position="sticky" color="secondary" className={classes.root}>
-      <ContentContainer className={classes.main}>
+      <Container fixed className={classes.main}>
         <Tabs
           value={tabValue}
           indicatorColor="primary"
@@ -288,24 +290,22 @@ export default function NavBar() {
             flexContainer: classes.tabsFlexContainer,
             scroller: classes.tabsScroller,
           }}
-          action={ref => {
+          action={(ref) => {
             if (!ref) return;
             const font = new FontFaceObserver("Fira Sans");
-            font.load().then(ref.updateIndicator);
+            font.load().then(ref.updateIndicator).catch(console.error);
           }}
         >
           <Tab value={0} className={classes.hiddenTab} />
 
-          {NAV_ITEMS.map(navItem => (
+          {NAV_ITEMS.map((navItem) => (
             <Tab
               key={navItem.path}
               value={navItem.path}
               label={navItem.label}
-              component={DesktopNavItemRef}
+              component={DesktopNavItem}
               navItem={navItem}
-              classes={{
-                root: classes.desktopTabRoot,
-              }}
+              classes={{ root: classes.desktopTabRoot }}
             />
           ))}
         </Tabs>
@@ -331,7 +331,7 @@ export default function NavBar() {
             </nav>
           </Collapse>
         </div>
-      </ContentContainer>
+      </Container>
     </AppBar>
   );
 }

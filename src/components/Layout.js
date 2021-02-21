@@ -1,45 +1,73 @@
 import React from "react";
-import { useLocation } from "react-router";
-import { Helmet } from "react-helmet-async";
-import { makeStyles, useTheme, Grid } from "@material-ui/core";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import { makeStyles, useTheme, Grid, Container } from "@material-ui/core";
 
-import { getBaseUrl } from "mtc/utils";
-import { ADDRESS, PHONE } from "mtc/constants";
+import { BASE_URL, ADDRESS, PHONE } from "constants";
+import Banner from "components/Banner";
+import NavBar from "components/NavBar";
+import SideBar from "components/SideBar";
+import Footer from "components/Footer";
 
-import PageMetaTitle from "mtc/components/PageMetaTitle";
-import PageMetaDescription from "mtc/components/PageMetaDescription";
-import Banner from "mtc/components/Banner";
-import NavBar from "mtc/components/NavBar";
-import ContentContainer from "mtc/components/ContentContainer";
-import SideBar from "mtc/components/SideBar";
-import Router from "mtc/components/Router";
-import Footer from "mtc/components/Footer";
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
+  "@global": {
+    html: { height: "100%" },
+    body: { height: "100%" },
+    "#__next": {
+      minHeight: "100%",
+      display: "flex",
+      flexDirection: "column",
+    },
+  },
   content: {
     position: "relative",
     flexGrow: 1,
+
+    padding: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(3),
+    },
+  },
+  sidebar: {
+    position: "sticky",
+    top: 48 + 24,
   },
 }));
 
-export default function Main() {
+export default function Layout({ children }) {
   const theme = useTheme();
   const classes = useStyles();
-  const location = useLocation();
+  const router = useRouter();
 
-  const baseUrl = getBaseUrl();
-  const url = baseUrl + location.pathname + location.search;
+  const url = BASE_URL + router.pathname;
 
   return (
     <>
-      <PageMetaTitle title="Loïse Holive praticienne en médecine traditionnelle chinoise à Nantes. Acupuncture, Tuina, Ventouses, Qi-Gong, …" />
-      <PageMetaDescription description="Loïse Holive praticienne en médecine traditionnelle chinoise à Nantes. Acupuncture, Tuina, Ventouses, Qi-Gong, …" />
-
-      <Helmet>
-        <html lang="fr" />
-        <meta property="og:locale" content="fr" />
-
+      <Head>
+        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <meta name="theme-color" content={theme.palette.secondary.main} />
+
+        <title>
+          Loïse Holive praticienne en médecine traditionnelle chinoise à Nantes.
+          Acupuncture, Tuina, Ventouses, Qi-Gong, …
+        </title>
+        <meta
+          property="og:title"
+          content="Loïse Holive praticienne en médecine traditionnelle chinoise à Nantes. Acupuncture, Tuina, Ventouses, Qi-Gong, …"
+        />
+
+        <meta
+          name="description"
+          content="Loïse Holive praticienne en médecine traditionnelle chinoise à Nantes. Acupuncture, Tuina, Ventouses, Qi-Gong, …"
+        />
+        <meta
+          property="og:description"
+          content="Loïse Holive praticienne en médecine traditionnelle chinoise à Nantes. Acupuncture, Tuina, Ventouses, Qi-Gong, …"
+        />
 
         <link rel="canonical" href={url} />
         <meta property="og:url" content={url} />
@@ -48,7 +76,7 @@ export default function Main() {
           content="Loïse Holive - Praticienne en médecine traditionnelle chinoise à Nantes"
         />
 
-        <meta property="og:image" content={baseUrl + "/og-image.png"} />
+        <meta property="og:image" content={BASE_URL + "/og-image.png"} />
 
         <meta property="og:type" content="business.business" />
         <meta
@@ -71,7 +99,7 @@ export default function Main() {
           property="business:contact_data:country_name"
           content={ADDRESS.country}
         />
-      </Helmet>
+      </Head>
 
       <script
         type="application/ld+json"
@@ -79,7 +107,7 @@ export default function Main() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            url: baseUrl,
+            url: BASE_URL,
             name: "Nantes Médecine Chinoise",
           }),
         }}
@@ -91,7 +119,7 @@ export default function Main() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            url: baseUrl,
+            url: BASE_URL,
             name: "Loïse Holive",
           }),
         }}
@@ -105,8 +133,8 @@ export default function Main() {
             "@type": "LocalBusiness",
             name:
               "Loïse Holive - Praticienne en médecine traditionnelle chinoise",
-            logo: baseUrl + "/logo.png",
-            image: baseUrl + "/logo.png",
+            logo: BASE_URL + "/logo.png",
+            image: BASE_URL + "/logo.png",
             address: {
               "@type": "PostalAddress",
               streetAddress: ADDRESS.street,
@@ -117,7 +145,7 @@ export default function Main() {
             telephone: PHONE,
             email: "contact@syos.co",
             openingHours: ["Mo-Fr 09:00-20:00", "Sa 09:00-17:00"],
-            url: baseUrl,
+            url: BASE_URL,
           }),
         }}
       />
@@ -125,17 +153,17 @@ export default function Main() {
       <Banner />
       <NavBar />
 
-      <ContentContainer padded className={classes.content}>
+      <Container fixed className={classes.content}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={8} component="main">
-            <Router />
+            {children}
           </Grid>
 
           <Grid item xs={12} md={4} component="aside">
-            <SideBar />
+            <SideBar classes={{ root: classes.sidebar }} />
           </Grid>
         </Grid>
-      </ContentContainer>
+      </Container>
 
       <Footer />
     </>

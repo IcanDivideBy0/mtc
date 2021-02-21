@@ -1,12 +1,19 @@
 import React from "react";
 
-import { makeStyles, Card, CardContent, Typography } from "@material-ui/core";
+import {
+  makeStyles,
+  Card,
+  CardContent,
+  Typography,
+  Link,
+} from "@material-ui/core";
 import { Phone as PhoneIcon, Email as EmailIcon } from "@material-ui/icons";
 
-import { ADDRESS, PHONE, EMAIL } from "mtc/constants";
-import Map from "mtc/components/Map";
+import { ADDRESS, PHONE, EMAIL } from "constants";
+import Map from "components/Map";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
+  root: {},
   icon: {
     verticalAlign: "middle",
     fontSize: "1rem",
@@ -36,19 +43,19 @@ export default function SideBar(props) {
 
         <Typography>
           <strong>
-            <a href={`tel:${PHONE}`}>
+            <Link href={`tel:${PHONE}`}>
               <PhoneIcon className={classes.icon} />
               {PHONE}
-            </a>
+            </Link>
           </strong>
         </Typography>
 
         <Typography>
           <strong>
-            <a href={`mailto:${EMAIL}`}>
+            <Link href={`mailto:${EMAIL}`}>
               <EmailIcon className={classes.icon} />
               {EMAIL}
-            </a>
+            </Link>
           </strong>
         </Typography>
       </CardContent>

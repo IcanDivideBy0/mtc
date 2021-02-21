@@ -1,22 +1,36 @@
 import React from "react";
 import clsx from "clsx";
 
+import Layout from "components/Layout";
+
 import { makeStyles, Typography, Divider } from "@material-ui/core";
 
-export const H1 = props => <Typography variant="h1" gutterBottom {...props} />;
-export const H2 = props => <Typography variant="h2" gutterBottom {...props} />;
-export const H3 = props => <Typography variant="h3" gutterBottom {...props} />;
-export const H4 = props => <Typography variant="h4" gutterBottom {...props} />;
-export const H5 = props => <Typography variant="h5" gutterBottom {...props} />;
-export const H6 = props => <Typography variant="h6" gutterBottom {...props} />;
+export const H1 = (props) => (
+  <Typography variant="h1" gutterBottom {...props} />
+);
+export const H2 = (props) => (
+  <Typography variant="h2" gutterBottom {...props} />
+);
+export const H3 = (props) => (
+  <Typography variant="h3" gutterBottom {...props} />
+);
+export const H4 = (props) => (
+  <Typography variant="h4" gutterBottom {...props} />
+);
+export const H5 = (props) => (
+  <Typography variant="h5" gutterBottom {...props} />
+);
+export const H6 = (props) => (
+  <Typography variant="h6" gutterBottom {...props} />
+);
 
-export const Paragraph = props => <Typography paragraph {...props} />;
+export const Paragraph = (props) => <Typography paragraph {...props} />;
 
 /**
  * <strong>
  */
 
-const useStrongStyles = makeStyles(theme => ({
+const useStrongStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.primary.main,
   },
@@ -24,7 +38,6 @@ const useStrongStyles = makeStyles(theme => ({
 
 export function Strong({ className, ...props }) {
   const classes = useStrongStyles(props);
-
   return <strong className={clsx(className, classes.root)} {...props} />;
 }
 
@@ -48,7 +61,7 @@ export function ListItem(props) {
  * <hr />
  */
 
-const useHorizontalRuleStyles = makeStyles(theme => ({
+const useHorizontalRuleStyles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(2, 0),
   },
@@ -60,7 +73,7 @@ export function HorizontalRule(props) {
 }
 
 export default {
-  wrapper: React.Fragment,
+  wrapper: Layout,
   h1: H1,
   h2: H2,
   h3: H3,

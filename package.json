@@ -2,97 +2,35 @@
   "name": "mtc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nantes-medecine-chinoise.fr",
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "postbuild": "node ./ssr/index.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "craco test",
-    "lint": "eslint src",
-    "eject": "react-scripts eject"
+    "dev": "next dev -p 4000",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
   },
   "dependencies": {
-    "@loadable/component": "^5.12.0",
-    "@material-ui/core": "^4.9.5",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/lab": "^4.0.0-alpha.45",
-    "clsx": "^1.1.0",
-    "final-form": "^4.18.7",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.7",
+    "clsx": "^1.1.1",
     "fontfaceobserver": "^2.1.0",
-    "leaflet": "^1.6.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-final-form": "^6.3.5",
-    "react-helmet-async": "^1.0.4",
-    "react-lazyload": "^2.6.5",
-    "react-leaflet": "^2.6.1",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0",
-    "sitemap": "^6.0.0",
-    "typeface-fira-sans": "^0.0.75"
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-final-form": "^6.5.2",
+    "react-leaflet": "^3.1.0",
+    "typeface-fira-sans": "^1.1.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "@craco/craco": "^3.1.1",
-    "@loadable/babel-plugin": "^5.12.0",
-    "@loadable/server": "^5.1.1",
-    "@loadable/webpack-plugin": "^5.12.0",
-    "@mdx-js/loader": "^0.16.5",
-    "@mdx-js/mdx": "^0.16.5",
-    "babel-plugin-module-resolver": "^3.1.1",
-    "express": "^4.16.4",
-    "gh-pages": "^2.0.1",
-    "html-minifier": "^4.0.0",
-    "lodash.flowright": "^3.5.0",
-    "lodash.template": "^4.4.0",
-    "mkdirp": "^0.5.1",
-    "node-fetch": "^2.6.0",
-    "prettier": "^1.14.3",
-    "webpack-visualizer-plugin": "^0.1.11"
-  },
-  "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-transform-runtime",
-        {
-          "regenerator": true
-        }
-      ],
-      [
-        "module-resolver",
-        {
-          "alias": {
-            "mtc": "./src"
-          }
-        }
-      ],
-      "@loadable/babel-plugin",
-      "@babel/syntax-dynamic-import",
-      "@babel/plugin-proposal-optional-chaining",
-      "@babel/proposal-class-properties"
-    ],
-    "presets": [
-      "@babel/env",
-      "@babel/react"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "leaflet": "^1.7.1",
+    "prettier": "^2.2.1",
+    "prop-types": "^15.7.2"
+  }
 }

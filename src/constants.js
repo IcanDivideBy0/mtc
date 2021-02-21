@@ -1,13 +1,15 @@
+export const BASE_URL = "https://nantes-medecine-chinoise.fr";
+
 export const ADDRESS = {
   name: "Loïse Holive",
-  street: "1 allée Jean Bart",
-  postalCode: "44000",
+  street: "49 rue de la Gourmette",
+  postalCode: "44300",
   locality: "Nantes",
   region: "Pays de la Loire",
   country: "France",
   geo: {
-    lat: 47.214256,
-    lng: -1.555182,
+    lat: 47.23289916876871,
+    lng: -1.5730772740086578,
   },
 };
 

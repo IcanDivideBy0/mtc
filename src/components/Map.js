@@ -1,12 +1,12 @@
 import React from "react";
-
 import { makeStyles } from "@material-ui/core";
-import { ADDRESS } from "mtc/constants";
+
+import { ADDRESS } from "constants";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZGlzY29sb3JkIiwiYSI6ImNrN2plazhteTBzZzQzbG8zcnEyMHA3eWQifQ.j6KgxESGIU8KLbE0FRiRUg";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
     position: "relative",
     width: "100%",
@@ -18,43 +18,45 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "100%",
   },
-}));
+});
 
 function useMap() {
   const [mapUtils, setMapUtils] = React.useState();
 
   React.useEffect(() => {
-    Promise.all([import("react-leaflet"), import("leaflet")]).then(
-      ([{ Map: LeafletMap, TileLayer, Marker }, L]) => {
-        const icon = L.icon({
-          iconUrl: require("./images/marker.svg"),
-          iconSize: [48, 48],
-          iconAnchor: [24, 48],
-        });
+    Promise.all([
+      import("react-leaflet"),
+      import("leaflet"),
+      import("leaflet/dist/leaflet.css"),
+    ]).then(([{ MapContainer, TileLayer, Marker }, L]) => {
+      const icon = L.icon({
+        iconUrl: "/images/marker.svg",
+        iconSize: [48, 48],
+        iconAnchor: [24, 48],
+      });
 
-        setMapUtils({
-          LeafletMap,
-          TileLayer,
-          Marker,
-          icon,
-        });
-      }
-    );
+      setMapUtils({
+        MapContainer,
+        TileLayer,
+        Marker,
+        icon,
+      });
+    });
   }, []);
 
   return mapUtils;
 }
 
-export default function MapComponent(props) {
+export default function Map(props) {
   const classes = useStyles(props);
   const mapUtils = useMap();
   if (!mapUtils) return <div className={classes.root} />;
 
-  const { LeafletMap, TileLayer, Marker, icon } = mapUtils;
+  const { MapContainer, TileLayer, Marker, icon } = mapUtils;
 
   return (
     <div className={classes.root}>
-      <LeafletMap
+      <MapContainer
         center={ADDRESS.geo}
         className={classes.map}
         zoom={13}
@@ -66,7 +68,7 @@ export default function MapComponent(props) {
           url={`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${MAPBOX_TOKEN}`}
         />
         <Marker position={ADDRESS.geo} icon={icon} />
-      </LeafletMap>
+      </MapContainer>
     </div>
   );
 }

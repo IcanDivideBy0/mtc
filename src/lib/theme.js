@@ -1,6 +1,7 @@
 import { createMuiTheme } from "@material-ui/core";
+import "typeface-fira-sans";
 
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: ['"Fira Sans"', "sans-serif"],
@@ -34,26 +35,4 @@ const theme = createMuiTheme({
       spacing: 2,
     },
   },
-  images: {
-    genImageSizes: config => {
-      const getSizeQuery = breakpoint =>
-        theme.breakpoints.up(breakpoint).replace("@media ", "");
-
-      return Array.from(theme.breakpoints.keys)
-        .reverse()
-        .reduce((acc, breakpoint) => {
-          const fn = config[breakpoint];
-          if (!fn || typeof fn !== "function") return acc;
-
-          const size = [
-            getSizeQuery(breakpoint),
-            fn(theme.breakpoints.values[breakpoint]),
-          ].join(" ");
-
-          return [...acc, size];
-        }, []);
-    },
-  },
 });
-
-export default theme;

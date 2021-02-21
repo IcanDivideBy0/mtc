@@ -1,13 +1,11 @@
 import React from "react";
 
-import { makeStyles, Paper, Typography } from "@material-ui/core";
+import { makeStyles, Container, Paper, Typography } from "@material-ui/core";
 
-import ContentContainer from "mtc/components/ContentContainer";
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     background: `
-      url(${require("./images/bg.svg")}),
+      url("/images/background.svg"),
       radial-gradient(
         ellipse at center,
         ${theme.palette.secondary.light},
@@ -17,6 +15,12 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: "repeat, no-repeat",
     color: theme.palette.secondary.contrastText,
   },
+  content: {
+    padding: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(3),
+    },
+  },
 }));
 
 export default function Footer(props) {
@@ -24,9 +28,9 @@ export default function Footer(props) {
 
   return (
     <Paper square className={classes.root}>
-      <ContentContainer padded>
-        <Typography color="inherit" />
-      </ContentContainer>
+      <Container fixed className={classes.content}>
+        <Typography color="inherit"></Typography>
+      </Container>
     </Paper>
   );
 }

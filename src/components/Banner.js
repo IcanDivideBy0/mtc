@@ -1,13 +1,11 @@
 import React from "react";
 
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles, Container, Typography, Grid } from "@material-ui/core";
 
-import ContentContainer from "mtc/components/ContentContainer";
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundImage: `
-      url(${require("./images/bg.svg")}),
+      url("/images/background.svg"),
       radial-gradient(
         ellipse at center,
         ${theme.palette.primary.light},
@@ -17,41 +15,31 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: "repeat, no-repeat",
     backgroundPosition: "center center, center center",
     color: theme.palette.primary.contrastText,
-    display: "flex",
-    height: 300,
   },
   content: {
-    flexGrow: 1,
+    height: 300,
     position: "relative",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
+    alignItems: "center",
 
+    padding: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
-      paddingRight: 200,
-    },
-  },
-  logo: {
-    position: "absolute",
-    right: 0,
-    top: "50%",
-    transform: "translateY(-50%)",
-
-    [theme.breakpoints.down("xs")]: {
-      top: 32,
-      transform: "scale(0.5)",
-      transformOrigin: "top right",
+      padding: theme.spacing(3),
     },
   },
   title: {
-    position: "relative",
     fontWeight: 500,
     textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
   },
   subtitle: {
-    position: "relative",
     fontWeight: 500,
     textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
+  },
+  logo: {
+    [theme.breakpoints.down("xs")]: {
+      transform: "scale(0.5)",
+      transformOrigin: "top right",
+    },
   },
 }));
 
@@ -60,33 +48,36 @@ export default function Banner(props) {
 
   return (
     <header className={classes.root}>
-      <ContentContainer padded className={classes.content}>
-        <img
-          src={require("./images/logo.svg")}
-          alt="logo"
-          className={classes.logo}
-        />
+      <Container fixed className={classes.content}>
+        <Grid container alignItems="center">
+          <Grid item xs>
+            <Typography
+              variant="h1"
+              component="div"
+              color="inherit"
+              gutterBottom
+              className={classes.title}
+            >
+              La Médecine Énergétique Chinoise à Nantes
+            </Typography>
 
-        <Typography
-          variant="h1"
-          component="div"
-          color="inherit"
-          gutterBottom
-          className={classes.title}
-        >
-          La Médecine Énergétique Chinoise à Nantes
-        </Typography>
+            <Typography
+              variant="h3"
+              component="div"
+              color="inherit"
+              className={classes.subtitle}
+            >
+              Loïse Holive, votre praticienne en Acupuncture et massage Tuina,
+              pour soulager rapidement vos douleurs et restituer votre bien
+              être.
+            </Typography>
+          </Grid>
 
-        <Typography
-          variant="h3"
-          component="div"
-          color="inherit"
-          className={classes.subtitle}
-        >
-          Loïse Holive, votre praticienne en Acupuncture et massage Tuina, pour
-          soulager rapidement vos douleurs et restituer votre bien être.
-        </Typography>
-      </ContentContainer>
+          <Grid item>
+            <img src="/images/logo.svg" alt="logo" className={classes.logo} />
+          </Grid>
+        </Grid>
+      </Container>
     </header>
   );
 }
