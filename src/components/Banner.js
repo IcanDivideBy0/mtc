@@ -1,6 +1,12 @@
 import React from "react";
 
-import { makeStyles, Container, Typography, Grid } from "@material-ui/core";
+import {
+  makeStyles,
+  Container,
+  Typography,
+  Grid,
+  Hidden,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,12 +41,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
   },
-  logo: {
-    [theme.breakpoints.down("xs")]: {
-      transform: "scale(0.5)",
-      transformOrigin: "top right",
-    },
-  },
 }));
 
 export default function Banner(props) {
@@ -73,9 +73,11 @@ export default function Banner(props) {
             </Typography>
           </Grid>
 
-          <Grid item>
-            <img src="/images/logo.svg" alt="logo" className={classes.logo} />
-          </Grid>
+          <Hidden xsDown implementation="css">
+            <Grid item>
+              <img src="/images/logo.svg" alt="logo" />
+            </Grid>
+          </Hidden>
         </Grid>
       </Container>
     </header>
