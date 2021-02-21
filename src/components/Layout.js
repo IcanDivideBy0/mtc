@@ -44,7 +44,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="shortcut icon" href={`${BASE_URL}/favicon.ico`} />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
