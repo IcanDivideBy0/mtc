@@ -40,6 +40,8 @@ const useStyles = makeStyles((theme) => ({
   subtitle: {
     fontWeight: 500,
     textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
+
+    [theme.breakpoints.up("lg")]: { maxWidth: "80%" },
   },
 }));
 
