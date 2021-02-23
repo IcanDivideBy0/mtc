@@ -20,8 +20,10 @@ jobs:
       - name: Caching
         uses: actions/cache@v2
         with:
-          path: "node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('package-lock.json') }}
+          path: |
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       - name: Install
         run: npm install
