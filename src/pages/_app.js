@@ -6,6 +6,7 @@ import { MDXProvider } from "@mdx-js/react";
 import * as gtag from "lib/gtag";
 import { theme } from "lib/theme";
 import mdxComponents from "lib/mdx";
+import Layout from "components/Layout";
 
 export function reportWebVitals({ id, name, label, value }) {
   gtag.event(name, {
@@ -36,7 +37,9 @@ export default function App({ Component, pageProps }) {
       <CssBaseline />
 
       <MDXProvider components={mdxComponents}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </MDXProvider>
     </ThemeProvider>
   );

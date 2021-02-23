@@ -1,8 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 
-import Layout from "components/Layout";
-
 import { makeStyles, Typography, Divider } from "@material-ui/core";
 
 export const H1 = (props) => (
@@ -73,7 +71,7 @@ export function HorizontalRule(props) {
 }
 
 export default {
-  wrapper: Layout,
+  wrapper: React.Fragment,
   h1: H1,
   h2: H2,
   h3: H3,
