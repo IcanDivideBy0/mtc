@@ -48,7 +48,7 @@ export default function HomePage(props) {
     <Grid container spacing={4}>
       <Grid item xs={12}>
         <Typography variant="h1" gutterBottom>
-          Qu’est-ce que la Médecine Énergétique Chinoise ?
+          Qu’est-ce que la Médecine Énergétique Chinoise&nbsp;?
         </Typography>
         <Typography paragraph>
           La médecine énergétique chinoise est basée sur l’observation de
