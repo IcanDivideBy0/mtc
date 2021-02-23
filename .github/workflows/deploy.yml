@@ -23,16 +23,16 @@ jobs:
           path: |
             ${{ github.workspace }}/node_modules
             ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
       - name: Install
-        run: npm install
+        run: yarn install
 
       - name: Build
-        run: npm run build
+        run: yarn run build
 
       - name: Export
-        run: npm run export
+        run: yarn run export
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
