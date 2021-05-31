@@ -69,9 +69,8 @@ export default function Banner(props) {
               color="inherit"
               className={classes.subtitle}
             >
-              Loïse Holive, votre praticienne en Acupuncture et massage Tuina,
-              pour soulager rapidement vos douleurs et restituer votre bien
-              être.
+              Loïse Holive, votre praticienne en acupuncture, pour soulager
+              rapidement vos douleurs et restituer votre bien être.
             </Typography>
           </Grid>
 

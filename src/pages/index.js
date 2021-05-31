@@ -58,14 +58,10 @@ export default function HomePage(props) {
         </Typography>
         <Typography paragraph>
           De façon schématique, une douleur, une gêne physique ou moral est due
-          à un blocage. Grâce aux différents outils de la médecine énergétique
-          chinoise, je pourrai lever ces blocages et ainsi remettre en
-          circulation vos énergies et faciliter l’autoguérison du corps.
+          à un blocage. Grâce à l’acupuncture, je pourrai lever ces blocages et
+          ainsi remettre en circulation vos énergies et faciliter l’autoguérison
+          du corps.
         </Typography>
-      </Grid>
-
-      <Grid item xs={12}>
-        <Typography variant="h2">Les outils</Typography>
       </Grid>
 
       <Grid item xs={12}>
@@ -92,102 +88,6 @@ export default function HomePage(props) {
                 une plus grande intensité et rapidité au soulagement.
                 L’acupuncture permet de re-équilibrer et harmoniser les énergies
                 et de relancer leur circulation.
-              </Typography>
-            </CardContent>
-          </Grid>
-        </Card>
-      </Grid>
-
-      <Grid item xs={12}>
-        <Card
-          className={classes.card}
-          component={Grid}
-          container
-          spacing={0}
-          direction="row-reverse"
-        >
-          <Grid item xs={12} md={4} className={classes.cardMedia}>
-            <div className={classes.cardImageContainer}>
-              <img
-                src="/images/home/tuina.jpg"
-                className={classes.cardImage}
-                alt=""
-              />
-            </div>
-          </Grid>
-
-          <Grid item xs={12} md={8} className={classes.cardMedia}>
-            <CardContent className={classes.cardContent}>
-              <Typography variant="h2" component="h3" gutterBottom>
-                Le massage Tui Na
-              </Typography>
-              <Typography>
-                Le massage Tui Na est une mobilisation manuel semblable à un
-                modelage dynamique. Adapter pour la détente, ce soin est plus
-                global et permet un récupération plus progressive.
-              </Typography>
-            </CardContent>
-          </Grid>
-        </Card>
-      </Grid>
-
-      <Grid item xs={12}>
-        <Card className={classes.card} component={Grid} container spacing={0}>
-          <Grid item xs={12} md={4} className={classes.cardMedia}>
-            <div className={classes.cardImageContainer}>
-              <img
-                src="/images/home/ventouses.jpg"
-                className={classes.cardImage}
-                alt=""
-              />
-            </div>
-          </Grid>
-
-          <Grid item xs={12} md={8} className={classes.cardMedia}>
-            <CardContent className={classes.cardContent}>
-              <Typography variant="h2" component="h3" gutterBottom>
-                Les Ventouses
-              </Typography>
-              <Typography>
-                Les Ventouses permettent de créer une succion sur les couches
-                les plus externe du corps (peau, système lymphatique, cellules
-                adipeuses et premières couches des muscles). Elles sont idéales
-                pour lever certaines stagnations, et donc aider à une bonne
-                circulation.
-              </Typography>
-            </CardContent>
-          </Grid>
-        </Card>
-      </Grid>
-
-      <Grid item xs={12}>
-        <Card
-          className={classes.card}
-          component={Grid}
-          container
-          spacing={0}
-          direction="row-reverse"
-        >
-          <Grid item xs={12} md={4} className={classes.cardMedia}>
-            <div className={classes.cardImageContainer}>
-              <img
-                src="/images/home/moxas.jpg"
-                className={classes.cardImage}
-                alt=""
-              />
-            </div>
-          </Grid>
-
-          <Grid item xs={12} md={8} className={classes.cardMedia}>
-            <CardContent className={classes.cardContent}>
-              <Typography variant="h2" component="h3" gutterBottom>
-                Les Moxas
-              </Typography>
-              <Typography>
-                Les Moxas sont des batons d’armoise ressemblant à des cigare. On
-                s’en sert essentiellement chauffer les points d’acupuncture et
-                ainsi re-énergiser la personne, chasser le froid du corps et
-                apaiser certaines douleurs physique ou psychique.
               </Typography>
             </CardContent>
           </Grid>

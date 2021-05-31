@@ -131,8 +131,7 @@ export default function Layout({ children }) {
           __html: JSON.stringify({
             "@context": "http://schema.org/",
             "@type": "LocalBusiness",
-            name:
-              "Loïse Holive - Praticienne en médecine traditionnelle chinoise",
+            name: "Loïse Holive - Praticienne en acupuncture",
             logo: BASE_URL + "/logo.png",
             image: BASE_URL + "/logo.png",
             address: {
