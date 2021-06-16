@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { makeStyles, useTheme, Grid, Container } from "@material-ui/core";
 
-import { BASE_URL, ADDRESS, PHONE } from "constants";
+import { BASE_URL, ADDRESSES, PHONE } from "constants";
 import Banner from "components/Banner";
 import NavBar from "components/NavBar";
 import SideBar from "components/SideBar";
@@ -81,23 +81,23 @@ export default function Layout({ children }) {
         <meta property="og:type" content="business.business" />
         <meta
           property="business:contact_data:street_address"
-          content={ADDRESS.street}
+          content={ADDRESSES[0].street}
         />
         <meta
           property="business:contact_data:locality"
-          content={ADDRESS.locality}
+          content={ADDRESSES[0].locality}
         />
         <meta
           property="business:contact_data:region"
-          content={ADDRESS.region}
+          content={ADDRESSES[0].region}
         />
         <meta
           property="business:contact_data:postal_code"
-          content={ADDRESS.postalCode}
+          content={ADDRESSES[0].postalCode}
         />
         <meta
           property="business:contact_data:country_name"
-          content={ADDRESS.country}
+          content={ADDRESSES[0].country}
         />
       </Head>
 
@@ -136,10 +136,10 @@ export default function Layout({ children }) {
             image: BASE_URL + "/logo.png",
             address: {
               "@type": "PostalAddress",
-              streetAddress: ADDRESS.street,
-              postalCode: ADDRESS.postalCode,
-              addressLocality: ADDRESS.locality,
-              addressRegion: ADDRESS.region,
+              streetAddress: ADDRESSES[0].street,
+              postalCode: ADDRESSES[0].postalCode,
+              addressLocality: ADDRESSES[0].locality,
+              addressRegion: ADDRESSES[0].region,
             },
             telephone: PHONE,
             email: "contact@syos.co",

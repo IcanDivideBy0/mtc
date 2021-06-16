@@ -6,14 +6,18 @@ import {
   CardContent,
   Typography,
   Link,
+  Divider,
 } from "@material-ui/core";
 import { Phone as PhoneIcon, Email as EmailIcon } from "@material-ui/icons";
 
-import { ADDRESS, PHONE, EMAIL } from "constants";
+import { ADDRESSES, PHONE, EMAIL } from "constants";
 import Map from "components/Map";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
+  divider: {
+    margin: theme.spacing(1, 0),
+  },
   icon: {
     verticalAlign: "middle",
     fontSize: "1rem",
@@ -34,11 +38,15 @@ export default function SideBar(props) {
 
       <CardContent>
         <Typography paragraph>
-          {ADDRESS.name}
+          {ADDRESSES[0].name}
+          <Divider className={classes.divider} />
+          {ADDRESSES[0].street}
           <br />
-          {ADDRESS.street}
+          {ADDRESSES[0].postalCode} {ADDRESSES[0].locality}
+          <Divider className={classes.divider} />
+          {ADDRESSES[1].street}
           <br />
-          {ADDRESS.postalCode} {ADDRESS.locality}
+          {ADDRESSES[1].postalCode} {ADDRESSES[1].locality}
         </Typography>
 
         <Typography>
@@ -50,7 +58,7 @@ export default function SideBar(props) {
           </strong>
         </Typography>
 
-        <Typography>
+        <Typography paragraph>
           <strong>
             <Link href={`mailto:${EMAIL}`}>
               <EmailIcon className={classes.icon} />

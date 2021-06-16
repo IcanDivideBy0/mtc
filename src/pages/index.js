@@ -6,8 +6,28 @@ import {
   CardContent,
   Typography,
 } from "@material-ui/core";
+import { Alert } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
+  alert: {
+    marginBottom: theme.spacing(2),
+  },
+  alertMessage: {
+    flexGrow: 1,
+    position: "relative",
+  },
+  alertImage: {
+    display: "block",
+    maxWidth: 200,
+    margin: theme.spacing(1, "auto"),
+
+    [theme.breakpoints.up("lg")]: {
+      position: "absolute",
+      right: 0,
+      top: "50%",
+      transform: "translateY(-50%)",
+    },
+  },
   card: {
     display: "flex",
   },
@@ -47,6 +67,30 @@ export default function HomePage(props) {
   return (
     <Grid container spacing={4}>
       <Grid item xs={12}>
+        <Alert
+          severity="info"
+          classes={{
+            root: classes.alert,
+            message: classes.alertMessage,
+          }}
+        >
+          <Typography>
+            Retrouvez moi tous les lundis au centre de bien être Kloyna&nbsp;:
+            <br />
+            <br />
+            88 rue de la bourgeonnière 44300 Nantes <br />
+            Tram 2 Bourgeonnière <br />
+            Bus 26/86/116 Fresche Blanc <br />
+            Stationnement gratuit
+          </Typography>
+
+          <img
+            src="/images/home/klyona.png"
+            className={classes.alertImage}
+            alt=""
+          />
+        </Alert>
+
         <Typography variant="h1" gutterBottom>
           Qu’est-ce que la Médecine Énergétique Chinoise&nbsp;?
         </Typography>
@@ -84,10 +128,9 @@ export default function HomePage(props) {
               <Typography>
                 L’acupuncture est un outil pour travailler en toute minutie et
                 précision grâce à des aiguilles stériles très fines à usage
-                unique. Elle permet d’agir en profondeur et de donner au soin
-                une plus grande intensité et rapidité au soulagement.
-                L’acupuncture permet de re-équilibrer et harmoniser les énergies
-                et de relancer leur circulation.
+                unique. Elle permet d’agir efficacement pour obtenir un
+                soulagement rapide. L’acupuncture permet de re-équilibrer et
+                harmoniser les énergies et de relancer leur circulation.
               </Typography>
             </CardContent>
           </Grid>

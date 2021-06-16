@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 
-import { ADDRESS } from "constants";
+import { ADDRESSES } from "constants";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiZGlzY29sb3JkIiwiYSI6ImNrN2plazhteTBzZzQzbG8zcnEyMHA3eWQifQ.j6KgxESGIU8KLbE0FRiRUg";
@@ -54,10 +54,20 @@ export default function Map(props) {
 
   const { MapContainer, TileLayer, Marker, icon } = mapUtils;
 
+  const center = ADDRESSES.reduce(
+    (acc, address) => ({
+      lat: acc.lat + address.geo.lat,
+      lng: acc.lng + address.geo.lng,
+    }),
+    { lat: 0, lng: 0 }
+  );
+  center.lat = center.lat / ADDRESSES.length;
+  center.lng = center.lng / ADDRESSES.length;
+
   return (
     <div className={classes.root}>
       <MapContainer
-        center={ADDRESS.geo}
+        center={center}
         className={classes.map}
         zoom={13}
         maxZoom={19}
@@ -67,7 +77,9 @@ export default function Map(props) {
           id="mapbox/streets-v11"
           url={`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${MAPBOX_TOKEN}`}
         />
-        <Marker position={ADDRESS.geo} icon={icon} />
+        {ADDRESSES.map((address, idx) => (
+          <Marker key={idx} position={address.geo} icon={icon} />
+        ))}
       </MapContainer>
     </div>
   );
