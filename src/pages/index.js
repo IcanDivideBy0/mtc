@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   makeStyles,
   Grid,
@@ -47,15 +48,6 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: "calc(2 / 4 * 100%)",
     },
   },
-  cardImage: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-  },
   cardContent: {
     flexGrow: 2,
   },
@@ -84,8 +76,8 @@ export default function HomePage(props) {
             Stationnement gratuit
           </Typography>
 
-          <img
-            src="/images/home/klyona.png"
+          <Image
+            src={require("./_images/home/klyona.png")}
             className={classes.alertImage}
             alt=""
           />
@@ -112,10 +104,11 @@ export default function HomePage(props) {
         <Card className={classes.card} component={Grid} container spacing={0}>
           <Grid item xs={12} md={4} className={classes.cardMedia}>
             <div className={classes.cardImageContainer}>
-              <img
-                src="/images/home/acupuncture.jpg"
-                className={classes.cardImage}
+              <Image
+                src={require("./_images/home/acupuncture.jpg")}
                 alt=""
+                layout="fill"
+                objectFit="cover"
               />
             </div>
           </Grid>

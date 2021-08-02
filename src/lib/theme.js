@@ -1,7 +1,7 @@
-import { createMuiTheme } from "@material-ui/core";
+import { createTheme } from "@material-ui/core";
 import "typeface-fira-sans";
 
-export const theme = createMuiTheme({
+export const theme = createTheme({
   typography: {
     useNextVariants: true,
     fontFamily: ['"Fira Sans"', "sans-serif"],

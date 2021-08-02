@@ -70,7 +70,7 @@ export function HorizontalRule(props) {
   return <Divider {...props} classes={classes} />;
 }
 
-export default {
+const components = {
   wrapper: React.Fragment,
   h1: H1,
   h2: H2,
@@ -84,3 +84,5 @@ export default {
   li: ListItem,
   hr: HorizontalRule,
 };
+
+export default components;

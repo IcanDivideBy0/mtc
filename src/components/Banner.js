@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import {
   makeStyles,
@@ -76,9 +77,9 @@ export default function Banner(props) {
 
           <Hidden xsDown implementation="css">
             <Grid item>
-              <img
+              <Image
                 src="/images/logo.svg"
-                alt="logo"
+                alt=""
                 width="188.828"
                 height="151.063"
               />

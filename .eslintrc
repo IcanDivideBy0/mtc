@@ -1,14 +1,18 @@
-{
-  "parser": "@babel/eslint-parser",
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended"],
-  "settings": { "react": { "version": "detect" } },
+{ 
+  "extends": [
+    "next",
+    "eslint:recommended"
+  ],
   "env": {
-    "browser": true,
     "es6": true,
-    "node": true,
-    "commonjs": true
+    "browser": true
+  },
+  "globals": {
+    "process": true,
+    "require": true
   },
   "rules": {
-    "react/prop-types": "off"
+    "no-unused-vars": "warn",
+    "no-irregular-whitespace": "off"
   }
 }

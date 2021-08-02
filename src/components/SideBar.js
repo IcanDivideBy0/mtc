@@ -7,6 +7,7 @@ import {
   Typography,
   Link,
   Divider,
+  NoSsr,
 } from "@material-ui/core";
 import { Phone as PhoneIcon, Email as EmailIcon } from "@material-ui/icons";
 
@@ -34,10 +35,12 @@ export default function SideBar(props) {
         <Typography variant="h2">Infos pratiques</Typography>
       </CardContent>
 
-      <Map />
+      <NoSsr>
+        <Map />
+      </NoSsr>
 
       <CardContent>
-        <Typography paragraph>
+        <Typography paragraph component="div">
           {ADDRESSES[0].name}
           <Divider className={classes.divider} />
           {ADDRESSES[0].street}
