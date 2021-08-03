@@ -76,11 +76,9 @@ export default function HomePage(props) {
             Stationnement gratuit
           </Typography>
 
-          <Image
-            src={require("./_images/home/klyona.png")}
-            className={classes.alertImage}
-            alt=""
-          />
+          <div className={classes.alertImage}>
+            <Image src={require("./_images/home/klyona.png")} alt="" />
+          </div>
         </Alert>
 
         <Typography variant="h1" gutterBottom>
