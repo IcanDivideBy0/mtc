@@ -2,22 +2,21 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import FontFaceObserver from "fontfaceobserver";
-import clsx from "clsx";
 
 import {
-  makeStyles,
   AppBar,
-  Tabs,
-  Tab,
-  Popper,
+  Box,
   ButtonBase,
-  Paper,
-  Fade,
-  Typography,
   Collapse,
   Container,
-} from "@material-ui/core";
-import { Menu as MenuIcon } from "@material-ui/icons";
+  Fade,
+  Paper,
+  Popper,
+  Tabs,
+  Tab,
+  Typography,
+} from "@mui/material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 
 const NAV_ITEMS = [
   { label: "Accueil", path: "/", exact: true },
@@ -42,157 +41,139 @@ const NAV_ITEMS = [
  * Desktop nav
  */
 
-const useNavItemStyles = makeStyles((theme) => ({
-  root: {
-    position: "relative",
-    display: "flex",
-    flexDirection: "column",
-    zIndex: 100,
+// eslint-disable-next-line react/display-name
+const DesktopNavItem = React.forwardRef(
+  ({ navItem, isNested, className, children }, ref) => {
+    const router = useRouter();
 
-    "$popper & ~ &": {
-      borderTop: [[1, "solid", "rgba(0, 0, 0, 0.3)"]],
-    },
-  },
-  button: {
-    color: "#fff",
+    let rootRef = React.useRef();
+    const [isOver, setIsOver] = React.useState(false);
 
-    "&:hover": {
-      backgroundColor: "rgba(0, 0, 0, 0.2)",
-    },
-  },
-  popper: {
-    display: "flex",
-    flexDirection: "column",
-    zIndex: 200,
+    return (
+      <Box
+        ref={(r) => {
+          rootRef.current = r;
+          if (typeof ref === "function") ref(r);
+        }}
+        onMouseEnter={() => setIsOver(true)}
+        onMouseLeave={() => setIsOver(false)}
+        onClick={() => setIsOver(false)}
+        sx={{
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          zIndex: 100,
 
-    "& &": {
-      paddingTop: 1,
-      marginLeft: -1,
-    },
-  },
-  paper: {
-    backgroundColor: theme.palette.secondary.main,
-  },
-}));
+          "& ~ &": {
+            borderTop: isNested ? "1px solid rgba(0, 0, 0, 0.3)" : "none",
+          },
+        }}
+      >
+        <Link href={navItem.path} passHref>
+          <ButtonBase
+            component="a"
+            variant="contained"
+            color="secondary"
+            sx={{
+              color: "#fff !important",
+              ":hover": { backgroundColor: "rgba(0, 0, 0, 0.2)" },
+            }}
+            className={className}
+          >
+            {children}
+          </ButtonBase>
+        </Link>
 
-const DesktopNavItem = React.forwardRef(function DesktopNavItem(
-  { navItem, isNested, className, children },
-  ref
-) {
-  const classes = useNavItemStyles();
-  const router = useRouter();
+        {navItem.items && (
+          <Popper
+            open={isOver}
+            placement={isNested ? "right-start" : "bottom-start"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              zIndex: 200,
 
-  let rootRef = React.useRef();
-  const [isOver, setIsOver] = React.useState(false);
+              "& &": {
+                paddingTop: 1,
+                marginLeft: -1,
+              },
+            }}
+            anchorEl={rootRef.current}
+            transition
+          >
+            {({ TransitionProps }) => (
+              <Fade {...TransitionProps} timeout={350}>
+                <Paper square sx={{ backgroundColor: "secondary.main" }}>
+                  {navItem.items.map((item) => {
+                    const selected = item.exact
+                      ? item.path === router.pathname
+                      : router.pathname.indexOf(item.path) === 0;
 
-  return (
-    <div
-      ref={(r) => {
-        rootRef.current = ref;
-        ref && ref(r);
-      }}
-      onMouseEnter={() => setIsOver(true)}
-      onMouseLeave={() => setIsOver(false)}
-      onClick={() => setIsOver(false)}
-      className={classes.root}
-    >
-      <Link href={navItem.path} passHref>
-        <ButtonBase
-          variant="contained"
-          color="secondary"
-          component="a"
-          className={clsx(classes.button, className)}
-        >
-          {children}
-        </ButtonBase>
-      </Link>
-
-      {navItem.items && (
-        <Popper
-          open={isOver}
-          placement={isNested ? "right-start" : "bottom-start"}
-          className={classes.popper}
-          anchorEl={rootRef.current}
-          transition
-        >
-          {({ TransitionProps }) => (
-            <Fade {...TransitionProps} timeout={350}>
-              <Paper square className={classes.paper}>
-                {navItem.items.map(({ label, path, exact }) => {
-                  const selected = exact
-                    ? path === router.pathname
-                    : router.pathname.indexOf(path) === 0;
-
-                  return (
-                    <Tab
-                      key={path}
-                      value={path}
-                      label={label}
-                      component={DesktopNavItem}
-                      navItem={navItem}
-                      isNested
-                      selected={selected}
-                    />
-                  );
-                })}
-              </Paper>
-            </Fade>
-          )}
-        </Popper>
-      )}
-    </div>
-  );
-});
+                    return (
+                      <Tab
+                        key={item.path}
+                        value={item.path}
+                        label={item.label}
+                        component={DesktopNavItem}
+                        navItem={item}
+                        isNested
+                        selected={selected}
+                      />
+                    );
+                  })}
+                </Paper>
+              </Fade>
+            )}
+          </Popper>
+        )}
+      </Box>
+    );
+  }
+);
 
 /**
  * Mobile nav
  */
 
-const useMobileNavItemListStyles = makeStyles((theme) => ({
-  root: {
-    listStyleType: "none",
-    padding: 0,
-    margin: 0,
-
-    "& &": {
-      paddingLeft: theme.spacing(2),
-    },
-  },
-  item: {
-    padding: Object,
-    margin: 0,
-
-    borderTop: [[1, "solid", "rgba(0, 0, 0, 0.3)"]],
-  },
-  link: {
-    display: "block",
-    textDecoration: "none",
-    margin: 0,
-    padding: theme.spacing(1, 2),
-
-    "&:hover": {
-      backgroundColor: "rgba(0, 0, 0, 0.2)",
-    },
-  },
-}));
-
 function MobileNavItemList({ navItems }) {
-  const classes = useMobileNavItemListStyles();
-
   return (
-    <ul className={classes.root}>
+    <Box
+      component="ul"
+      sx={{
+        listStyleType: "none",
+        padding: 0,
+        margin: 0,
+        "& &": { paddingLeft: 2 },
+      }}
+    >
       {navItems.map((navItem) => (
-        <li key={navItem.path} className={classes.item}>
+        <Box
+          key={navItem.path}
+          component="li"
+          sx={{
+            margin: 0,
+            borderTop: "1px solid rgba(0, 0, 0, 0.3)",
+          }}
+        >
           <Link href={navItem.path} passHref>
-            <ButtonBase component="a" className={classes.link}>
+            <ButtonBase
+              component="a"
+              sx={{
+                display: "block",
+                textDecoration: "none",
+                margin: 0,
+                padding: (t) => t.spacing(1, 2),
+                ":hover": { backgroundColor: "rgba(0, 0, 0, 0.2)" },
+              }}
+            >
               <Typography color="inherit">{navItem.label}</Typography>
             </ButtonBase>
           </Link>
 
           {navItem.items && <MobileNavItemList navItems={navItem.items} />}
-        </li>
+        </Box>
       ))}
-    </ul>
+    </Box>
   );
 }
 
@@ -200,74 +181,8 @@ function MobileNavItemList({ navItems }) {
  * Nav bar
  */
 
-const useNavBarStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  main: {
-    display: "flex",
-
-    [theme.breakpoints.down("xs")]: {
-      maxWidth: "100%",
-    },
-  },
-
-  tabs: {
-    flexGrow: 1,
-    overflow: "visible",
-
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-    "@media (hover: none)": {
-      display: "none",
-    },
-  },
-  tabsFlexContainer: {
-    minHeight: 48,
-  },
-  tabsScroller: {
-    overflow: "visible",
-  },
-  hiddenTab: {
-    display: "none",
-  },
-  desktopTabRoot: {
-    [theme.breakpoints.down("md")]: {
-      minWidth: 80,
-    },
-  },
-
-  mobileNav: {
-    flexGrow: 1,
-    margin: [[0, -theme.spacing(2)]],
-    display: "flex",
-    flexDirection: "column",
-
-    [theme.breakpoints.up("md")]: {
-      "@media (hover: hover)": {
-        display: "none",
-      },
-    },
-  },
-  mobileMenuButton: {
-    height: 48,
-    display: "flex",
-    justifyContent: "flex-end",
-    padding: theme.spacing(0, 2),
-  },
-  mobileMenuButtonLabel: {
-    padding: theme.spacing(0, 2),
-    fontWeight: 500,
-    textTransform: "uppercase",
-    lineHeight: 1.75,
-  },
-}));
-
 export default function NavBar() {
   const router = useRouter();
-  const classes = useNavBarStyles();
 
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const toggleMobilenav = () => setMobileNavOpen((open) => !open);
@@ -279,16 +194,24 @@ export default function NavBar() {
   ).path;
 
   return (
-    <AppBar position="sticky" color="secondary" className={classes.root}>
-      <Container fixed className={classes.main}>
+    <AppBar
+      position="sticky"
+      color="secondary"
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+      }}
+    >
+      <Container fixed sx={{ display: "flex" }}>
         <Tabs
           value={tabValue}
           indicatorColor="primary"
           textColor="inherit"
-          classes={{
-            root: classes.tabs,
-            flexContainer: classes.tabsFlexContainer,
-            scroller: classes.tabsScroller,
+          sx={{
+            flexGrow: 1,
+            overflow: "visible",
+            display: { xs: "none", md: "flex" },
+            "@media (hover: none)": { display: "none" },
           }}
           action={(ref) => {
             if (!ref) return;
@@ -296,7 +219,7 @@ export default function NavBar() {
             font.load().then(ref.updateIndicator).catch(console.error);
           }}
         >
-          <Tab value={0} className={classes.hiddenTab} />
+          <Tab value={0} sx={{ minWidth: 0, padding: 0 }} />
 
           {NAV_ITEMS.map((navItem) => (
             <Tab
@@ -305,20 +228,41 @@ export default function NavBar() {
               label={navItem.label}
               component={DesktopNavItem}
               navItem={navItem}
-              classes={{ root: classes.desktopTabRoot }}
+              sx={{ minWidth: { xs: 80, md: "initial" } }}
             />
           ))}
         </Tabs>
 
         {/* Mobile nav */}
-        <div className={classes.mobileNav}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            m: (t) => t.spacing(0, -2),
+            display: "flex",
+            flexDirection: "column",
+
+            "@media (hover: hover)": {
+              display: { md: "none" },
+            },
+          }}
+        >
           <ButtonBase
             onClick={toggleMobilenav}
-            className={classes.mobileMenuButton}
+            sx={{
+              height: 48,
+              display: "flex",
+              justifyContent: "flex-end",
+              p: (t) => t.spacing(0, 2),
+            }}
           >
             <Typography
               color="inherit"
-              className={classes.mobileMenuButtonLabel}
+              sx={{
+                p: (t) => t.spacing(0, 2),
+                fontWeight: 500,
+                textTransform: "uppercase",
+                lineHeight: 1.75,
+              }}
             >
               Menu
             </Typography>
@@ -330,7 +274,7 @@ export default function NavBar() {
               <MobileNavItemList navItems={NAV_ITEMS} />
             </nav>
           </Collapse>
-        </div>
+        </Box>
       </Container>
     </AppBar>
   );

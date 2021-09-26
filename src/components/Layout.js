@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { makeStyles, useTheme, Grid, Container } from "@material-ui/core";
+import { GlobalStyles, Container, Grid } from "@mui/material";
 
 import { BASE_URL, ADDRESSES, PHONE } from "constants";
 import Banner from "components/Banner";
@@ -9,34 +9,7 @@ import NavBar from "components/NavBar";
 import SideBar from "components/SideBar";
 import Footer from "components/Footer";
 
-const useStyles = makeStyles((theme) => ({
-  "@global": {
-    html: { height: "100%" },
-    body: { height: "100%" },
-    "#__next": {
-      minHeight: "100%",
-      display: "flex",
-      flexDirection: "column",
-    },
-  },
-  content: {
-    position: "relative",
-    flexGrow: 1,
-
-    padding: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      padding: theme.spacing(3),
-    },
-  },
-  sidebar: {
-    position: "sticky",
-    top: 48 + 24,
-  },
-}));
-
 export default function Layout({ children }) {
-  const theme = useTheme();
-  const classes = useStyles();
   const router = useRouter();
 
   const url = BASE_URL + router.pathname;
@@ -44,13 +17,6 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href={`${BASE_URL}/favicon.ico`} />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="theme-color" content={theme.palette.secondary.main} />
-
         <title>
           Loïse Holive praticienne en médecine traditionnelle chinoise à Nantes.
           Acupuncture, Tuina, Ventouses, Qi-Gong, …
@@ -149,17 +115,41 @@ export default function Layout({ children }) {
         }}
       />
 
+      <GlobalStyles
+        styles={{
+          html: { height: "100%" },
+          body: { height: "100%" },
+          "#__next": {
+            minHeight: "100%",
+            display: "flex",
+            flexDirection: "column",
+          },
+        }}
+      />
+
       <Banner />
       <NavBar />
 
-      <Container fixed className={classes.content}>
+      <Container
+        fixed
+        sx={{
+          position: "relative",
+          flexGrow: 1,
+          p: [2, 3],
+        }}
+      >
         <Grid container spacing={4}>
           <Grid item xs={12} md={8} component="main">
             {children}
           </Grid>
 
           <Grid item xs={12} md={4} component="aside">
-            <SideBar classes={{ root: classes.sidebar }} />
+            <SideBar
+              sx={{
+                position: "sticky",
+                top: 48 + 24,
+              }}
+            />
           </Grid>
         </Grid>
       </Container>

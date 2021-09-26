@@ -1,68 +1,37 @@
 import React from "react";
 import Image from "next/image";
-import {
-  makeStyles,
-  Grid,
-  Card,
-  CardContent,
-  Typography,
-} from "@material-ui/core";
-import { Alert } from "@material-ui/lab";
+import { Alert, Box, Grid, Card, CardContent, Typography } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  alert: {
-    marginBottom: theme.spacing(2),
-  },
-  alertMessage: {
-    flexGrow: 1,
-    position: "relative",
-  },
-  alertImage: {
-    display: "block",
-    maxWidth: 200,
-    margin: theme.spacing(1, "auto"),
+// const useStyles = makeStyles((theme) => ({
+//   alertMessage: {
+//     flexGrow: 1,
+//     position: "relative",
+//   },
+//   alertImage: {
+//   },
+//   card: {
+//
+//   },
+//   cardMedia: {
+//
+//   },
+//   cardImageContainer: {
+//   },
+//   cardContent: {
+//     ,
+//   },
+// }));
 
-    [theme.breakpoints.up("lg")]: {
-      position: "absolute",
-      right: 0,
-      top: "50%",
-      transform: "translateY(-50%)",
-    },
-  },
-  card: {
-    display: "flex",
-  },
-  cardMedia: {
-    display: "flex",
-  },
-  cardImageContainer: {
-    flexGrow: 1,
-    position: "relative",
-
-    [theme.breakpoints.down("sm")]: {
-      minHeight: 0,
-      maxHeight: 0,
-      paddingBottom: "calc(2 / 6 * 100%)",
-    },
-    [theme.breakpoints.down("xs")]: {
-      paddingBottom: "calc(2 / 4 * 100%)",
-    },
-  },
-  cardContent: {
-    flexGrow: 2,
-  },
-}));
-
-export default function HomePage(props) {
-  const classes = useStyles(props);
+export default function HomePage() {
+  const classes = {};
 
   return (
     <Grid container spacing={4}>
       <Grid item xs={12}>
         <Alert
           severity="info"
+          sx={{ marginBottom: 2 }}
           classes={{
-            root: classes.alert,
             message: classes.alertMessage,
           }}
         >
@@ -76,9 +45,20 @@ export default function HomePage(props) {
             Stationnement gratuit
           </Typography>
 
-          <div className={classes.alertImage}>
+          <Box
+            sx={{
+              display: "block",
+              maxWidth: 200,
+              margin: (t) => t.spacing(1, "auto"),
+
+              position: { lg: "absolute" },
+              right: { lg: 0 },
+              top: { lg: "50%" },
+              transform: { lg: "translateY(-50%)" },
+            }}
+          >
             <Image src={require("./_images/home/klyona.png")} alt="" />
-          </div>
+          </Box>
         </Alert>
 
         <Typography variant="h1" gutterBottom>
@@ -99,20 +79,26 @@ export default function HomePage(props) {
       </Grid>
 
       <Grid item xs={12}>
-        <Card className={classes.card} component={Grid} container spacing={0}>
-          <Grid item xs={12} md={4} className={classes.cardMedia}>
-            <div className={classes.cardImageContainer}>
-              <Image
-                src={require("./_images/home/acupuncture.jpg")}
-                alt=""
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
+        <Card sx={{ display: "flex" }} component={Grid} container spacing={0}>
+          <Grid
+            item
+            xs={12}
+            lg={4}
+            sx={{
+              position: "relative",
+              paddingBottom: { xs: "33.333%", lg: "16.666%" },
+            }}
+          >
+            <Image
+              src={require("./_images/home/acupuncture.jpg")}
+              alt=""
+              layout="fill"
+              objectFit="cover"
+            />
           </Grid>
 
-          <Grid item xs={12} md={8} className={classes.cardMedia}>
-            <CardContent className={classes.cardContent}>
+          <Grid item xs={12} lg={8}>
+            <CardContent>
               <Typography variant="h2" component="h3" gutterBottom>
                 L’acupuncture
               </Typography>

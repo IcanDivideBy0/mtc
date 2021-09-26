@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Typography, TextField, Button } from "@material-ui/core";
-import { Send as SendIcon } from "@material-ui/icons";
+import { Grid, Typography, TextField, Button } from "@mui/material";
+import { Send as SendIcon } from "@mui/icons-material";
 
 import { EMAIL } from "constants";
 

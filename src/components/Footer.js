@@ -1,34 +1,25 @@
 import React from "react";
 
-import { makeStyles, Container, Paper, Typography } from "@material-ui/core";
+import { Container, Paper, Typography } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    background: `
-      url("/images/background.svg"),
-      radial-gradient(
-        ellipse at center,
-        ${theme.palette.secondary.light},
-        ${theme.palette.secondary.dark}
-      )
-    `,
-    backgroundRepeat: "repeat, no-repeat",
-    color: theme.palette.secondary.contrastText,
-  },
-  content: {
-    padding: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      padding: theme.spacing(3),
-    },
-  },
-}));
-
-export default function Footer(props) {
-  const classes = useStyles(props);
-
+export default function Footer() {
   return (
-    <Paper square className={classes.root}>
-      <Container fixed className={classes.content}>
+    <Paper
+      square
+      sx={{
+        background: (t) => `
+        url("/images/background.svg"),
+        radial-gradient(
+          ellipse at center,
+          ${t.palette.secondary.light},
+          ${t.palette.secondary.dark}
+        )
+      `,
+        backgroundRepeat: "repeat, no-repeat",
+        color: "secondary.contrastText",
+      }}
+    >
+      <Container fixed sx={{ padding: [2, 3] }}>
         <Typography color="inherit"></Typography>
       </Container>
     </Paper>

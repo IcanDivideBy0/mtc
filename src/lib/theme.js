@@ -1,9 +1,8 @@
-import { createTheme } from "@material-ui/core";
+import { createTheme } from "@mui/material/styles";
 import "typeface-fira-sans";
 
-export const theme = createTheme({
+export default createTheme({
   typography: {
-    useNextVariants: true,
     fontFamily: ['"Fira Sans"', "sans-serif"],
     fontSize: 14,
     body1: { fontWeight: 300 },

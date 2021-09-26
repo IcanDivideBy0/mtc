@@ -1,7 +1,6 @@
 import React from "react";
-import clsx from "clsx";
 
-import { makeStyles, Typography, Divider } from "@material-ui/core";
+import { Box, Typography, Divider } from "@mui/material";
 
 export const H1 = (props) => (
   <Typography variant="h1" gutterBottom {...props} />
@@ -28,15 +27,8 @@ export const Paragraph = (props) => <Typography paragraph {...props} />;
  * <strong>
  */
 
-const useStrongStyles = makeStyles((theme) => ({
-  root: {
-    color: theme.palette.primary.main,
-  },
-}));
-
-export function Strong({ className, ...props }) {
-  const classes = useStrongStyles(props);
-  return <strong className={clsx(className, classes.root)} {...props} />;
+export function Strong(props) {
+  return <Box component="strong" sx={{ color: "primary.main" }} {...props} />;
 }
 
 /**
@@ -59,15 +51,8 @@ export function ListItem(props) {
  * <hr />
  */
 
-const useHorizontalRuleStyles = makeStyles((theme) => ({
-  root: {
-    margin: theme.spacing(2, 0),
-  },
-}));
-
 export function HorizontalRule(props) {
-  const classes = useHorizontalRuleStyles(props);
-  return <Divider {...props} classes={classes} />;
+  return <Divider sx={{ m: (t) => t.spacing(2, 0) }} {...props} />;
 }
 
 const components = {

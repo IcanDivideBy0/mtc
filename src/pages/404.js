@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert } from "@material-ui/lab";
+import { Alert } from "@mui/material";
 
 export default function NotFoundPage() {
   return <Alert severity="error">Page introuvable.</Alert>;

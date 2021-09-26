@@ -1,10 +1,15 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { ThemeProvider, CssBaseline } from "@material-ui/core";
+import Head from "next/head";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { CacheProvider } from "@emotion/react";
 import { MDXProvider } from "@mdx-js/react";
 
+import { BASE_URL } from "constants";
 import * as gtag from "lib/gtag";
-import { theme } from "lib/theme";
+import theme from "lib/theme";
+import createEmotionCache from "lib/createEmotionCache";
 import mdxComponents from "lib/mdx";
 import Layout from "components/Layout";
 
@@ -18,7 +23,13 @@ export function reportWebVitals({ id, name, label, value }) {
   });
 }
 
-export default function App({ Component, pageProps }) {
+const clientSideEmotionCache = createEmotionCache();
+
+export default function App({
+  Component,
+  emotionCache = clientSideEmotionCache,
+  pageProps,
+}) {
   const router = useRouter();
   React.useEffect(() => {
     const handleRouteChange = (url) => gtag.pageview(url);
@@ -26,21 +37,22 @@ export default function App({ Component, pageProps }) {
     return () => router.events.off("routeChangeComplete", handleRouteChange);
   }, [router.events]);
 
-  React.useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector("#jss-server-side");
-    if (jssStyles) jssStyles.parentElement.removeChild(jssStyles);
-  }, []);
-
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="shortcut icon" href={`${BASE_URL}/favicon.ico`} />
+      </Head>
 
-      <MDXProvider components={mdxComponents}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </MDXProvider>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+
+        <MDXProvider components={mdxComponents}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MDXProvider>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }

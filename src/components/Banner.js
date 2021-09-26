@@ -1,57 +1,36 @@
 import React from "react";
 import Image from "next/image";
 
-import {
-  makeStyles,
-  Container,
-  Typography,
-  Grid,
-  Hidden,
-} from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundImage: `
-      url("/images/background.svg"),
-      radial-gradient(
-        ellipse at center,
-        ${theme.palette.primary.light},
-        ${theme.palette.primary.dark}
-      )
-    `,
-    backgroundRepeat: "repeat, no-repeat",
-    backgroundPosition: "center center, center center",
-    color: theme.palette.primary.contrastText,
-  },
-  content: {
-    height: 300,
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-
-    padding: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      padding: theme.spacing(3),
-    },
-  },
-  title: {
-    fontWeight: 500,
-    textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
-  },
-  subtitle: {
-    fontWeight: 500,
-    textShadow: [[theme.palette.secondary.main, 0, 0, "10px"]],
-
-    [theme.breakpoints.up("lg")]: { maxWidth: "80%" },
-  },
-}));
-
-export default function Banner(props) {
-  const classes = useStyles(props);
-
+export default function Banner() {
   return (
-    <header className={classes.root}>
-      <Container fixed className={classes.content}>
+    <Box
+      component="header"
+      sx={{
+        backgroundImage: (theme) => `
+          url("/images/background.svg"),
+          radial-gradient(
+            ellipse at center,
+            ${theme.palette.primary.light},
+            ${theme.palette.primary.dark}
+          )
+        `,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundPosition: "center center, center center",
+        color: "primary.contrastText",
+      }}
+    >
+      <Container
+        fixed
+        sx={{
+          height: 300,
+          p: [2, 3],
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Grid container alignItems="center">
           <Grid item xs>
             <Typography
@@ -59,7 +38,11 @@ export default function Banner(props) {
               component="div"
               color="inherit"
               gutterBottom
-              className={classes.title}
+              sx={{
+                fontWeight: 500,
+                textShadow: (theme) =>
+                  `${theme.palette.secondary.main} 0 0 10px`,
+              }}
             >
               La Médecine Énergétique Chinoise à Nantes
             </Typography>
@@ -68,25 +51,28 @@ export default function Banner(props) {
               variant="h3"
               component="div"
               color="inherit"
-              className={classes.subtitle}
+              sx={{
+                fontWeight: 500,
+                textShadow: (theme) =>
+                  `${theme.palette.secondary.main} 0 0 10px`,
+                maxWidth: { lg: "80%" },
+              }}
             >
               Loïse Holive, votre praticienne en acupuncture, pour soulager
               rapidement vos douleurs et restituer votre bien être.
             </Typography>
           </Grid>
 
-          <Hidden xsDown implementation="css">
-            <Grid item>
-              <Image
-                src="/images/logo.svg"
-                alt=""
-                width="188.828"
-                height="151.063"
-              />
-            </Grid>
-          </Hidden>
+          <Grid item sx={{ display: { xs: "none", sm: "initial" } }}>
+            <Image
+              src="/images/logo.svg"
+              alt=""
+              width="188.828"
+              height="151.063"
+            />
+          </Grid>
         </Grid>
       </Container>
-    </header>
+    </Box>
   );
 }
