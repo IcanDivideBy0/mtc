@@ -27,11 +27,17 @@ export default createTheme({
       dark: "#252324",
       contrastText: "#fff",
     },
-    text: { main: "#ff0000" },
   },
-  props: {
+  components: {
     MuiGrid: {
-      spacing: 2,
+      defaultProps: {
+        spacing: 2,
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        variant: "standard",
+      },
     },
   },
 });

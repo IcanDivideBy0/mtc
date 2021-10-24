@@ -7,7 +7,7 @@ import { EMAIL } from "constants";
 export default function ContactPage() {
   return (
     <form noValidate action={`https://formspree.io/${EMAIL}`} method="POST">
-      <Grid container justify="flex-end">
+      <Grid container justifyContent="flex-end">
         <Grid item xs={12}>
           <Typography variant="h1">Contact</Typography>
         </Grid>
