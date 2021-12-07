@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, TextField, Button } from "@mui/material";
+import { Divider, Stack, Typography, TextField, Button } from "@mui/material";
 import { Send as SendIcon } from "@mui/icons-material";
 
 import { EMAIL } from "constants";
@@ -7,46 +7,33 @@ import { EMAIL } from "constants";
 export default function ContactPage() {
   return (
     <form noValidate action={`https://formspree.io/${EMAIL}`} method="POST">
-      <Grid container justifyContent="flex-end">
-        <Grid item xs={12}>
-          <Typography variant="h1">Contact</Typography>
-        </Grid>
+      <Stack spacing={2}>
+        <Typography variant="h1">Contact</Typography>
 
-        <Grid item xs={12}>
-          <TextField name="name" required label="Nom" fullWidth />
-        </Grid>
+        <Divider />
 
-        <Grid item xs={12}>
-          <TextField
-            name="email"
-            type="email"
-            required
-            label="Email"
-            fullWidth
-          />
-        </Grid>
+        <TextField name="name" required label="Nom" fullWidth />
 
-        <Grid item xs={12}>
-          <TextField
-            name="message"
-            required
-            label="Message"
-            multiline
-            fullWidth
-          />
-        </Grid>
+        <TextField name="email" type="email" required label="Email" fullWidth />
 
-        <Grid item>
-          <Button
-            type="submit"
-            variant="contained"
-            color="secondary"
-            startIcon={<SendIcon />}
-          >
-            Envoyer
-          </Button>
-        </Grid>
-      </Grid>
+        <TextField
+          name="message"
+          required
+          label="Message"
+          multiline
+          fullWidth
+        />
+
+        <Button
+          type="submit"
+          variant="contained"
+          color="secondary"
+          startIcon={<SendIcon />}
+          sx={{ alignSelf: "flex-end" }}
+        >
+          Envoyer
+        </Button>
+      </Stack>
     </form>
   );
 }

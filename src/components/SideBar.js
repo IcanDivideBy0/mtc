@@ -7,8 +7,13 @@ import {
   Link,
   Divider,
   NoSsr,
+  Button,
 } from "@mui/material";
-import { Phone as PhoneIcon, Email as EmailIcon } from "@mui/icons-material";
+import {
+  Phone as PhoneIcon,
+  Email as EmailIcon,
+  CalendarToday as CalendarIcon,
+} from "@mui/icons-material";
 
 import { ADDRESSES, PHONE, EMAIL } from "constants";
 import Map from "components/Map";
@@ -18,6 +23,19 @@ export default function SideBar() {
     <Card>
       <CardContent>
         <Typography variant="h2">Infos pratiques</Typography>
+      </CardContent>
+
+      <CardContent sx={{ textAlign: "center" }}>
+        <Button
+          component="a"
+          href="https://www.crenolib.fr/prendre-rdv/21708_holive-loise"
+          variant="contained"
+          size="large"
+          color="secondary"
+          startIcon={<CalendarIcon />}
+        >
+          Prendre RDV
+        </Button>
       </CardContent>
 
       <NoSsr>
