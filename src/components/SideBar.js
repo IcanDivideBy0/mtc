@@ -1,6 +1,9 @@
 import React from "react";
+import { openPopupWidget } from "react-calendly";
 
 import {
+  useTheme,
+  GlobalStyles,
   Card,
   CardContent,
   Typography,
@@ -19,13 +22,15 @@ import { ADDRESSES, PHONE, EMAIL } from "constants";
 import Map from "components/Map";
 
 export default function SideBar() {
+  const theme = useTheme();
+
   return (
     <Card>
       <CardContent>
         <Typography variant="h2">Infos pratiques</Typography>
       </CardContent>
 
-      <CardContent sx={{ textAlign: "center" }}>
+      {/* <CardContent sx={{ textAlign: "center" }}>
         <Button
           component="a"
           href="https://www.crenolib.fr/prendre-rdv/21708_holive-loise"
@@ -33,6 +38,41 @@ export default function SideBar() {
           size="large"
           color="secondary"
           startIcon={<CalendarIcon />}
+        >
+          Prendre RDV
+        </Button>
+      </CardContent> */}
+
+      <CardContent sx={{ textAlign: "center" }}>
+        <GlobalStyles
+          styles={{
+            ".calendly-overlay .calendly-popup": {
+              width: "100vw",
+              height: "100vh",
+              maxWidth: "100vw",
+              maxHeight: "100vh",
+            },
+          }}
+        />
+
+        <Button
+          variant="contained"
+          size="large"
+          color="secondary"
+          startIcon={<CalendarIcon />}
+          onClick={() => {
+            openPopupWidget({
+              url: "https://calendly.com/loise-holive-mtc",
+              pageSettings: {
+                backgroundColor: "fff",
+                hideEventTypeDetails: false,
+                hideLandingPageDetails: false,
+                primaryColor: theme.palette.primary.main.substring(1),
+                f: console.log(theme),
+                textColor: theme.palette.text.primary.substring(1),
+              },
+            });
+          }}
         >
           Prendre RDV
         </Button>
