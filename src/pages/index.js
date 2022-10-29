@@ -1,38 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { Alert, Box, Grid, Card, CardContent, Typography } from "@mui/material";
+import { Grid, Card, CardContent, Typography } from "@mui/material";
 
 export default function HomePage() {
   return (
     <Grid container spacing={4}>
       <Grid item xs={12}>
-        <Alert severity="info" sx={{ marginBottom: 2, position: "relative" }}>
-          <Typography>
-            Retrouvez moi tous les lundis au centre de bien être Kloyna&nbsp;:
-            <br />
-            <br />
-            88 rue de la bourgeonnière 44300 Nantes <br />
-            Tram 2 Bourgeonnière <br />
-            Bus 26/86/116 Fresche Blanc <br />
-            Stationnement gratuit
-          </Typography>
-
-          <Box
-            sx={{
-              display: "block",
-              maxWidth: 200,
-              margin: (t) => t.spacing(1, "auto"),
-
-              position: { lg: "absolute" },
-              right: (t) => ({ lg: t.spacing(2) }),
-              top: { lg: "50%" },
-              transform: { lg: "translateY(-50%)" },
-            }}
-          >
-            <Image src={require("./_images/home/klyona.png")} alt="" />
-          </Box>
-        </Alert>
-
         <Typography variant="h1" gutterBottom>
           Qu’est-ce que la Médecine Énergétique Chinoise&nbsp;?
         </Typography>

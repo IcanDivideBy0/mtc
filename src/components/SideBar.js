@@ -89,10 +89,6 @@ export default function SideBar() {
           {ADDRESSES[0].street}
           <br />
           {ADDRESSES[0].postalCode} {ADDRESSES[0].locality}
-          <Divider sx={{ m: (t) => t.spacing(1, 0) }} />
-          {ADDRESSES[1].street}
-          <br />
-          {ADDRESSES[1].postalCode} {ADDRESSES[1].locality}
         </Typography>
 
         <Typography>
