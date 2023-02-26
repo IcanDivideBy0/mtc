@@ -69,20 +69,19 @@ const DesktopNavItem = React.forwardRef(
           },
         }}
       >
-        <Link href={navItem.path} passHref>
-          <ButtonBase
-            component="a"
-            variant="contained"
-            color="secondary"
-            sx={{
-              color: "#fff !important",
-              ":hover": { backgroundColor: "rgba(0, 0, 0, 0.2)" },
-            }}
-            className={className}
-          >
-            {children}
-          </ButtonBase>
-        </Link>
+        <ButtonBase
+          component={Link}
+          href={navItem.path}
+          variant="contained"
+          color="secondary"
+          sx={{
+            color: "#fff !important",
+            ":hover": { backgroundColor: "rgba(0, 0, 0, 0.2)" },
+          }}
+          className={className}
+        >
+          {children}
+        </ButtonBase>
 
         {navItem.items && (
           <Popper

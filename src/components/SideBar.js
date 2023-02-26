@@ -1,5 +1,5 @@
 import React from "react";
-import { openPopupWidget } from "react-calendly";
+import { PopupModal } from "react-calendly";
 
 import {
   useTheme,
@@ -23,25 +23,13 @@ import Map from "components/Map";
 
 export default function SideBar() {
   const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
 
   return (
     <Card>
       <CardContent>
         <Typography variant="h2">Infos pratiques</Typography>
       </CardContent>
-
-      {/* <CardContent sx={{ textAlign: "center" }}>
-        <Button
-          component="a"
-          href="https://www.crenolib.fr/prendre-rdv/21708_holive-loise"
-          variant="contained"
-          size="large"
-          color="secondary"
-          startIcon={<CalendarIcon />}
-        >
-          Prendre RDV
-        </Button>
-      </CardContent> */}
 
       <CardContent sx={{ textAlign: "center" }}>
         <GlobalStyles
@@ -55,24 +43,28 @@ export default function SideBar() {
           }}
         />
 
+        {typeof document !== "undefined" && (
+          <PopupModal
+            url="https://calendly.com/loise-holive-mtc"
+            pageSettings={{
+              backgroundColor: "fff",
+              hideEventTypeDetails: false,
+              hideLandingPageDetails: false,
+              primaryColor: theme.palette.primary.main.substring(1),
+              textColor: theme.palette.text.primary.substring(1),
+            }}
+            onModalClose={() => setOpen(false)}
+            open={open}
+            rootElement={document.getElementById("__next")}
+          />
+        )}
+
         <Button
           variant="contained"
           size="large"
           color="secondary"
           startIcon={<CalendarIcon />}
-          onClick={() => {
-            openPopupWidget({
-              url: "https://calendly.com/loise-holive-mtc",
-              pageSettings: {
-                backgroundColor: "fff",
-                hideEventTypeDetails: false,
-                hideLandingPageDetails: false,
-                primaryColor: theme.palette.primary.main.substring(1),
-                f: console.log(theme),
-                textColor: theme.palette.text.primary.substring(1),
-              },
-            });
-          }}
+          onClick={() => setOpen(true)}
         >
           Prendre RDV
         </Button>

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import { Box, Container, Grid, Typography } from "@mui/material";
 
@@ -67,8 +67,8 @@ export default function Banner() {
             <Image
               src="/images/logo.svg"
               alt=""
-              width="188.828"
-              height="151.063"
+              width="188"
+              height="151"
             />
           </Grid>
         </Grid>
